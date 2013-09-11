@@ -15,6 +15,12 @@
 # Page options, layouts, aliases and proxies
 ###
 
+# With no layout
+page "robots.txt", :layout => false
+page "humans.txt", :layout => false
+page "index.html", :layout => false
+page "404.html", :layout => false
+
 # Per-page layout changes:
 #
 # With no layout
@@ -55,11 +61,6 @@ set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
-  ignore 'images/*.psd'
-  ignore 'stylesheets/lib/*'
-  ignore 'stylesheets/vendor/*'
-  ignore 'javascripts/lib/*'
-  ignore 'javascripts/vendor/*'
 
   # For example, change the Compass output style for deployment
   activate :minify_css
@@ -75,8 +76,8 @@ configure :build do
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
-  require "middleman-smusher"
-  activate :smusher
+  # require "middleman-smusher"
+  # activate :smusher
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
