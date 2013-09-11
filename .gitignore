@@ -5,13 +5,19 @@
 # git config --global core.excludesfile ~/.gitignore_global
 
 # Ignore bundler config
-/.bundle
+/*/.bundle
 
 # Ignore Gemfile.lock
-/Gemfile.lock
+/*/Gemfile.lock
 
 # Ignore the build directory
-/build
+/*/build
 
 # Ignore Sass' cache
-/.sass-cache
+/*/.sass-cache
+
+# Ignore rbenv directives
+.rbenv-version
+.rbenv-gemsets
+
+/*/vendor/ruby
