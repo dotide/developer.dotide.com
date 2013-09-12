@@ -59,6 +59,18 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+###
+# Deploy
+###
+activate :deploy do |deploy|
+  deploy.method   = :ftp
+  deploy.host     = "v0.ftp.upyun.com"
+  deploy.user     = 'cms-admin/dotide-developer'
+  deploy.password = ENV['password']
+  deploy.path     = "/"
+  deploy.build_before = true
+end
+
 # Build-specific configuration
 configure :build do
 
