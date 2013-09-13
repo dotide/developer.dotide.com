@@ -1,3 +1,9 @@
+require 'kramdown'
+require 'extensions/sitemap.rb'
+require 'zurb-foundation'
+
+activate :sprockets
+
 ###
 # Compass
 ###
@@ -52,6 +58,18 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+###
+# Deploy
+###
+activate :deploy do |deploy|
+  deploy.method   = :ftp
+  deploy.host     = "v0.ftp.upyun.com"
+  deploy.user     = 'cms-admin/dotide-developer'
+  deploy.password = ENV['password']
+  deploy.path     = "/cn/"
+  deploy.build_before = true
+end
 
 # Build-specific configuration
 configure :build do
