@@ -6,7 +6,6 @@ module GoogleSitemapGenerator
       app.after_build do |builder|
         app_sitemap = sitemap # avoid name conflict
         SitemapGenerator::Sitemap.default_host = "http://developer.dotide.com/cn/"
-        SitemapGenerator::Sitemap.filename = 'sitemap-cn'
         SitemapGenerator::Sitemap.create(:public_path => 'build', :verbose => true) do
           app_sitemap.resources.each do |r|
             add(r.url) if r.ext == '.html'
