@@ -1,3 +1,9 @@
+require 'kramdown'
+require 'extensions/sitemap.rb'
+require 'zurb-foundation'
+
+activate :sprockets
+
 ###
 # Compass
 ###
@@ -30,9 +36,9 @@ page "404.html", :layout => false
 # page "/path/to/file.html", :layout => :otherlayout
 #
 # A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+with_layout :layout_cn do
+  page "/cn/*"
+end
 
 # Proxy (fake) files
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
@@ -53,11 +59,19 @@ page "404.html", :layout => false
 #   end
 # end
 
+# Generate sitemap after build
+activate :sitemap_generator
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+###
+# Syntax
+###
+activate :syntax
 
 ###
 # Deploy
@@ -67,12 +81,17 @@ activate :deploy do |deploy|
   deploy.host     = "v0.ftp.upyun.com"
   deploy.user     = 'cms-admin/dotide-developer'
   deploy.password = ENV['password']
-  deploy.path     = "/"
+  deploy.path     = "/cn/"
   deploy.build_before = true
 end
 
 # Build-specific configuration
 configure :build do
+  ignore 'images/*.psd'
+  ignore 'stylesheets/lib/*'
+  ignore 'stylesheets/vendor/*'
+  ignore 'javascripts/lib/*'
+  ignore 'javascripts/vendor/*'
 
   # For example, change the Compass output style for deployment
   activate :minify_css
@@ -84,12 +103,12 @@ configure :build do
   # activate :cache_buster
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  # activate :smusher
+  require "middleman-smusher"
+  activate :smusher
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
