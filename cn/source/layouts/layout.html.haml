@@ -34,9 +34,19 @@
         %h1
           - link_to '/cn/' do
             = image_tag('logo.png')
-            Dotide开发者中心
+            开发者中心
     %section.top-bar-section
       %ul
+        %li.divider
+        %li= link_to "快速上手", '/cn/tutorial/index.html'
+        %li.divider
+        %li= link_to "工作流", '/cn/workflow/index.html'
+        %li.divider
+        %li= link_to "SDK", '/cn/sdk/index.html'
+        %li.divider
+        %li= link_to "API服务", '/cn/api/index.html'
+        %li.divider
+        %li= link_to "FAQ", '/cn/faq/index.html'
         %li.divider
         %li= link_to '本站源代码', 'https://github.com/dotide/developer.dotide.com'
       %ul.right

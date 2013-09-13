@@ -63,6 +63,11 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 ###
+# Syntax
+###
+activate :syntax
+
+###
 # Deploy
 ###
 activate :deploy do |deploy|
