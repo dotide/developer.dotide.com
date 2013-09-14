@@ -87,11 +87,6 @@ end
 
 # Build-specific configuration
 configure :build do
-  ignore 'images/*.psd'
-  ignore 'stylesheets/lib/*'
-  ignore 'stylesheets/vendor/*'
-  ignore 'javascripts/lib/*'
-  ignore 'javascripts/vendor/*'
 
   # For example, change the Compass output style for deployment
   activate :minify_css

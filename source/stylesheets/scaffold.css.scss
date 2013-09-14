@@ -1,0 +1,127 @@
+.page-title {
+  img {
+    width: 36px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
+
+.title-area{
+  .name {
+    h1{
+      img {
+        width: 35px;
+      }
+    }
+  }
+}
+
+.page-title{
+  margin: 55px 0 45px 10px;
+  h2{
+    border-bottom: solid 1px #dde5e9;
+    padding-bottom: 10px;
+  }
+}
+
+footer {
+  border-top: solid 2px #dde5e9;
+}
+
+.main-content{
+  margin: 25px 0 25px 0;
+  .boxed-nav{
+    border-right: solid 1px #dde5e9;
+    padding-right: 20px;
+  }
+  .side-nav{
+    float: left;
+    width: 120px;
+  }
+}
+.block-list{
+  li{
+    i{
+      color: #2ba6cb;
+      font-size: 100px;
+      float: left;
+    }
+    .item-content{
+      padding-left: 120px;
+      padding-right: 35px;
+      p{
+        color: #8996a0;
+        font-size: 12.5px;
+      }
+    }
+  }
+}
+
+/* IE upgrade overlay */
+#ie-warning-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  filter: alpha(opacity=90);
+  background-color: #f1f1f1;
+
+  #ie-warning {
+    position: relative;
+    z-index: 2001;
+    border: #000 1px solid;
+    padding: 20px;
+    background-color: #fff;
+    color: #4f4f4f;
+    font-family: 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+    list-style-type: none;
+    margin: 50px auto;
+    width: 650px;
+    height: 300px;
+
+    h1 {
+      margin-bottom: 0.5em;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0 auto;
+      list-style: none none outside;
+
+      li {
+        background: image-url("browser_warning_bg.gif") no-repeat left top;
+        float: left;
+        margin: 0 5px;
+        width: 120px;
+        height: 122px;
+        cursor: pointer;
+
+        a {
+          display: block;
+          width: 120px;
+          height: 122px;
+          cursor: pointer;
+        }
+
+        img {
+          margin: 0 10px;
+          width: 100px;
+          height: 100px;
+        }
+
+        p {
+          font-size: 0.8em;
+          margin: 0 auto;
+          width: 120px;
+          color: #808080;
+          line-height: 17px;
+          height: 18px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
