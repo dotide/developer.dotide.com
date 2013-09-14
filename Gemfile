@@ -3,7 +3,7 @@
 # source 'http://rubygems.org'
 source 'http://ruby.taobao.org/'
 
-gem "middleman", "~>3.0.13"
+gem "middleman", "~> 3.1.0"
 gem "middleman-syntax"
 gem "middleman-deploy"
 gem "middleman-smusher"
