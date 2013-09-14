@@ -81,7 +81,7 @@ activate :deploy do |deploy|
   deploy.host     = "v0.ftp.upyun.com"
   deploy.user     = 'cms-admin/dotide-developer'
   deploy.password = ENV['password']
-  deploy.path     = "/cn/"
+  deploy.path     = "/"
   deploy.build_before = true
 end
 
@@ -98,7 +98,7 @@ configure :build do
   # activate :cache_buster
 
   # Use relative URLs
-  activate :relative_assets
+  # activate :relative_assets
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
