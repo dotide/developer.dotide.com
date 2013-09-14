@@ -36,7 +36,7 @@ page "404.html", :layout => false
 # page "/path/to/file.html", :layout => :otherlayout
 #
 # A path which all have the same layout
-with_layout :layout_cn do
+with_layout :cn do
   page "/cn/*"
 end
 

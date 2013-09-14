@@ -1,0 +1,16 @@
+- wrap_layout :cn do
+  .api
+    .api-header
+      .page-title
+        %h2
+          = 'API 服务'
+    .api-content
+      .row
+        .large-3.columns
+          = partial "layouts/sidebar"
+        .large-9.columns
+          = yield
+
+  - content_for :javascripts do
+    :javascript
+      $(".api section.#{current_page.data.current_section}").addClass('active');
