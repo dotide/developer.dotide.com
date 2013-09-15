@@ -36,6 +36,10 @@ page "404.html", :layout => false
 # page "/path/to/file.html", :layout => :otherlayout
 #
 # A path which all have the same layout
+with_layout :en do
+  page "/en/*"
+end
+
 with_layout :cn do
   page "/cn/*"
 end
