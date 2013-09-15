@@ -23,4 +23,16 @@
       margin: 0;
     }
   }
+  .sidebar .section-container.accordion > section > .content,
+   .section-container.accordion > .section > .content {
+    padding: 0;
+    li a{
+      display: block;
+      padding: 10px;
+    }
+    li:hover{
+      background-color: #f7f7f8;
+      text-decoration: none;
+    }
+  }
 }
