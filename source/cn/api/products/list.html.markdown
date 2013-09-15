@@ -4,11 +4,11 @@ current_section: products
 title: 产品列表 ｜ Dotide API
 ---
 
-## List all products
+## 列出所有产品
 
     GET /products
 
-### Response
+### 响应
 
     200 OK
 

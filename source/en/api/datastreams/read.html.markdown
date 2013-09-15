@@ -4,7 +4,7 @@ current_section: datastreams
 title: Read Datastreams｜ Dotide API
 ---
 
-## Read a datastream
+## Read a single datastream
 
     GET /products/:product/devices/:device_serial/datastreams/:datastream_name
 

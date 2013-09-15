@@ -4,7 +4,7 @@ current_section: products
 title: 产品更新 ｜ Dotide API
 ---
 
-## Update a single product
+## 更新一个产品
 
     PUT /products/:product
 
@@ -14,7 +14,7 @@ title: 产品更新 ｜ Dotide API
 }
 ```
 
-### Response
+### 响应
 
     200 OK
 

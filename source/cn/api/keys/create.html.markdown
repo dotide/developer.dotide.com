@@ -1,10 +1,10 @@
 ---
 layout: cn_api
 current_section: keys
-title: key 创建 ｜ Dotide API
+title: ApiKey 创建 ｜ Dotide API
 ---
 
-## Create a single ApiKey
+## 创建一个ApiKey
 
     POST /keys
 
@@ -36,7 +36,7 @@ title: key 创建 ｜ Dotide API
 }
 ```
 
-### Response
+### 响应
 
     201 Created
 

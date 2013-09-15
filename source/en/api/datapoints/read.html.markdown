@@ -4,7 +4,7 @@ current_section: datapoints
 title: Read Datapoints｜ Dotide API
 ---
 
-## Read a datapoint
+## Read a single datapoint
 
     GET /devices/:device_serial/datastreams/:datastream_name/datapoints/:timestamp
 

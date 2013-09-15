@@ -1,14 +1,14 @@
 ---
 layout: cn_api
 current_section: devices
-title: 产品读取 ｜ Dotide API
+title: 设备读取 ｜ Dotide API
 ---
 
-## Read a Device
+## 读取一个设备
 
     GET /products/:product/devices/:device_serial
 
-### Response
+### 响应
 
     200 OK
 

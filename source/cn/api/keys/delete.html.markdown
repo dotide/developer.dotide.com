@@ -1,13 +1,13 @@
 ---
 layout: cn_api
 current_section: keys
-title: key 删除｜ Dotide API
+title: ApiKey删除｜ Dotide API
 ---
 
-## Delete a single ApiKey
+## 删除一个ApiKey
 
     DELETE /keys/:key
 
-### Response
+### 响应
 
     204 No Content

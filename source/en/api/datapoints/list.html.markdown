@@ -4,9 +4,9 @@ current_section: datapoints
 title: List Datapoints｜ Dotide API
 ---
 
-## Create datapoints
+## List datapoints
 
-    POST /products/:product/devices/:device_serial/datastreams/:datastream_name/datapoints
+    GET /devices/:device/datastreams/:datastream/datapoints
 
 ```json
 {

@@ -4,11 +4,11 @@ current_section: datapoints
 title: 数据点读取｜ Dotide API
 ---
 
-## Read a datapoint
+## 读取一个数据点
 
     GET /devices/:device_serial/datastreams/:datastream_name/datapoints/:timestamp
 
-### Response
+### 响应
 
     200 OK
 

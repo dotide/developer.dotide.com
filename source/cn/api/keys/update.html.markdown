@@ -1,10 +1,10 @@
 ---
 layout: cn_api
 current_section: keys
-title: key 更新｜ Dotide API
+title: ApiKey更新｜ Dotide API
 ---
 
-## Update a single ApiKey
+## 更新一个ApiKey
 
     PUT /keys/:key
 
@@ -35,7 +35,7 @@ title: key 更新｜ Dotide API
   ]
 }
 ```
-### Response
+### 响应
 
     200 OK
 

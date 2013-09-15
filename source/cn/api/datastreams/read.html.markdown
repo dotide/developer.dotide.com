@@ -4,11 +4,11 @@ current_section: datastreams
 title: 数据流读取｜ Dotide API
 ---
 
-## Read a datastream
+## 读取一个数据流
 
     GET /products/:product/devices/:device_serial/datastreams/:datastream_name
 
-### Response
+### 响应
 
     200 OK
 

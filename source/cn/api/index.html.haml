@@ -6,10 +6,10 @@
   .api-content
     .row
       .large-3.columns
-        = partial "layouts/sidebar"
+        = partial "layouts/cn_sidebar"
       .large-8.columns.large-offset-1
         %p
-          = 'All API access is over HTTP and accessed from the http://api.dotide.com/v1.'
+          = '本文档描述的所有API请求均基于HTTP协议，请求地址为：http://api.dotide.com/v1 。'
         %pre.terminal
           %p= '$ curl -i http://api.dotide.com/v1'
           %br
@@ -20,24 +20,24 @@
           %p= 'X-Rack-Cache: miss'
           %p= 'Server: nginx'
           %p= 'Connection: Keep-Alive'
-        %p= 'You need to add ApiKey(YOUR_APIKEY) to the header of your require.'
-        %p= 'All data is sent and received as JSON.'
-        %p= 'All timestamps are returned in ISO 8601 format:'
+        %p= '你需要在请求头部附上ApiKey(YOUR_APIKEY)'
+        %p= '无论是发送请求还是接受响应，所有数据均以JSON传输。'
+        %p= '所有时间戳均以ISO 8601格式返回:'
         %pre.code
           %p= 'YYYY-MM-DDTHH:MM:SSZ'
         %ul.api-list
           %li
             %a{:href => "/cn/api/products/index.html"}
-              = 'Products'
+              = '产品'
           %li
             %a{:href => "/cn/api/devices/index.html"}
-              = 'Devices'
+              = '设备'
           %li
             %a{:href => "/cn/api/datastreams/index.html"}
-              = 'Datastreams'
+              = '数据流'
           %li
             %a{:href => "/cn/api/datapoints/index.html"}
-              = 'Datapoints'
+              = '数据点'
           %li
             %a{:href => "/cn/api/keys/index.html"}
               = 'Keys'

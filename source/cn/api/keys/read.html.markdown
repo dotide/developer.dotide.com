@@ -1,14 +1,14 @@
 ---
 layout: cn_api
 current_section: keys
-title: key 读取｜ Dotide API
+title: ApiKey读取｜ Dotide API
 ---
 
-## Read a single ApiKey
+## 读取一个ApiKey
 
     GET /keys/:key
 
-### Response
+### 响应
 
     200 OK
 

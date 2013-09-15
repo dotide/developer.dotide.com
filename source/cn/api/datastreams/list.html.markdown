@@ -4,13 +4,11 @@ current_section: datastreams
 title: 数据流列表｜ Dotide API
 ---
 
-#Datastream
-
-## List all datastreams
+## 列出所有数据流
 
     GET /products/:product/devices/:serial/datastreams
 
-### Response
+### 响应
 
     200 OK
 

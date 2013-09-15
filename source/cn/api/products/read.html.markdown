@@ -4,11 +4,11 @@ current_section: products
 title: 产品读取 ｜ Dotide API
 ---
 
-## Read a single product
+## 读取一个产品
 
     GET /products/:product
 
-### Response
+### 响应
 
     200 OK
 

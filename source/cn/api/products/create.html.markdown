@@ -4,7 +4,7 @@ current_section: products
 title: 产品创建 ｜ Dotide API
 ---
 
-## Create a single product
+## 创建一个产品
 
     POST /products
 
@@ -35,7 +35,7 @@ title: 产品创建 ｜ Dotide API
 }
 ```
 
-### Response
+### 响应
 
     201 Created
 

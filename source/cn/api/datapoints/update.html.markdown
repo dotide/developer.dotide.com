@@ -4,7 +4,7 @@ current_section: datapoints
 title: 数据点更新｜ Dotide API
 ---
 
-## Update a datapoint
+## 更新一个数据点
 
     PUT /devices/:device_serial/datastream/:datastream_name/datapoints/:timestamp
 
@@ -15,7 +15,7 @@ title: 数据点更新｜ Dotide API
     }
 ```
 
-### Response
+### 响应
 
     200 OK
 

@@ -4,9 +4,9 @@ current_section: datapoints
 title: 数据点列表｜ Dotide API
 ---
 
-## Create datapoints
+## 列出所有数据点
 
-    POST /products/:product/devices/:device_serial/datastreams/:datastream_name/datapoints
+    GET /devices/:device/datastreams/:datastream/datapoints
 
 ```json
 {
@@ -16,6 +16,6 @@ title: 数据点列表｜ Dotide API
   }]
 }
 ```
-### Response
+### 响应
 
     201 OK

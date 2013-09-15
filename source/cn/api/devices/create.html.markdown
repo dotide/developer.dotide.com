@@ -4,7 +4,7 @@ current_section: devices
 title: 设备创建 ｜ Dotide API
 ---
 
-## Create Devices
+## 创建设备(批量)
 
     POST /products/:product/devices
 
@@ -17,6 +17,6 @@ title: 设备创建 ｜ Dotide API
 }
 ```
 
-### Response
+### 响应
 
     201 Created

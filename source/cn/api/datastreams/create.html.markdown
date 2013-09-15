@@ -4,7 +4,7 @@ current_section: datastreams
 title: 数据流创建｜ Dotide API
 ---
 
-## Create a single datastream
+## 创建一个数据流
 
     POST /products/:product/devices/:device_serial/datastreams
 
@@ -18,7 +18,7 @@ title: 数据流创建｜ Dotide API
 }
 ```
 
-### Response
+### 响应
 
     201 Created
 

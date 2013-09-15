@@ -4,7 +4,7 @@ current_section: datastreams
 title: 数据流更新｜ Dotide API
 ---
 
-## Update a datastream
+## 更新一个数据流
 
     PUT /products/:product/devices/:device_serial/datastreams/:datastream_name
 
@@ -14,7 +14,7 @@ title: 数据流更新｜ Dotide API
 }
 ```
 
-### Response
+### 响应
 
     200 OK
 

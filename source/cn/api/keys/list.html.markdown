@@ -1,16 +1,14 @@
 ---
 layout: cn_api
 current_section: keys
-title: key 列表｜ Dotide API
+title: ApiKey列表｜ Dotide API
 ---
 
-# ApiKeys
-
-## List all ApiKeys
+## 列出所有ApiKeys
 
     GET /keys
 
-### Response
+### 响应
 
     200 OK
 

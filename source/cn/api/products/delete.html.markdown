@@ -4,10 +4,10 @@ current_section: products
 title: 产品删除 ｜ Dotide API
 ---
 
-## Delete a single product
+## 删除一个产品
 
     DELETE /products/:product
 
-### Response
+### 响应
 
     204 No Content

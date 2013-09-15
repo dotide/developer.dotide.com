@@ -1,10 +1,10 @@
 ---
 layout: cn_api
 current_section: devices
-title: 产品更新 ｜ Dotide API
+title: 设备更新 ｜ Dotide API
 ---
 
-## Update a Device
+## 更新一个设备
 
     PUT /products/:product/devices/:device_serial
 
@@ -14,7 +14,7 @@ title: 产品更新 ｜ Dotide API
 }
 ```
 
-### Response
+### 响应
 
     200 OK
 

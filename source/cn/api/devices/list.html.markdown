@@ -1,16 +1,14 @@
 ---
 layout: cn_api
 current_section: devices
-title: 产品列表 ｜ Dotide API
+title: 设备列表 ｜ Dotide API
 ---
 
-# Device
-
-## List All Devices
+## 列出所有设备
 
     GET /products/:product/devices
 
-### Response
+### 响应
 
     200 OK
 

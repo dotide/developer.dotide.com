@@ -4,7 +4,7 @@ current_section: datapoints
 title: 数据点创建｜ Dotide API
 ---
 
-## Create datapoints
+## 创建数据点(批量)
 
     POST /products/:product/devices/:device_serial/datastreams/:datastream_name/datapoints
 
@@ -17,6 +17,6 @@ title: 数据点创建｜ Dotide API
 }
 ```
 
-### Response
+### 响应
 
     201 OK
