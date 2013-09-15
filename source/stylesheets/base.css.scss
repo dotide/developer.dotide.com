@@ -1,6 +1,35 @@
 a.th{
   margin: 10px;
 }
-.highlight{
+.pre{
 
+}
+.terminal{
+  padding: 15px;
+  margin: 5px 0 13px 0;
+  background-color: #444;
+  color: #fff;
+  border-radius: 3px;
+  border: 2px solid #dedede;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  background-clip: padding-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  p{
+    margin: 0;
+    line-height: 1;
+  }
+}
+.code{
+  border: 1px solid #cacaca;
+  color: #393939;
+  margin-bottom: 13px;
+  padding: 10px;
+  line-height: 1;
+  background-color: #fafafb;
+  background-clip: padding-box;
+  p{
+    margin: 0;
+  }
 }
