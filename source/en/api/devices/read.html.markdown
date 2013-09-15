@@ -30,7 +30,7 @@ title: Read Devices ｜ Dotide API
     "lat": 67,
     "lon": 12,
     "ele": 4,
-    "updated_at": "2013-07-16T16:36:51+08:00"
+    "updated_at": "2013-07-16T16:36:51Z"
   }
 }
 ```
