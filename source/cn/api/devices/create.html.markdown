@@ -1,6 +1,7 @@
 ---
 layout: cn_api
 current_section: devices
+title: 设备创建 ｜ Dotide API
 ---
 
 ## Create Devices

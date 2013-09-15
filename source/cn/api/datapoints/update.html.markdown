@@ -1,6 +1,7 @@
 ---
 layout: cn_api
 current_section: datapoints
+title: 数据点更新｜ Dotide API
 ---
 
 ## Update a datapoint

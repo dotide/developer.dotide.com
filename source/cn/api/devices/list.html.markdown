@@ -1,6 +1,7 @@
 ---
 layout: cn_api
 current_section: devices
+title: 产品列表 ｜ Dotide API
 ---
 
 # Device

@@ -1,6 +1,7 @@
 ---
 layout: cn_api
 current_section: products
+title: 产品读取 ｜ Dotide API
 ---
 
 ## Read a single product

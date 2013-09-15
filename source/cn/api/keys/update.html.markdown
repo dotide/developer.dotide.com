@@ -1,6 +1,7 @@
 ---
 layout: cn_api
 current_section: keys
+title: key 更新｜ Dotide API
 ---
 
 ## Update a single ApiKey

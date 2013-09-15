@@ -1,6 +1,7 @@
 ---
 layout: cn_api
 current_section: products
+title: 产品删除 ｜ Dotide API
 ---
 
 ## Delete a single product

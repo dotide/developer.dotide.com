@@ -1,6 +1,7 @@
 ---
 layout: cn_api
 current_section: datapoints
+title: 数据点创建｜ Dotide API
 ---
 
 ## Create datapoints

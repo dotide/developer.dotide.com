@@ -1,6 +1,7 @@
 ---
 layout: cn_api
 current_section: devices
+title: 产品更新 ｜ Dotide API
 ---
 
 ## Update a Device

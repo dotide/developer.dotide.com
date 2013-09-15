@@ -1,6 +1,7 @@
 ---
 layout: cn_api
 current_section: datastreams
+title: 数据流列表｜ Dotide API
 ---
 
 Datastream

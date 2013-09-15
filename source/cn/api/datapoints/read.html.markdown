@@ -1,6 +1,7 @@
 ---
 layout: cn_api
 current_section: datapoints
+title: 数据点读取｜ Dotide API
 ---
 
 ## Read a datapoint

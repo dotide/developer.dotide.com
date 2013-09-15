@@ -1,6 +1,7 @@
 ---
 layout: cn_api
 current_section: products
+title: 产品创建 ｜ Dotide API
 ---
 
 ## Create a single product
