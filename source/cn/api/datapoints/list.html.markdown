@@ -1,7 +1,7 @@
 ---
 layout: cn_api
 current_section: datapoints
-title: 数据点列表｜ Dotide API
+title: 数据点罗列｜ Dotide API
 ---
 
 ## 列出所有数据点

@@ -1,7 +1,7 @@
 ---
 layout: cn_api
 current_section: products
-title: 产品列表 ｜ Dotide API
+title: 产品罗列 ｜ Dotide API
 ---
 
 ## 列出所有产品

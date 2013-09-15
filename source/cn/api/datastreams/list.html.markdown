@@ -1,7 +1,7 @@
 ---
 layout: cn_api
 current_section: datastreams
-title: 数据流列表｜ Dotide API
+title: 数据流罗列｜ Dotide API
 ---
 
 ## 列出所有数据流

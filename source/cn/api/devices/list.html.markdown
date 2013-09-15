@@ -1,7 +1,7 @@
 ---
 layout: cn_api
 current_section: devices
-title: 设备列表 ｜ Dotide API
+title: 设备罗列 ｜ Dotide API
 ---
 
 ## 列出所有设备
