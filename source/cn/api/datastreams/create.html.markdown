@@ -8,21 +8,21 @@ title: 数据流创建｜ Dotide API
 
     POST /products/:product/devices/:device_serial/datastreams
 
-~~~json
+```json
 {
   "name": "demostream",
-  "type": "number"
+  "type": "number",
   "tags": ["temperature"],
   "units": "Celsius",
-  "unit_symbol": "C",
+  "unit_symbol": "C"
 }
-~~~
+```
 
 ### Response
 
     201 Created
 
-~~~json
+```json
 {
   "name": "demostream",
   "type": "number",
@@ -32,5 +32,5 @@ title: 数据流创建｜ Dotide API
   "tags": ["temperature"],
   "updated_at": "2013-07-13T15:31:22Z"
 }
-~~~
+```
 

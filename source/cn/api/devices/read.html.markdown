@@ -12,7 +12,7 @@ title: 产品读取 ｜ Dotide API
 
     200 OK
 
-~~~json
+```json
 {
   "serial": "123456",
   "title": "Demo Device",
@@ -33,4 +33,4 @@ title: 产品读取 ｜ Dotide API
     "updated_at": "2013-07-16T16:36:51+08:00"
   }
 }
-~~~
+```

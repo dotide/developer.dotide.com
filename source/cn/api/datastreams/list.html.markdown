@@ -4,7 +4,7 @@ current_section: datastreams
 title: 数据流列表｜ Dotide API
 ---
 
-Datastream
+#Datastream
 
 ## List all datastreams
 
@@ -14,7 +14,7 @@ Datastream
 
     200 OK
 
-~~~json
+```json
 [
   {
     "name": "demostream",
@@ -26,4 +26,4 @@ Datastream
     "updated_at": "2013-07-13T15:31:22Z"
   }
 ]
-~~~
+```

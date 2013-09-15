@@ -8,17 +8,17 @@ title: 产品更新 ｜ Dotide API
 
     PUT /products/:product
 
-~~~json
+```json
 {
     "name": "New Name"
 }
-~~~
+```
 
 ### Response
 
     200 OK
 
-~~~json
+```json
 {
   "id": "51e51544fa36a48592000074",
   "name": "New Name",
@@ -47,4 +47,4 @@ title: 产品更新 ｜ Dotide API
     ]
   }
 }
-~~~
+```

@@ -12,7 +12,7 @@ title: 数据流读取｜ Dotide API
 
     200 OK
 
-~~~json
+```json
 {
   "name": "demostream",
   "type": "number",
@@ -22,4 +22,4 @@ title: 数据流读取｜ Dotide API
   "tags": ["temperature"],
   "updated_at": "2013-07-13T15:31:22Z"
 }
-~~~
+```

@@ -8,17 +8,17 @@ title: 数据流更新｜ Dotide API
 
     PUT /products/:product/devices/:device_serial/datastreams/:datastream_name
 
-~~~json
+```json
 {
-  "name": "New Name",
+  "name": "New Name"
 }
-~~~
+```
 
 ### Response
 
     200 OK
 
-~~~json
+```json
 {
   "name": "New Name",
   "type": "number",
@@ -28,4 +28,4 @@ title: 数据流更新｜ Dotide API
   "tags": ["temperature"],
   "updated_at": "2013-07-13T15:31:23Z"
 }
-~~~
+```

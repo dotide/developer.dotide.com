@@ -8,7 +8,7 @@ title: 产品创建 ｜ Dotide API
 
     POST /products
 
-~~~json
+```json
 {
   "name": "Temperature Monitor",
   "description": "A temperature monitor.",
@@ -33,13 +33,13 @@ title: 产品创建 ｜ Dotide API
     ]
   }
 }
-~~~
+```
 
 ### Response
 
     201 Created
 
-~~~json
+```json
 {
   "id": "51e51544fa36a48592000074",
   "name": "Temperature Monitor",
@@ -67,4 +67,4 @@ title: 产品创建 ｜ Dotide API
     ]
   }
 }
-~~~
+```

@@ -8,7 +8,7 @@ title: key 更新｜ Dotide API
 
     PUT /keys/:key
 
-~~~json
+```json
 {
   "label": "MyPhone",
   "permissions": [
@@ -34,12 +34,12 @@ title: key 更新｜ Dotide API
     }
   ]
 }
-~~~
+```
 ### Response
 
     200 OK
 
-~~~json
+```json
 {
   "api_key": "d58f2d36656e75ff60279cfc5d294e2a42b904e3",
   "label": "MyPhone",
@@ -66,4 +66,4 @@ title: key 更新｜ Dotide API
     }
   ]
 }
-~~~
+```

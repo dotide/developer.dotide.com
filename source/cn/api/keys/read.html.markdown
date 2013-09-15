@@ -12,7 +12,7 @@ title: key 读取｜ Dotide API
 
     200 OK
 
-~~~json
+```json
 {
   "api_key": "d58f2d36656e75ff60279cfc5d294e2a42b904e3",
   "label": "MyPhone",
@@ -39,4 +39,4 @@ title: key 读取｜ Dotide API
     }
   ]
 }
-~~~
+```

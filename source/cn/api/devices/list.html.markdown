@@ -14,7 +14,7 @@ title: 产品列表 ｜ Dotide API
 
     200 OK
 
-~~~json
+```json
 [
   {
     "serial": "123456",
@@ -37,4 +37,4 @@ title: 产品列表 ｜ Dotide API
     }
   }
 ]
-~~~
+```

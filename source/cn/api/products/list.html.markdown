@@ -12,7 +12,7 @@ title: 产品列表 ｜ Dotide API
 
     200 OK
 
-~~~json
+```json
 [
   {
     "id": "51e51544fa36a48592000074",
@@ -43,4 +43,4 @@ title: 产品列表 ｜ Dotide API
     }
   }
 ]
-~~~
+```

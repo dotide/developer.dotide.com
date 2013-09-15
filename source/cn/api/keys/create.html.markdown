@@ -8,7 +8,7 @@ title: key 创建 ｜ Dotide API
 
     POST /keys
 
-~~~json
+```json
 {
   "label": "MyPhone",
   "permissions": [
@@ -34,13 +34,13 @@ title: key 创建 ｜ Dotide API
     }
   ]
 }
-~~~
+```
 
 ### Response
 
     201 Created
 
-~~~json
+```json
 {
   "api_key": "d58f2d36656e75ff60279cfc5d294e2a42b904e3",
   "label": "MyPhone",
@@ -67,4 +67,4 @@ title: key 创建 ｜ Dotide API
     }
   ]
 }
-~~~
+```

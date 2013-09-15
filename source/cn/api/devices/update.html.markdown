@@ -8,17 +8,17 @@ title: 产品更新 ｜ Dotide API
 
     PUT /products/:product/devices/:device_serial
 
-~~~json
+```json
 {
     "title": "New Name"
 }
-~~~
+```
 
 ### Response
 
     200 OK
 
-~~~json
+```json
 {
   "serial": "123456",
   "title": "New Name",
@@ -39,4 +39,4 @@ title: 产品更新 ｜ Dotide API
     "updated_at": "2013-07-16T16:36:51+08:00"
   }
 }
-~~~
+```

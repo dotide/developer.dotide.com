@@ -12,7 +12,7 @@ title: 产品读取 ｜ Dotide API
 
     200 OK
 
-~~~json
+```json
 {
   "id": "51e51544fa36a48592000074",
   "name": "Temperature Monitor",
@@ -41,4 +41,4 @@ title: 产品读取 ｜ Dotide API
     ]
   }
 }
-~~~
+```
