@@ -36,7 +36,7 @@ page "404.html", :layout => false
 # page "/path/to/file.html", :layout => :otherlayout
 #
 # A path which all have the same layout
-with_layout :layout_cn do
+with_layout :cn do
   page "/cn/*"
 end
 
@@ -73,6 +73,10 @@ set :images_dir, 'images'
 ###
 activate :syntax
 
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+set :haml, { ugly: true }
 ###
 # Deploy
 ###
