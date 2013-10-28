@@ -28,11 +28,18 @@ title: List Devices ｜ Dotide API
       "demo",
       "temperature"
     ],
+    "properties": {
+      "prop1": "abc"
+    }
     "location": {
-      "name": "Home",
-      "lat": 67,
-      "lon": 12,
-      "ele": 4,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [118.82, 31.89]
+      },
+      "properties": {
+        "name" : "home"
+      },
       "updated_at": "2013-07-16T16:36:51Z"
     }
   }
