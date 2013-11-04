@@ -13,8 +13,10 @@ title: Create Datastreams｜ Dotide API
   "name": "demostream",
   "type": "number",
   "tags": ["temperature"],
-  "units": "Celsius",
-  "unit_symbol": "C"
+  "properties": {
+    "unit_name": "Celsius",
+    "unit_symbol": "C",
+  }
 }
 ```
 
@@ -26,8 +28,10 @@ title: Create Datastreams｜ Dotide API
 {
   "name": "demostream",
   "type": "number",
-  "unit_name": "Celsius",
-  "unit_symbol": "C",
+  "properties": {
+    "unit_name": "Celsius",
+    "unit_symbol": "C",
+  }
   "current_value": 20,
   "tags": ["temperature"],
   "updated_at": "2013-07-13T15:31:22Z"
