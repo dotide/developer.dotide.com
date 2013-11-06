@@ -20,7 +20,9 @@
           %p= 'X-Rack-Cache: miss'
           %p= 'Server: nginx'
           %p= 'Connection: Keep-Alive'
-        %p= '你需要在请求头部附上ApiKey(YOUR_APIKEY)'
+        %p= '你需要在请求头部附上'
+        %pre.code
+          %p= 'ApiKey: YOUR_APIKEY'
         %p= '无论是发送请求还是接受响应，所有数据均以JSON传输。'
         %p= '所有时间戳均以ISO 8601格式返回:'
         %pre.code
