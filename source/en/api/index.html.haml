@@ -20,7 +20,9 @@
           %p= 'X-Rack-Cache: miss'
           %p= 'Server: nginx'
           %p= 'Connection: Keep-Alive'
-        %p= 'You need to add ApiKey(YOUR_APIKEY) to the header of your require.'
+        %p= 'You need to add ApiKey to the header of your require.'
+        %pre.code
+          %p= 'ApiKey: YOUR_APIKEY'
         %p= 'All data is sent and received as JSON.'
         %p= 'All timestamps are returned in ISO 8601 format:'
         %pre.code
