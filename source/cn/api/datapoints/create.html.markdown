@@ -19,4 +19,4 @@ title: 数据点创建｜ Dotide API
 
 ### 响应
 
-    201 OK
+    201 Created

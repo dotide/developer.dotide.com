@@ -18,4 +18,4 @@ title: 数据点罗列｜ Dotide API
 ```
 ### 响应
 
-    201 OK
+    200 OK
