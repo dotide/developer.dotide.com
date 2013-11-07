@@ -11,7 +11,7 @@ title: Update Datapoints｜ Dotide API
 ```json
     {
     "at": "2013-06-05T23:41:33Z",
-    "value": "23"
+    "value": 23
     }
 ```
 
@@ -22,6 +22,6 @@ title: Update Datapoints｜ Dotide API
 ```json
     {
     "at": "2013-06-05T23:41:33Z",
-    "value": "23"
+    "value": 23
     }
 ```
