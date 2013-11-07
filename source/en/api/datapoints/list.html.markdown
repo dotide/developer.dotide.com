@@ -12,10 +12,10 @@ title: List Datapoints｜ Dotide API
 {
   "datapoints": [{
     "at": "2013-06-05T23:50:32Z",
-    "value": "20"
+    "value": 20
   }]
 }
 ```
 ### Response
 
-    201 OK
+    200 OK

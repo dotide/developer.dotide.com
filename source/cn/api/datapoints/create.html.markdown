@@ -12,11 +12,11 @@ title: 数据点创建｜ Dotide API
 {
   "datapoints": [{
     "at": "2013-06-05T23:50:32Z",
-    "value": "20"
+    "value": 20
   }]
 }
 ```
 
 ### 响应
 
-    201 OK
+    201 Created
