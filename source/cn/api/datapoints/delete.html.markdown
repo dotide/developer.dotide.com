@@ -4,7 +4,7 @@ current_section: datapoints
 title: 数据点删除｜ Dotide API
 ---
 
-## 删除一个数据点
+## 删除数据点
 
     DELETE /products/:product_id/devices/:device_serial/datastream/:datastream_name/datapoints
 
@@ -15,7 +15,6 @@ title: 数据点删除｜ Dotide API
 | start | string | **必需的**。 起始时间戳。格式遵循ISO 8601标准:YYYY-MM-DDTHH:MM:SSZ。 |
 | end   | string | **必需的**。 截止时间戳。格式遵循ISO 8601标准:YYYY-MM-DDTHH:MM:SSZ。 |
 | limit | number | 要显示的结果的个数。 |
-| order | string | 结果排序方式。值可以为"asc"(从旧到新)或者"desc"(从新到旧) |
 
 **示例**
 
@@ -23,8 +22,7 @@ title: 数据点删除｜ Dotide API
 {
   "start": "2013-06-05T23:50:32Z",
   "end": "2013-06-05T23:50:32Z",
-  "limit": 20,
-  "order": "desc"
+  "limit": 20
 }
 ```
 

@@ -6,7 +6,7 @@ title: 设备罗列 ｜ Dotide API
 
 ## 列出所有设备
 
-    GET /products/:product/devices
+    GET /products/:product_id/devices
 
 ### 响应
 
@@ -28,7 +28,7 @@ title: 设备罗列 ｜ Dotide API
     ],
     "properties": {
       "prop1": "abc"
-    }
+    },
     "location": {
       "type": "Feature",
       "geometry": {

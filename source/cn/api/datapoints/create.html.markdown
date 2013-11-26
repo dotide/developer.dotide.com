@@ -6,14 +6,16 @@ title: 数据点创建｜ Dotide API
 
 ## 创建数据点
 
-    POST /products/:product/devices/:device_serial/datastreams/:datastream_name/datapoints
+    POST /products/:product_id/devices/:device_serial/datastreams/:datastream_name/datapoints
 
 ### 输入
 
 | 名称  | 类型           | 说明 |
 | ----- | ------ | ------------------------------------------------------ |
 | at    | string | **必需的**。 时间戳。格式遵循ISO 8601标准:YYYY-MM-DDTHH:MM:SSZ。 |
-| value | json   | **必需的**。 数据点的值。类型不限，编码为json即可。例如：数`20.5`，字符`"something"`，列表`[11,45]`，哈希`{"name": "dot", "age": 2}` |
+| value | json   | **必需的**。 数据点的值。类型不限，编码为json即可。例如：数`20.5`，字符`"something"`，列表`[11,45]`，哈希`{"name": "dot", "age": 2}`。 |
+
+*注意：*如果value为数值型，或者符合[GeoJSON][geojson]格式并且是Point类型的Feature(如下面示例所示)，则可以在Dotide站点上直接以图表或地图的形式展现数据。
 
 **示例**
 
@@ -22,7 +24,16 @@ title: 数据点创建｜ Dotide API
 ```json
 {
   "at": "2013-06-05T23:50:32Z",
-  "value": [118.82097580000004, 31.891278699999994]
+  "value": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [118.82, 31.89]
+    },
+    "properties": {
+      "speed" : 35
+    }
+  }
 }
 ```
 
@@ -44,3 +55,5 @@ title: 数据点创建｜ Dotide API
 ### 响应
 
     201 Created
+
+[geojson]: http://geojson.org/geojson-spec.html

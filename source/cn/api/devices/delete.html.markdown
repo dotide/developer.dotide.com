@@ -6,7 +6,7 @@ title: 设备删除 ｜ Dotide API
 
 ## 删除一个设备
 
-    DELETE /products/:product/devices/:device_serial
+    DELETE /products/:product_id/devices/:device_serial
 
 ### 响应
 

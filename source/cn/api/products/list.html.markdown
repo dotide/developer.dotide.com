@@ -17,27 +17,41 @@ title: 产品罗列 ｜ Dotide API
   {
     "id": "51e51544fa36a48592000074",
     "name": "Temperature Monitor",
-    "description": "A temperature monitor.",
+    "description": "A demo device for temperature monitor.",
     "state": "deploy",
-    "devices_count": 1,
-    "activated_devices_count": 0,
+    "devices_count": 10,
+    "activated_devices_count": 2,
     "device_template": {
-      "title": "Demo Device",
-      "description": "a temperature monitor.",
+      "title": "王迪的iPhone 10",
+      "description": "王迪自制的iPhone",
+      "private": true,
       "tags": [
         "demo",
         "temperature"
       ],
-      "private": true,
+      "properties": {
+        "prop1": "abc"
+      },
+      "location": {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [118.82, 31.89]
+        },
+        "properties": {
+          "name" : "home"
+        }
+      },
       "datastreams": [
         {
-          "name": "demostream",
+          "name": "icetemp",
+          "annotation": "冰箱温度值",
           "type": "number",
-          "unit_name": "Celsius",
-          "unit_symbol": "C",
-          "tags": [
-            "temperature"
-          ]
+          "tags": ["temperature"],
+          "properties": {
+            "unit_name": "摄氏度",
+            "unit_symbol": "C"
+          }
         }
       ]
     }

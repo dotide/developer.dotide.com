@@ -6,7 +6,7 @@ title: 产品删除 ｜ Dotide API
 
 ## 删除一个产品
 
-    DELETE /products/:product
+    DELETE /products/:product_id
 
 ### 响应
 

@@ -6,7 +6,7 @@ title: 设备读取 ｜ Dotide API
 
 ## 读取一个设备
 
-    GET /products/:product/devices/:device_serial
+    GET /products/:product_id/devices/:device_serial
 
 ### 响应
 
@@ -27,7 +27,7 @@ title: 设备读取 ｜ Dotide API
   ],
   "properties": {
     "prop1": "abc"
-  }
+  },
   "location": {
     "type": "Feature",
     "geometry": {
@@ -35,7 +35,7 @@ title: 设备读取 ｜ Dotide API
       "coordinates": [118.82, 31.89]
     },
     "properties": {
-      "name" : "home"
+      "name": "home"
     },
     "updated_at": "2013-07-16T16:36:51Z"
   }
