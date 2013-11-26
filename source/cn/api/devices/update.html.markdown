@@ -17,8 +17,8 @@ title: 设备更新 ｜ Dotide API
 | description| string | 设备描述。 |
 | private    | boolean| 是否私有。如果是false，则会：1.任何ApiKey都拥有该设备的读(read)权限，2.任何人都可以访问该设备的dotide页面。 |
 | tags       | array  | 标签。一组用来分类，描述的词汇。 |
-| properties | hash   | 属性。用来自定义设备的一些属性。 |
-| location   | hash   | 设备位置。遵循[GeoJSON][geojson]格式。并且此处只支持Point类型的Feature，参见示例中的"location"部分 |
+| properties | object   | 属性。用来自定义设备的一些属性。 |
+| location   | object   | 设备位置。遵循[GeoJSON][geojson]格式。并且此处只支持Point类型的Feature，参见示例中的"location"部分 |
 
 **示例**
 
