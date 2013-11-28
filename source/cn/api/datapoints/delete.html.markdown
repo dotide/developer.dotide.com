@@ -28,4 +28,4 @@ title: 数据点删除｜ Dotide API
 
 ### 响应
 
-    204 No Content
+    Status: 204 No Content

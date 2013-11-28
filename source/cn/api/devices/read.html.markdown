@@ -10,7 +10,7 @@ title: 设备读取 ｜ Dotide API
 
 ### 响应
 
-    200 OK
+    Status: 200 OK
 
 ```json
 {

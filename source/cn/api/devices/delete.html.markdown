@@ -10,4 +10,4 @@ title: 设备删除 ｜ Dotide API
 
 ### 响应
 
-    204 No Content
+    Status: 204 No Content

@@ -35,7 +35,8 @@ title: 数据流创建｜ Dotide API
 
 ### 响应
 
-    201 Created
+    Status: 201 Created
+    Location: http://api.dotide.com/v1/products/51e51544fa36a48592000074/devices/AFKDJK-UIJSJK/datastreams/icetemp
 
 ```json
 {

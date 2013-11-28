@@ -10,7 +10,7 @@ title: 产品罗列 ｜ Dotide API
 
 ### 响应
 
-    200 OK
+    Status: 200 OK
 
 ```json
 [

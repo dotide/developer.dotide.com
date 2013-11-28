@@ -34,4 +34,102 @@ title: 设备创建 ｜ Dotide API
 ```
 ### 响应
 
-    201 Created
+`创建单个设备:`
+
+    Status: 201 Created
+    Location: http://api.dotide.com/v1/products/51e51544fa36a48592000074/devices/AFKDJK-UIJSJK
+
+```json
+{
+  "serial": "AFKDJK-UIJSJK",
+  "title": "Demo Device",
+  "description": "a temperature monitor.",
+  "private": true,
+  "status": "live",
+  "created_at": "2013-07-16T16:36:51Z",
+  "updated_at": "2013-07-16T16:36:51Z",
+  "tags": [
+    "demo",
+    "temperature"
+  ],
+  "properties": {
+    "prop1": "abc"
+  },
+  "location": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [118.82, 31.89]
+    },
+    "properties": {
+      "name": "home"
+    },
+    "updated_at": "2013-07-16T16:36:51Z"
+  }
+}
+```
+
+`创建多个设备:`
+
+    Status: 201 Created
+    Location: http://api.dotide.com/v1/products/51e51544fa36a48592000074/devices
+
+```json
+[
+  {
+    "serial": "AFKDJK-UIJSJK",
+    "title": "Demo Device",
+    "description": "a temperature monitor.",
+    "private": true,
+    "status": "live",
+    "created_at": "2013-07-16T16:36:51Z",
+    "updated_at": "2013-07-16T16:36:51Z",
+    "tags": [
+      "demo",
+      "temperature"
+    ],
+    "properties": {
+      "prop1": "abc"
+    },
+    "location": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [118.82, 31.89]
+      },
+      "properties": {
+        "name": "home"
+      },
+      "updated_at": "2013-07-16T16:36:51Z"
+    }
+  },
+  {
+    "serial": "MKUIJI-MKJKUK",
+    "title": "Demo Device",
+    "description": "a temperature monitor.",
+    "private": true,
+    "status": "live",
+    "created_at": "2013-07-16T16:36:51Z",
+    "updated_at": "2013-07-16T16:36:51Z",
+    "tags": [
+      "demo",
+      "temperature"
+    ],
+    "properties": {
+      "prop1": "abc"
+    },
+    "location": {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [118.82, 31.89]
+      },
+      "properties": {
+        "name": "home"
+      },
+      "updated_at": "2013-07-16T16:36:51Z"
+    }
+  }
+]
+
+```

@@ -54,6 +54,44 @@ title: 数据点创建｜ Dotide API
 
 ### 响应
 
-    201 Created
+`创建单个数据点:`
+
+    Status: 201 Created
+    Location: http://api.dotide.com/v1/products/51e51544fa36a48592000074/devices/AFKDJK-UIJSJK/datastreams/icetemp/datapoints
+
+```json
+{
+  "at": "2013-06-05T23:50:32Z",
+  "value": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [118.82, 31.89]
+    },
+    "properties": {
+      "speed" : 35
+    }
+  }
+}
+```
+
+`创建多个数据点:`
+
+    Status: 201 Created
+    Location: http://api.dotide.com/v1/products/51e51544fa36a48592000074/devices/AFKDJK-UIJSJK/datastreams/icetemp/datapoints
+
+```json
+[
+  {
+    "at": "2013-06-05T23:50:32Z",
+    "value": 20
+  },
+  {
+    "at": "2013-06-05T23:50:60Z",
+    "value": 27
+  }
+]
+
+```
 
 [geojson]: http://geojson.org/geojson-spec.html
