@@ -18,8 +18,8 @@
   %meta{:content => "on", "http-equiv" => "cleartype"}/
   %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
   %title= data.page.title || "Dotide开发者中心"
-  %link{:href => "//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
   = stylesheet_link_tag "application"
+  = stylesheet_link_tag "font-awesome.min.css"
   = yield_content :stylesheets
   - if content_for? :styles
     :css
@@ -28,7 +28,8 @@
   = yield_content :head
 %body
   / Logo &amp; Top Nav
-  %nav.top-bar
+  %nav.top-bar.show-for-small
+  %nav.top-bar.hide-for-small
     %ul.title-area
       %li.name
         %h1
@@ -52,18 +53,11 @@
         %li= link_to '返回Dotide', 'http://dotide.com/'
 
   / Main page container
-  .row
-    .small-12.columns
-      = yield
+  = yield
+
   / Footer
-  %footer.footer.row
-    .small-12.large-6.columns
-      %p
-        \&copy; Copyright #{Date.today.year.to_s} Dotide开发者中心
-    .small-12.large-6.columns
-      %p.right
-        %i.icon-heart
-        = link_to '托管于又拍云', 'https://www.upyun.com/?md=geakit'
+  = yield_content :footer
+
   /[if lt IE 9]
     #ie-warning-overlay
       #ie-warning

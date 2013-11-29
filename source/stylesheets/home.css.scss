@@ -1,3 +1,31 @@
-.page-title {
-  margin: 55px 0 45px 10px;
+.homepage-head{
+  ul{
+    margin: 55px 0 45px 10px;
+    h1{
+      margin: 35px 0 25px 5px;
+    }
+    .intro{
+      color: #666666;
+      font-size: 18px;
+      line-height: 1.5em;
+      max-width: 400px;
+    }
+  }
+}
+
+.homepage-body{
+  background-color: #ebf8ff;
+  border-top: 1px solid #cde8f4;
+  border-bottom: 1px solid #cde8f4;
+  ul{
+    margin: 45px 0 30px 0px;
+    li{
+      h3{
+        color: #2ba6cb;
+      }
+      p{
+        max-width: 200px;
+      }
+    }
+  }
 }

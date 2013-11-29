@@ -1,37 +1,38 @@
 ---
 title: Dotide开发者中心
 ---
-.page-title
-  %h2= "开发者中心"
-.main-content
-  %ul.large-block-grid-3.block-list
-    %li
-      %i.icon-book
-      .item-content
+.homepage-head
+  .row
+    %ul.large-block-grid-2
+      %li
+        %h1= "Dotide开发者中心"
+        %p.intro= "加速你的物联网应用开发。"
+        %p.intro= "通过示例快速了解如何利用Dotide开发你的物联网应用；或通过指南和参考文档，了解Dotide产品使用细节。"
+      %li
+        = image_tag 'page-head.png'
+.homepage-body
+  .row
+    %ul.large-block-grid-4
+      %li
         %h3
+          %i.fa.fa-rocket
           = link_to "快速上手", '/cn/tutorial/index.html'
-        %p= "通过一个示例快速了解Dotide。"
-    %li
-      %i.icon-sitemap
-      .item-content
+        %p= "通过几个示例快速了解如何利用Dotide开发你的物联网应用。"
+      %li
         %h3
-          = link_to "工作流", '/cn/workflow/index.html'
-        %p= "Dotide提供一套工作流机制，方便由产品原型开发到产品发布、应用上线以及持续开发更新等。"
-    %li
-      %i.icon-cogs
-      .item-content
+          %i.fa.fa-flask
+          = link_to "使用指南", '/cn/guides/index.html'
+        %p= "帮助你进一步了解Dotide产品服务的方方面面。"
+      %li
         %h3
-          = link_to "SDK", '/cn/sdk/index.html'
-        %p= "Dotide提供丰富的SDK，帮助开发者更好地使用我们的服务。这些SDK涵盖多种语言和平台。"
-    %li
-      %i.icon-cloud
-      .item-content
+          %i.fa.fa-book
+          = link_to "参考文档", '/cn/refs/index.html'
+        %p= "关于SDK和Web Service的完整参考文档。"
+      %li
         %h3
-          = link_to "API服务", '/cn/api/index.html'
-        %p= "提供RESTFul风格的API，用于实现设备与云端的交互以及数据存取的统一接口，支持HTTP/Socket多种协议。"
-    %li
-      %i.icon-question
-      .item-content
-        %h3
-          = link_to "FAQ", '/cn/faq/index.html'
-        %p= "常见问题集合。"
+          %i.fa.fa-comments
+          = link_to "反馈建议", 'https://github.com/dotide/Feedback-cn/issues'
+        %p= "您遇到了什么问题？您期待什么改进或者新功能？请让我们知道。"
+
+- content_for :footer do
+  %footer.homepage-footer

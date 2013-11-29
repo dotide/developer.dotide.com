@@ -22,8 +22,28 @@
   }
 }
 
-footer {
-  border-top: solid 2px #dde5e9;
+.footer{
+  .row{
+    border-top: solid 2px #dde5e9;
+  }
+  a{
+    font-weight: normal;
+  }
+  ul{
+    list-style: none;
+    li{
+      float: left;
+      margin-left: 22px;
+      line-height: 40px;
+    }
+  }
+  .beian {
+    color: #333333;
+    &:hover {
+      color: #333333;
+      text-decoration: underline;
+    }
+  }
 }
 
 .main-content{
