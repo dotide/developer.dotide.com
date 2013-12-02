@@ -1,38 +1,15 @@
-.api{
+.sidebar .section-container.accordion > section > .content,
+ .section-container.accordion > .section > .content {
+  padding: 0;
   ul{
     list-style: none;
-    li{
-    }
-    li:hover{
-      text-decoration: underline;
-    }
   }
-  .api-list{
-    list-style: square;
-    margin-left: 18px;
-  }
-  .highlight{
-    border: 1px solid #cacaca;
-    color: #393939;
-    margin-bottom: 10px;
+  li a{
+    display: block;
     padding: 10px;
-    line-height: 1;
-    background-color: #fafafb;
-    background-clip: padding-box;
-    p{
-      margin: 0;
-    }
   }
-  .sidebar .section-container.accordion > section > .content,
-   .section-container.accordion > .section > .content {
-    padding: 0;
-    li a{
-      display: block;
-      padding: 10px;
-    }
-    li:hover{
-      background-color: #f7f7f8;
-      text-decoration: none;
-    }
+  li:hover{
+    background-color: #f7f7f8;
+    text-decoration: none;
   }
 }

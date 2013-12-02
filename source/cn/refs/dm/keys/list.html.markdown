@@ -1,10 +1,10 @@
 ---
 layout: refs/dm.cn
 current_section: keys
-title: ApiKey罗列｜ 数据存取
+title: Key罗列｜ 数据存取
 ---
 
-## 列出所有ApiKeys
+## 列出所有Keys
 
     GET /keys
 

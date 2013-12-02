@@ -13,7 +13,7 @@ title: 数据点创建｜ 数据存取
 | 名称  | 类型           | 说明 |
 | ----- | ------ | ------------------------------------------------------ |
 | at    | string | **必需的**。 时间戳。格式遵循ISO 8601标准:YYYY-MM-DDTHH:MM:SSZ。 |
-| value | object/array/string/number/boolean   | **必需的**。 数据点的值。类型不限[注1]。例如：数`20.5`，字符`"something"`，数组`[11,45]`，对象`{"name": "dot", "age": 2}`。 |
+| value | object/array/string/number/boolean   | **必需的**。 数据点的值。类型不限**[注1]**。例如：数`20.5`，字符`"something"`，数组`[11,45]`，对象`{"name": "dot", "age": 2}`。 |
 
 *注1：*如果value为数值型，或者符合[GeoJSON][geojson]格式并且是Point类型的Feature(如下面示例所示)，则可以在Dotide站点上直接以图表或地图的形式展现数据。
 

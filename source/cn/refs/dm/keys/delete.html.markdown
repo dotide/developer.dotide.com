@@ -1,10 +1,10 @@
 ---
 layout: refs/dm.cn
 current_section: keys
-title: ApiKey删除｜ 数据存取
+title: Key删除｜ 数据存取
 ---
 
-## 删除一个ApiKey
+## 删除一个Key
 
     DELETE /keys/:key
 

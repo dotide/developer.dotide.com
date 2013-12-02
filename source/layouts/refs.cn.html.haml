@@ -5,7 +5,7 @@
         = '参考文档'
       = yield_content :breadcrumbs
   .row.markdown
-    .large-3.columns
+    .large-3.columns.sidebar
       = yield_content :sidebar
     .large-8.columns.large-offset-1
       = yield
@@ -36,4 +36,4 @@
 
   - content_for :javascripts do
     :javascript
-      $(".api section.#{current_page.data.current_section}").addClass('active');
+      $(".sidebar section.#{current_page.data.current_section}").addClass('active');

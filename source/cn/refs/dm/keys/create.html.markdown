@@ -1,24 +1,44 @@
 ---
 layout: refs/dm.cn
 current_section: keys
-title: ApiKey 创建 ｜ 数据存取
+title: Key 创建 ｜ 数据存取
 ---
 
-## 创建一个ApiKey
+## 创建一个Key
 
     POST /keys
+
+### 输入
+
+| 名称            | 类型    | 说明 |
+| --------------- | ------ | ------------------------------------------------------ |
+| label           | string | Key的标识。便于标记Key |
+| permissions     | array  | Key权限。设定该Key包含的权限的列表。Key的权限包括"read"和"write"两种。`permissions`默认为空。 |
+| global          | boolean| 全局Key。如果`global`为true，则该Key的作用范围为其所有者的所有"资源"，并且忽略`resources`所定义的作用范围。只有全局Key可以创建产品。`global`默认为false。 |
+| resources       | array  | Key的作用范围。定义该Key对哪些"资源"起作用**[注1]**。数组的每一个元素为一个"资源"**[注2]**，类型为object，具体构成如下： |
+
+resources中单个元素的构成
+
+| 名称        | 类型    | 说明 |
+| ---------- | ------ | ------------------------------------------------------ |
+| product_id     | string | 产品id。 |
+| device_serial  | string | 设备序列号。 |
+| datastream_name| string | 数据流标识。 |
+
+*注1：*只能指定创建Key操作的用户自己的"资源"。
+
+*注2：*当指定一个"资源"的时候，作用范围会包括该"资源"的"子资源"，例如如果指定一个"设备"，则作用范围会包含该设备以及该设备的所有。
+
+**示例**
 
 ```json
 {
   "label": "MyPhone",
   "permissions": [
-    "create",
     "read",
-    "update",
-    "delete",
-    "list"
+    "write"
   ],
-  "master": false,
+  "global": false,
   "resources": [
     {
       "product_id": "951355e5fa56af20sa77c682",
@@ -42,16 +62,12 @@ title: ApiKey 创建 ｜ 数据存取
 
 ```json
 {
-  "api_key": "d58f2d36656e75ff60279cfc5d294e2a42b904e3",
   "label": "MyPhone",
   "permissions": [
-    "create",
     "read",
-    "update",
-    "delete",
-    "list"
+    "write"
   ],
-  "master": false,
+  "global": false,
   "resources": [
     {
       "product_id": "951355e5fa56af20sa77c682",

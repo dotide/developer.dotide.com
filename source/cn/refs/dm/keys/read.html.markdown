@@ -1,10 +1,10 @@
 ---
 layout: refs/dm.cn
 current_section: keys
-title: ApiKey读取｜ 数据存取
+title: Key读取｜ 数据存取
 ---
 
-## 读取一个ApiKey
+## 读取一个Key
 
     GET /keys/:key
 

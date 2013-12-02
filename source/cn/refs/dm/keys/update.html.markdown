@@ -1,10 +1,10 @@
 ---
 layout: refs/dm.cn
 current_section: keys
-title: ApiKey更新｜ 数据存取
+title: Key更新｜ 数据存取
 ---
 
-## 更新一个ApiKey
+## 更新一个Key
 
     PUT /keys/:key
 
