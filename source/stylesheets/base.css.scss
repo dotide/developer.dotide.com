@@ -1,3 +1,5 @@
+@import "foundation/variables";
+
 a.th{
   margin: 10px;
 }
@@ -18,4 +20,7 @@ pre{
       margin: 0;
     }
   }
+}
+.breadcrumbs > *{
+  font-size: emCalc(16px);
 }

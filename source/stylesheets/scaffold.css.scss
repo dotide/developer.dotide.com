@@ -22,35 +22,6 @@
   }
 }
 
-.main-content{
-  margin: 25px 0 25px 0;
-  .boxed-nav{
-    border-right: solid 1px #dde5e9;
-    padding-right: 20px;
-  }
-  .side-nav{
-    float: left;
-    width: 120px;
-  }
-}
-.block-list{
-  li{
-    i{
-      color: #2ba6cb;
-      font-size: 100px;
-      float: left;
-    }
-    .item-content{
-      padding-left: 120px;
-      padding-right: 35px;
-      p{
-        color: #8996a0;
-        font-size: 12.5px;
-      }
-    }
-  }
-}
-
 /* IE upgrade overlay */
 #ie-warning-overlay {
   position: absolute;
