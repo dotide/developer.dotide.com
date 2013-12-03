@@ -44,13 +44,13 @@ Dotide数据存取操作的授权有两种方式，一种是基于认证的，�
 **1)附加请求头:**
 
 ```
-$curl -H "ApiKey: KEY_KID" https://api.dotide.com/v1/products
+ApiKey: KEY_KID
 ```
 
 **2)作为请求参数**
 
 ```
-$curl https://api.dotide.com/?api_key=KEY_KID
+https://api.dotide.com/?api_key=KEY_KID
 ```
 
 其中，`KEY_KID`代表key的kid属性的值。

@@ -1,4 +1,4 @@
-@import "foundation/variables";
+@import "foundation_and_overrides";
 
 a.th{
   margin: 10px;
@@ -7,7 +7,8 @@ pre{
   overflow: auto;
 }
 .markdown{
-  margin-top: 25px;
+  margin-top: emCalc(25px);
+  margin-bottom: emCalc(25px);
   .highlight{
     border: 1px solid #cacaca;
     color: #393939;
