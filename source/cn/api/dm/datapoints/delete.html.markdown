@@ -14,16 +14,11 @@ title: 数据点删除｜ 数据存取
 | ----- | ------ | --- |
 | start | string | **必需的**。 起始时间戳。格式遵循ISO 8601标准:YYYY-MM-DDTHH:MM:SSZ。 |
 | end   | string | **必需的**。 截止时间戳。格式遵循ISO 8601标准:YYYY-MM-DDTHH:MM:SSZ。 |
-| limit | number | 要显示的结果的个数。 |
 
 **示例**
 
-```json
-{
-  "start": "2013-06-05T23:50:32Z",
-  "end": "2013-06-05T23:50:32Z",
-  "limit": 20
-}
+```
+/products/:product_id/devices/:device_serial/datastream/:datastream_name/datapoints?end=2013-06-05T23:50:32Z&start=2013-06-05T23:50:32Z
 ```
 
 ### 响应
