@@ -10,21 +10,18 @@ title: Key罗列｜ 数据存取
 
 ### 响应
 
-    200 OK
+    Status: 200 OK
 
 ```json
 [
   {
-    "api_key": "d58f2d36656e75ff60279cfc5d294e2a42b904e3",
+    "id": "51e51544fa36a48592000066",
     "label": "MyPhone",
     "permissions": [
-      "create",
       "read",
-      "update",
-      "delete",
-      "list"
+      "write"
     ],
-    "master": false,
+    "global": false,
     "resources": [
       {
         "product_id": "51355e5fa56af20sa77c682",

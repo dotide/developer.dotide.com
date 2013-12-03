@@ -6,8 +6,8 @@ title: Key删除｜ 数据存取
 
 ## 删除一个Key
 
-    DELETE /keys/:key
+    DELETE /keys/:key_id
 
 ### 响应
 
-    204 No Content
+    Status: 204 No Content

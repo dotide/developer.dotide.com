@@ -58,10 +58,12 @@ resources中单个元素的构成
 
 ### 响应
 
-    201 Created
+    Status: 201 Created
+    Location: http://api.dotide.com/v1/keys/51e51544fa36a48592000066
 
 ```json
 {
+  "id": "51e51544fa36a48592000066",
   "label": "MyPhone",
   "permissions": [
     "read",
