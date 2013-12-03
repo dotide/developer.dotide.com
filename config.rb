@@ -95,6 +95,9 @@ end
 # Build-specific configuration
 configure :build do
 
+  # Use digest for assets
+  activate :asset_hash
+
   # For example, change the Compass output style for deployment
   activate :minify_css
 
