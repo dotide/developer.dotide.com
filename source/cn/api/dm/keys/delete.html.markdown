@@ -6,7 +6,7 @@ title: Key删除｜ 数据存取
 
 ## 删除一个Key
 
-    DELETE /keys/:key_id
+    DELETE /keys/:key_kid
 
 ### 响应
 

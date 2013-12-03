@@ -15,7 +15,7 @@ title: Key罗列｜ 数据存取
 ```json
 [
   {
-    "id": "51e51544fa36a48592000066",
+    "kid": "51e51544fa36a48592000066",
     "label": "MyPhone",
     "permissions": [
       "read",

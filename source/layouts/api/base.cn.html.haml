@@ -1,0 +1,27 @@
+- wrap_layout 'api.cn' do
+  = yield
+
+  - content_for :breadcrumbs do
+    = link_to '#', :class => 'current' do
+      = 'API基础'
+
+  - content_for :sidebar do
+    .section-container.accordion{:'data-section' => 'accordion'}
+      %section.section
+        %p.title
+          = link_to '#' do
+            = 'API基础'
+        .content
+          %ul
+            %li
+              = link_to '/cn/api/base/index.html' do
+                = '调用约定'
+            %li
+              = link_to '/cn/api/base/auth.html' do
+                = '认证'
+            %li
+              = link_to '/cn/api/base/cors.html' do
+                = '调试'
+            / %li
+            /   = link_to '/cn/api/base/rating.html' do
+            /     = 'Rating Limit'

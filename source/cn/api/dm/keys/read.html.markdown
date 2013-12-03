@@ -6,7 +6,7 @@ title: Key读取｜ 数据存取
 
 ## 读取一个Key
 
-    GET /keys/:key_id
+    GET /keys/:key_kid
 
 ### 响应
 
@@ -14,7 +14,7 @@ title: Key读取｜ 数据存取
 
 ```json
 {
-  "id": "51e51544fa36a48592000066",
+  "kid": "51e51544fa36a48592000066",
   "label": "MyPhone",
   "permissions": [
     "write"
