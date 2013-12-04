@@ -7,19 +7,19 @@
 
   - content_for :sidebar do
     .section-container.accordion{:'data-section' => 'accordion'}
-      %section.section
+      %section.section.active
         %p.title
           = link_to '#' do
             = 'API基础'
         .content
           %ul
-            %li
+            %li.rules
               = link_to '/cn/api/base/index.html' do
                 = '调用约定'
-            %li
+            %li.auth
               = link_to '/cn/api/base/auth.html' do
                 = '认证'
-            %li
+            %li.debug
               = link_to '/cn/api/base/debug.html' do
                 = '调试'
             / %li

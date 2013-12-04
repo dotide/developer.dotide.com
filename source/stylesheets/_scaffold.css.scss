@@ -23,6 +23,10 @@ header{
   }
 }
 
+.top-bar{
+  margin-bottom: emCalc(25px);
+}
+
 .main{
   z-index: 0;
   position: relative;
