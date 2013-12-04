@@ -1,9 +1,18 @@
 a.th{
   margin: 10px;
 }
+a img{
+  border: none;
+}
+
+img{
+  vertical-align: middle;
+}
+
 pre{
   overflow: auto;
 }
+
 .markdown{
   margin-top: emCalc(25px);
   margin-bottom: emCalc(25px);
@@ -20,6 +29,7 @@ pre{
     }
   }
 }
+
 .breadcrumbs > *{
   font-size: emCalc(16px);
 }

@@ -27,7 +27,6 @@
   = yield_content :head
 %body
   / Logo &amp; Top Nav
-  %nav.top-bar.show-for-small
   %nav.top-bar.hide-for-small
     %ul.title-area
       %li.name
@@ -54,11 +53,32 @@
         %li.divider
         %li= link_to '返回Dotide', 'http://dotide.com'
 
-  / Main page container
-  = yield
+  %section.main
+    %header.show-for-small
+      = link_to '#sidebar', :class => 'sidebar-button show-for-small', :id => 'sidebarButton' do
+        = image_tag('menu-wht.png')
+        %h4= 'Dotide 开发者中心'
+    / Main page container
+    = yield
+    / Footer
+    = yield_content :footer
 
-  / Footer
-  = yield_content :footer
+  %aside#sidebar.hide{role: 'complementary'}
+    .main-menu.show-for-small
+      %h6= '开发者中心'
+      %nav#sideMenu{role: 'navigation'}
+        %ul#sideMainNav.nav-bar
+          %li= link_to "快速上手", '/cn/tutorial/index.html'
+          %li= link_to "使用指南", '/cn/guides/index.html'
+          %li= link_to "API", '/cn/api/index.html'
+          %li= link_to "SDK", '/cn/sdk/index.html'
+    .dotide-links.show-for-small
+      %h6= '站外链接'
+      %nav{role: 'navigation'}
+        %ul.nav-bar
+          %li= link_to "反馈建议", 'https://github.com/dotide/Feedback-cn/issues'
+          %li= link_to '本站源代码', 'https://github.com/dotide/developer.dotide.com'
+          %li= link_to '返回Dotide', 'http://dotide.com'
 
   /[if lt IE 9]
     #ie-warning-overlay
@@ -101,6 +121,17 @@
       #{yield_content :onready}
       $(document).foundation();
     });
+
+  :javascript
+    $("#sidebarButton").on( "click", function() {
+      if ($('#sidebar').hasClass('hide')) {
+        $('#sidebar').removeClass('hide');
+        $('section.main').addClass('main-offset');
+      } else {
+        $('#sidebar').addClass('hide');
+        $('section.main').removeClass('main-offset');
+      };
+      });
 
   - if build?
     -# Google Analytics
