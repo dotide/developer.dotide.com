@@ -6,10 +6,10 @@
           = 'API文档'
         = yield_content :breadcrumbs
   .row.markdown
-    .large-3.columns.sidebar
-      = yield_content :sidebar
-    .large-8.columns.large-offset-1
+    .large-8.large-offset-1.push-3.columns
       = yield
+    .large-3.pull-9.columns.sidebar
+      = yield_content :sidebar
 
   - content_for :footer do
     %footer.footer
