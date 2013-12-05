@@ -51,5 +51,10 @@ YYYY-MM-DDTHH:MM:SSZ
 | page    | number | 第几页。从1开始的整数，默认为1。 |
 | per_page| number | 每页最多包含多少元素。最大为1000，默认为100。 |
 
+示例如下：
+
+```
+http://api.dotide.com/v1/keys/:key_kid?page=2&per_page=10
+```
 
 <!-- ### CORS -->

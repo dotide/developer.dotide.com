@@ -61,7 +61,7 @@ resources中单个元素的构成
 
 ```json
 {
-  "kid": "51e51544fa36a48592000066",
+  "kid": "5b1d87bec76c6cb308e95313b29b99148f7eac5a",
   "label": "MyPhone",
   "permissions": [
     "read",
