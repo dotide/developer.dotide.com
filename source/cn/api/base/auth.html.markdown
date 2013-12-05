@@ -29,7 +29,7 @@ $curl -u "login" https://api.github.com
 
 ### Token认证
 
-Dotide的每个用户都拥有一个`secret token`，可以在Dotide站点的账户设置页看到。
+Dotide的每个用户都拥有一个`auth token`，可以在Dotide站点的账户设置页看到。
 
 使用login和token就可以实现Token认证。
 
@@ -40,7 +40,7 @@ Dotide的每个用户都拥有一个`secret token`，可以在Dotide站点的账
 在请求中包含以下请求头：
 
 ```
-Authorization: token login:SECRET-TOKEN
+Authorization: token login:AUTH-TOKEN
 ```
 
 **基于请求参数**
@@ -48,7 +48,7 @@ Authorization: token login:SECRET-TOKEN
 在请求中包含以下参数：
 
 ```
-http://api.dotide.com/v1?login=login&auth_token=SECRET-TOKEN
+http://api.dotide.com/v1?login=login&auth_token=AUTH-TOKEN
 ```
 
 [rfc2617]: http://tools.ietf.org/html/rfc2617
