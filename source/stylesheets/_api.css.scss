@@ -11,6 +11,9 @@
       background-color: $section-title-bg;
     }
   }
+  li.active{
+    font-weight: bold;
+  }
 }
 .api-index{
   margin-top: emCalc(35px);

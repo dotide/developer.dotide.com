@@ -59,11 +59,11 @@ resources中单个元素的构成
 ### 响应
 
     Status: 201 Created
-    Location: http://api.dotide.com/v1/keys/51e51544fa36a48592000066
+    Location: http://api.dotide.com/v1/keys/5b1d87bec76c6cb308e95313b29b99148f7eac5a
 
 ```json
 {
-  "kid": "51e51544fa36a48592000066",
+  "kid": "5b1d87bec76c6cb308e95313b29b99148f7eac5a",
   "label": "MyPhone",
   "permissions": [
     "read",
