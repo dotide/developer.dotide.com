@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: datapoints
-title: 数据点删除｜ 数据存取
+title: 数据点删除｜ Dotide DB
 ---
 
 ## 删除数据点

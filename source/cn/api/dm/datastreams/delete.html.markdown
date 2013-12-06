@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: datastreams
-title: 数据流删除｜ 数据存取
+title: 数据流删除｜ Dotide DB
 ---
 
 ## 删除一个数据流

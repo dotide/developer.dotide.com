@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: datastreams
-title: 数据流创建｜ 数据存取
+title: 数据流创建｜ Dotide DB
 ---
 
 ## 创建数据流

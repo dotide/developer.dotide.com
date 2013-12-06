@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: keys
-title: Key更新｜ 数据存取
+title: Key更新｜ Dotide DB
 ---
 
 ## 更新一个Key

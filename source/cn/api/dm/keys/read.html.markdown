@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: keys
-title: Key读取｜ 数据存取
+title: Key读取｜ Dotide DB
 ---
 
 ## 读取一个Key

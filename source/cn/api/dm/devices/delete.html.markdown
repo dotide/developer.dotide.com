@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: devices
-title: 设备删除 ｜ 数据存取
+title: 设备删除 ｜ Dotide DB
 ---
 
 ## 删除一个设备

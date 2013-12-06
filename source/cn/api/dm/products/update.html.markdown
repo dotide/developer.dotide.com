@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: products
-title: 产品更新 ｜ 数据存取
+title: 产品更新 ｜ Dotide DB
 ---
 
 ## 更新一个产品

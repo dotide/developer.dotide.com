@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: devices
-title: 设备创建 ｜ 数据存取
+title: 设备创建 ｜ Dotide DB
 ---
 
 ## 创建设备

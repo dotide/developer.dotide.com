@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: devices
-title: 设备罗列 ｜ 数据存取
+title: 设备罗列 ｜ Dotide DB
 ---
 
 ## 列出所有设备

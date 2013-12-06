@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: keys
-title: Key 创建 ｜ 数据存取
+title: Key 创建 ｜ Dotide DB
 ---
 
 ## 创建一个Key

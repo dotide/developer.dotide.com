@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: keys
-title: Key删除｜ 数据存取
+title: Key删除｜ Dotide DB
 ---
 
 ## 删除一个Key

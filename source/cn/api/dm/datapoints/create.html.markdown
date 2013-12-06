@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: datapoints
-title: 数据点创建｜ 数据存取
+title: 数据点创建｜ Dotide DB
 ---
 
 ## 创建数据点

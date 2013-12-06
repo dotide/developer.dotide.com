@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: devices
-title: 设备更新 ｜ 数据存取
+title: 设备更新 ｜ Dotide DB
 ---
 
 ## 更新一个设备

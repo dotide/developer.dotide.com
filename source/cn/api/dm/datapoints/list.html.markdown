@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: datapoints
-title: 数据点罗列｜ 数据存取
+title: 数据点罗列｜ Dotide DB
 ---
 
 ## 列出所有数据点

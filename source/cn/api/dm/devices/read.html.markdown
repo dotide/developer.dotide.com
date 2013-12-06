@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: devices
-title: 设备读取 ｜ 数据存取
+title: 设备读取 ｜ Dotide DB
 ---
 
 ## 读取一个设备

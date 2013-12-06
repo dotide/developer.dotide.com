@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: datastreams
-title: 数据流更新｜ 数据存取
+title: 数据流更新｜ Dotide DB
 ---
 
 ## 更新一个数据流

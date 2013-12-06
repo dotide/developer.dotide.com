@@ -1,7 +1,7 @@
 ---
 layout: api/dm.cn
 current_section: products
-title: 产品创建 ｜ 数据存取
+title: 产品创建 ｜ Dotide DB
 ---
 
 ## 创建一个产品
