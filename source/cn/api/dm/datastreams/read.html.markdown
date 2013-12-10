@@ -21,7 +21,7 @@ title: 数据流读取｜ Dotide DB
   "properties": {
     "unit_name": "摄氏度",
     "unit_symbol": "C",
-  }
+  },
   "current_value": 20,
   "tags": ["temperature"],
   "updated_at": "2013-07-13T15:31:22Z"
