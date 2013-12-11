@@ -33,7 +33,7 @@ title: 创建 ｜ 触发器
     "headers": {
       "user-agent": "Dotide"
     }
-  }
+  },
   "edge": true,
   "product_id": "51355e5fa56af20sa77c682",
   "device_serial": "516498",
@@ -57,7 +57,7 @@ title: 创建 ｜ 触发器
     "headers": {
       "user-agent": "Dotide"
     }
-  }
+  },
   "edge": true,
   "product_id": "51355e5fa56af20sa77c682",
   "device_serial": "516498",
