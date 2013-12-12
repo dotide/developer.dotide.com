@@ -25,6 +25,8 @@ title: 读取｜ 触发器
     }
   },
   "edge": true,
+  "active": true,
+  "triggered": true,
   "product_id": "51355e5fa56af20sa77c682",
   "device_serial": "516498",
   "datastream_name": "demostream"
