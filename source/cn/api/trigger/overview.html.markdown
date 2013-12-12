@@ -35,19 +35,19 @@ POST的body包含相应的产品，设备，数据流，数据点和触发器的
 ```json
 {
   "product": {
-    ...
+    "xxx": "xxx"
   },
   "device": {
-    ...
+    "xxx": "xxx"
   },
   "datastream": {
-    ...
+    "xxx": "xxx"
   },
   "datapoint": {
-    ...
+    "xxx": "xxx"
   },
   "trigger": {
-    ...
+    "xxx": "xxx"
   }
 }
 ```

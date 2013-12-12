@@ -40,6 +40,8 @@ title: 罗列｜ 触发器
       }
     },
     "edge": true,
+    "active": true,
+    "triggered": false,
     "product_id": "51355e5fa56af20sa77c682",
     "device_serial": "516498",
     "datastream_name": "demostream"

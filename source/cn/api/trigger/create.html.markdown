@@ -20,6 +20,7 @@ title: 创建 ｜ 触发器
 | action          | string | **必需的**。执行的动作。|
 | config          | object | **必需的**。动作的配置。|
 | edge            | boolean| 是否边缘触发。默认为true。|
+| active          | boolean| 是否启用触发器。默认为true。|
 
 **示例**
 
@@ -35,6 +36,7 @@ title: 创建 ｜ 触发器
     }
   },
   "edge": true,
+  "active": true,
   "product_id": "51355e5fa56af20sa77c682",
   "device_serial": "516498",
   "datastream_name": "demostream"
@@ -59,6 +61,8 @@ title: 创建 ｜ 触发器
     }
   },
   "edge": true,
+  "active": true,
+  "triggered": false,
   "product_id": "51355e5fa56af20sa77c682",
   "device_serial": "516498",
   "datastream_name": "demostream"
