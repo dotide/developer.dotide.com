@@ -6,7 +6,7 @@ title: 数据点删除｜ Dotide DB
 
 ## 删除数据点
 
-    DELETE /products/:product_id/devices/:device_serial/datastream/:datastream_name/datapoints
+    DELETE /datastreams/:datastream_id
 
 ### 参数
 
@@ -18,7 +18,7 @@ title: 数据点删除｜ Dotide DB
 **示例**
 
 ```
-/products/:product_id/devices/:device_serial/datastream/:datastream_name/datapoints?end=2013-06-05T23:50:32Z&start=2013-06-05T23:50:32Z
+/datastreams/:datastream_id/datapoints?end=2013-06-05T23:50:32Z&start=2013-06-05T23:50:32Z
 ```
 
 ### 响应
