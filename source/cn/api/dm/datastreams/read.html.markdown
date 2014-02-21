@@ -6,7 +6,7 @@ title: 数据流读取｜ Dotide DB
 
 ## 读取一个数据流
 
-    GET /datastreams/:datastream_id
+    GET /datastreams/:id
 
 ### 响应
 

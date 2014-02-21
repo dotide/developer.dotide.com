@@ -6,7 +6,7 @@ title: 数据点删除｜ Dotide DB
 
 ## 删除数据点
 
-    DELETE /datastreams/:datastream_id
+    DELETE /datastreams/:id
 
 ### 参数
 

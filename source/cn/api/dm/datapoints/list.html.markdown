@@ -6,7 +6,7 @@ title: 数据点罗列｜ Dotide DB
 
 ## 列出所有数据点
 
-    GET /datastreams/:datastream_id/datapoints
+    GET /datastreams/:id/datapoints
 
 ### 参数
 

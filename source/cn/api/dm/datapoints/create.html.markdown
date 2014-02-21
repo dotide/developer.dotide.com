@@ -6,7 +6,7 @@ title: 数据点创建｜ Dotide DB
 
 ## 创建数据点
 
-    POST /datastreams/:datastream_id/datapoints
+    POST /datastreams/:id/datapoints
 
 ### 输入
 

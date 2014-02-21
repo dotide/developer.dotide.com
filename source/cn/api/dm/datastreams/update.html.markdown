@@ -6,7 +6,7 @@ title: 数据流更新｜ Dotide DB
 
 ## 更新一个数据流
 
-    PUT /datastreams/:datastream_name
+    PUT /datastreams/:id
 
 ### 输入
 
@@ -17,7 +17,6 @@ title: 数据流更新｜ Dotide DB
 | type       | string | 类型。储存到该数据流的数据点的类型，当类型为"number"或"geopoint"时并且数据点符合对应要求(见[datapoint][datapoint])时，可以在Dotide站点上直接以图表或地图的形式展现数据。 |
 | tags       | string（array）  | 标签。一组用来分类，描述的词汇。请用逗号分隔，如“temperature，demo”。 |
 | attributes | string   | 属性。用来自定义数据流的一些属性。 |
-| public     | boolean | 权限标志，标志该条数据流为公有还是私有（“0”为私有，“1”为公有）。 |
 
 **示例**
 
