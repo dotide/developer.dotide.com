@@ -6,7 +6,7 @@ title: 数据流删除｜ Dotide DB
 
 ## 删除一个数据流
 
-    DELETE /products/:product_id/devices/:device_serial/datastreams/:datastream_name
+    DELETE /datastreams/:id
 
 ### 响应
 
