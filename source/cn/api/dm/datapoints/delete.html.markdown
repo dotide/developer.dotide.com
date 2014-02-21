@@ -18,7 +18,7 @@ title: 数据点删除｜ Dotide DB
 **示例**
 
 ```
-/datastreams/:datastream_id/datapoints?end=2013-06-05T23:50:32Z&start=2013-06-05T23:50:32Z
+/datastreams/:id/datapoints?end=2013-06-05T23:50:32Z&start=2013-06-05T23:50:32Z
 ```
 
 ### 响应

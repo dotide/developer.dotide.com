@@ -27,7 +27,7 @@ title: 数据点罗列｜ Dotide DB
 **示例**
 
 ```
-/datastreams/:datastream_id/datapoints?end=2014-01-03T01:00:00Z&order=desc&start=2014-01-03T00:00:00Z
+/datastreams/:id/datapoints?end=2014-01-03T01:00:00Z&order=desc&start=2014-01-03T00:00:00Z
 ```
 
 ### 响应
