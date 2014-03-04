@@ -8,6 +8,5 @@ gem "middleman-syntax"
 gem "middleman-deploy"
 gem "middleman-smusher"
 
-gem "zurb-foundation", '~> 4.3.0', require: false
 gem "sitemap_generator"
 gem "redcarpet"
