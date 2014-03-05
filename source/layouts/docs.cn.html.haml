@@ -1,0 +1,20 @@
+- wrap_layout :cn do
+  .row
+    %dl.sub-nav
+      %dt= '文档:'
+      %dd.nav-guides
+        %a{href: '/cn/docs/guides/index.html'}= 'API使用指南'
+      %dd.nav-refs
+        %a{href: '/cn/docs/refs/index.html'}= 'API参考手册'
+      %dd.nav-libraries
+        %a{href: '/cn/docs/libraries/index.html'}= 'SDK'
+    %hr/
+  .row.main-content
+    .large-3.columns.hide-for-small.sidebar
+      = yield_content :sidebar
+    .large-8.small-12.columns
+      = yield
+
+  - content_for :javascripts do
+    :javascript
+      $('li.nav-docs').addClass('active');
