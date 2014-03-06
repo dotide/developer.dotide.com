@@ -46,4 +46,6 @@
   - content_for :javascripts do
     :javascript
       $('dd.nav-guides').addClass('active');
+      $("##{current_page.data.section}").addClass('active');
+      $("##{current_page.data.section}").parent().addClass('active');
       $("li.nav-#{current_page.data.page}").addClass('active');

@@ -1,0 +1,96 @@
+---
+layout: docs.cn
+title: 文档
+---
+
+.row.block-guides
+  .large-12.columns
+    %h3= 'API使用指南'
+    %h3#guides-basics
+      %small
+        %i.fa.fa-book
+        = '开发基础'
+    %ul.inline-list
+      %li
+        %a{href: '/cn/docs/guides/basics/concepts.html'}= "关键概念"
+      %li
+        %a{href: '/cn/docs/guides/basics/programming-model.html'}= "编程模型"
+      %li
+        %a{href: '/cn/docs/guides/basics/security.html'}= "安全机制"
+    %h3#guides-data
+      %small
+        %i.fa.fa-book
+        = '数据存取'
+    %ul.inline-list
+      %li
+        %a{href: '/cn/docs/guides/data/database.html'}= "数据库"
+      %li
+        %a{href: '/cn/docs/guides/data/datastream.html'}= "数据流"
+      %li
+        %a{href: '/cn/docs/guides/data/datapoint.html'}= "数据点"
+    %hr/
+.row.block-guides
+  .large-12.columns
+    %h3= 'API参考手册'
+    %h3#refs-auth
+      %small
+        %i.fa.fa-book
+        = '认证与授权'
+    %ul.inline-list
+      %li
+        %a{href: '/cn/docs/refs/auth/basic.html'}= "Basic"
+      %li
+        %a{href: '/cn/docs/refs/auth/oauth.html'}= "OAuth"
+    %h3#refs-data
+      %small
+        %i.fa.fa-book
+        = '数据存取'
+    %ul.inline-list
+      %li
+        %a{href: '/cn/docs/refs/data/datastream.html'}= "数据流"
+      %li
+        %a{href: '/cn/docs/refs/data/datapoint.html'}= "数据点"
+    %hr/
+.row.block-guides
+  .large-12.columns
+    %h3= 'SDK'
+    %h3#libraries-official
+      %small
+        %i.fa.fa-book
+        = '官方'
+    %ul.inline-list
+      %li
+        %a{href: '/cn/docs/libraries/ruby.html'}= "Ruby"
+    %h3#libraries-community
+      %small
+        %i.fa.fa-book
+        = '社区'
+    %ul.inline-list
+    %hr/
+
+- content_for :sidebar do
+  %dl.accordion{:'data-accordion' => true}
+    %dd
+      %a{href: '#guides'}= 'API使用指南'
+      #guides.content
+        %ul.side-nav
+          %li
+            %a{href: '#guides-basics'}= "开发基础"
+          %li
+            %a{href: '#guides-data'}= "数据存取"
+    %dd
+      %a{href: '#refs'}= 'API参考手册'
+      #refs.content
+        %ul.side-nav
+          %li
+            %a{href: '#refs-auth'}= "认证与授权"
+          %li
+            %a{href: '#refs-data'}= "数据存取"
+    %dd
+      %a{href: '#libraries'}= 'SDK'
+      #libraries.content
+        %ul.side-nav
+          %li
+            %a{href: '#libraries-official'}= "官方"
+          %li
+            %a{href: '#libraries-community'}= "社区"

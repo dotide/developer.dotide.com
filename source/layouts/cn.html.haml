@@ -38,7 +38,7 @@
         %section.top-bar-section
           %ul.right
             %li.nav-home
-              %a{href: '/cn/index.html'}= "首页"
+              %a{href: '/cn/index.html'}= "中心首页"
             %li.nav-docs
               %a{href: '/cn/docs/index.html'}= "文档"
             %li.nav-changelog
@@ -90,7 +90,7 @@
                 %a{href: 'http://dotide.com'}= "© #{Date.today.year} Dotide"
               %li
                 %a{href: 'http://www.miibeian.gov.cn'}= '苏ICP备12071270号'
-    %a.exit-off-canvas
+      %a.exit-off-canvas
 
   /[if lt IE 9]
     #ie-warning-overlay
@@ -124,12 +124,12 @@
 
   / Javascript
   = javascript_include_tag "application"
+  = yield_content :javascripts
   :javascript
     $(document).ready(function () {
       #{yield_content :onready}
       $(document).foundation();
     });
-  = yield_content :javascripts
 
   - if build?
     -# Google Analytics
