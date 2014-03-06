@@ -1,0 +1,43 @@
+- wrap_layout 'docs.cn' do
+  = yield
+
+  - content_for :sidebar do
+    %dl.accordion{:'data-accordion' => true}
+      %dd
+        %a{href: '#auth'}= '认证与授权'
+        #auth.content
+          %ul.side-nav
+            %li.nav-basic-auth
+              %a{href: '/cn/docs/refs/auth/basic-auth.html'}= "Basic Auth"
+            %li.nav-programming-model
+              %a{href: '/cn/docs/refs/auth/oauth.html'}= "OAuth"
+      %dd
+        %a{href: '#data'}= '数据存取'
+        #data.content
+          %ul.side-nav
+            %li.nav-datastream
+              %a{href: '/cn/docs/refs/data/datastream.html'}= "数据流"
+            %li.nav-datapoint
+              %a{href: '/cn/docs/refs/data/datapoint.html'}= "数据点"
+
+  - content_for :second_nav do
+    %ul.off-canvas-list
+      %li
+        %label= '认证与授权'
+      %li.nav-basic-auth
+        %a{href: '/cn/docs/refs/auth/basic-auth.html'}= "Basic Auth"
+      %li.nav-programming-model
+        %a{href: '/cn/docs/refs/auth/oauth.html'}= "OAuth"
+      %li
+        %label= '数据存取'
+      %li.nav-datastream
+        %a{href: '/cn/docs/refs/data/datastream.html'}= "数据流"
+      %li.nav-datapoint
+        %a{href: '/cn/docs/refs/data/datapoint.html'}= "数据点"
+
+  - content_for :javascripts do
+    :javascript
+      $('dd.nav-refs').addClass('active');
+      $("##{current_page.data.section}").addClass('active');
+      $("##{current_page.data.section}").parent().addClass('active');
+      $("li.nav-#{current_page.data.page}").addClass('active');

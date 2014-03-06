@@ -1,0 +1,31 @@
+- wrap_layout 'docs.cn' do
+  = yield
+
+  - content_for :sidebar do
+    %dl.accordion{:'data-accordion' => true}
+      %dd
+        %a{href: '#official'}= '官方'
+        #official.content
+          %ul.side-nav
+            %li.nav-ruby
+              %a{href: '/cn/docs/libraries/ruby.html'}= "Ruby"
+      %dd
+        %a{href: '#community'}= '社区'
+        #community.content
+          %ul.side-nav
+
+  - content_for :second_nav do
+    %ul.off-canvas-list
+      %li
+        %label= '官方'
+      %li.nav-ruby
+        %a{href: '/cn/docs/libraries/ruby.html'}= "Ruby"
+      %li
+        %label= '社区'
+
+  - content_for :javascripts do
+    :javascript
+      $('dd.nav-libraries').addClass('active');
+      $("##{current_page.data.section}").addClass('active');
+      $("##{current_page.data.section}").parent().addClass('active');
+      $("li.nav-#{current_page.data.page}").addClass('active');
