@@ -1,5 +1,11 @@
 - wrap_layout 'docs.cn' do
-  = yield
+  %h1= current_page.data.title
+  - if current_page.data.outlines
+    %ul
+      - current_page.data.outlines.each_with_index do |o, i|
+        %li
+          %a{href: "#para-#{i}"}= o
+  .markdown= yield
 
   - content_for :sidebar do
     %dl.accordion{:'data-accordion' => true}
@@ -41,3 +47,8 @@
       $("##{current_page.data.section}").addClass('active');
       $("##{current_page.data.section}").parent().addClass('active');
       $("li.nav-#{current_page.data.page}").addClass('active');
+      $('.markdown h2').each(function(idx) {
+        $(this).prepend('<i class="fa fa-bookmark-o"></i>');
+        $(this).addClass('subheader');
+        return $(this).attr('id', "para-" + idx);
+      });
