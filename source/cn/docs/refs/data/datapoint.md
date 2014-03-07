@@ -90,11 +90,9 @@ POST /datastreams/:id/datapoints
 | 名称  | 类型    | 说明 |
 | ----- | ------ | ------------------------------------------------------ |
 | t     | string | **必需[注1]**。 时间戳。格式遵循ISO 8601标准:YYYY-MM-DDTHH:MM:SSZ。 |
-| v     | string/number/object(GeoJSON) | **必需[注2]**。 数据点的值。例如：number`20.5`，string`"something"`，object(GeoJSON)(详见示例)。 |
+| v     | string/number/object(GeoJSON) | **必需**。 数据点的值。例如：number`20.5`，string`"something"`，object(GeoJSON)(详见示例)。 |
 
 *注1：*当创建单个数据点的时候，可以没有`t`值。这样意味着以接受到该请求的时刻作为该数据点的`t`值。
-
-*注2：*如果`v`为数值型，或者符合[GeoJSON][geojson]格式并且是Point类型的Feature(如下面示例所示)，则可以在Dotide站点上直接以图表或地图的形式展现数据。
 
 **示例(number)**
 
@@ -244,8 +242,7 @@ POST /datastreams/:id/datapoints
 ## 删除数据点
 
 ```
-DELETE /datastreams/:id
-
+DELETE /datastreams/:id/datapoints
 
 注：:id为所属数据流的id。
 ```
