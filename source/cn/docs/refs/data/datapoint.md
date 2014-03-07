@@ -12,18 +12,19 @@ outlines:
 
 ## 权限验证
 
-数据流操作支持[Basic Auth][basic_auth]和[OAuth][oauth]两种形式
+数据流操作支持[Basic Auth][auth]和[OAuth][auth]两种形式
 
 ## 查询数据点
 
 ```
 GET /datastreams/:id/datapoints
+
+注：:id为所属数据流的id。
 ```
 
 ### 参数
 | 名称        | 类型    | 说明 |
 | ---------- | ------ | ------------------------------------------------------ |
-| id         | string | 所属数据流的id。 |
 | start      | string | 起始时间戳。格式遵循ISO 8601标准:YYYY-MM-DDTHH:MM:SSZ。 |
 | end        | string | 截止时间戳。格式遵循ISO 8601标准:YYYY-MM-DDTHH:MM:SSZ。 |
 | order      | string | 结果的排序方式。值可以为"asc"(从旧到新)或者"desc"(从新到旧)。`order`默认为"desc" |
@@ -75,3 +76,193 @@ Status: 200 OK
   }
 }
 ```
+
+## 创建数据点
+
+```
+POST /datastreams/:id/datapoints
+
+注：:id为所属数据流的id。
+```
+
+### 输入
+
+| 名称  | 类型    | 说明 |
+| ----- | ------ | ------------------------------------------------------ |
+| t     | string | **必需[注1]**。 时间戳。格式遵循ISO 8601标准:YYYY-MM-DDTHH:MM:SSZ。 |
+| v     | string/number/object(GeoJSON) | **必需**。 数据点的值。例如：number`20.5`，string`"something"`，object(GeoJSON)(详见示例)。 |
+
+*注1：*当创建单个数据点的时候，可以没有`t`值。这样意味着以接受到该请求的时刻作为该数据点的`t`值。
+
+**示例(number)**
+
+`创建单个数据点:`
+
+```json
+{
+  "t": "2013-06-05T23:50:32Z",
+  "v": 20
+}
+```
+
+`创建多个数据点:`
+
+```json
+[
+  {
+    "t": "2013-06-05T23:53:32Z",
+    "v": 25
+  },
+  {
+    "t": "2013-06-05T23:55:60Z",
+    "v": 27
+  }
+]
+```
+
+### 响应
+
+`创建单个数据点:`
+
+    Status: 201 Created
+
+```json
+{
+  "t": "2013-06-05T23:50:32Z",
+  "v": 20
+}
+```
+
+`创建多个数据点:`
+
+    Status: 201 Created
+    
+```json
+[
+  {
+    "t": "2013-06-05T23:53:32Z",
+    "v": 25
+  },
+  {
+    "t": "2013-06-05T23:55:60Z",
+    "v": 27
+  }
+]
+
+```
+
+**示例(object(GeoJSON))**
+
+`创建单个数据点:`
+
+```json
+{
+  "t": "2013-06-05T23:57:32Z",
+  "v": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [118.82, 31.89]
+    }
+  }
+}
+```
+
+`创建多个数据点:`
+
+```json
+[{
+  "t": "2013-06-05T23:58:32Z",
+  "v": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [119.32, 32.04]
+    }
+  }
+},
+  {
+  "t": "2013-06-05T23:59:32Z",
+  "v": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [119.87, 32.36]
+    }
+  }
+}]
+
+```
+
+### 响应
+
+`创建单个数据点:`
+
+    Status: 201 Created
+
+```json
+{
+  "t": "2013-06-05T23:57:32Z",
+  "v": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [118.82, 31.89]
+    }
+  }
+}
+```
+
+`创建多个数据点:`
+
+```json
+[{
+  "t": "2013-06-05T23:58:32Z",
+  "v": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [119.32, 32.04]
+    }
+  }
+},
+  {
+  "t": "2013-06-05T23:59:32Z",
+  "v": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [119.87, 32.36]
+    }
+  }
+}]
+
+```
+
+## 删除数据点
+
+```
+DELETE /datastreams/:id/datapoints
+
+注：:id为所属数据流的id。
+```
+
+### 参数
+
+| 名称  | 类型 | 说明 |
+| ----- | ------ | --- |
+| start | string | **必需**。 起始时间戳。格式遵循ISO 8601标准:YYYY-MM-DDTHH:MM:SSZ。 |
+| end   | string | **必需**。 截止时间戳。格式遵循ISO 8601标准:YYYY-MM-DDTHH:MM:SSZ。 |
+
+**示例**
+
+```
+/datastreams/51e51544fa36a48592000074/datapoints?end=2013-06-05T23:59:59Z&start=2013-06-05T23:50:32Z
+```
+
+### 响应
+
+    Status: 204 No Content
+
+[auth]: /cn/docs/refs/basics/auth.html
+[geojson]: http://geojson.org/

@@ -107,7 +107,7 @@ Status: 201 OK
   "current_t": "",
   "current_v": 0,
   "created_at": "2014-01-03T00:00:00Z",
-  "updated_at": "2014-01-03T00:00:00ZZ"
+  "updated_at": "2014-01-03T00:00:00Z"
 }
 ```
 
@@ -115,12 +115,9 @@ Status: 201 OK
 
 ```
 GET /datastreams/:id
-```
 
-### 参数
-| 名称        | 类型    | 说明 |
-| ---------- | ------ | ------------------------------------------------------ |
-| id         | string | 数据流id。 |
+注：:id为数据流的id。
+```
 
 **示例**
 
@@ -145,7 +142,7 @@ Status: 200 OK
   "current_t": "",
   "current_v": 0,
   "created_at": "2014-01-03T00:00:00Z",
-  "updated_at": "2014-01-03T00:00:00ZZ"
+  "updated_at": "2014-01-03T00:00:00Z"
 }
 ```
 
@@ -153,6 +150,8 @@ Status: 200 OK
 
 ```
 PUT /datastreams/:id
+
+注：:id为数据流的id。
 ```
 
 ### 输入
@@ -193,7 +192,7 @@ Status: 200 OK
   "current_t": "",
   "current_v": 0,
   "created_at": "2014-01-03T00:00:00Z",
-  "updated_at": "2014-01-03T00:00:00ZZ"
+  "updated_at": "2014-01-03T00:00:00Z"
 }
 ```
 
@@ -201,6 +200,8 @@ Status: 200 OK
 
 ```
 DELETE /datastreams/:id
+
+注：:id为数据流的id。
 ```
 
 ### 响应
