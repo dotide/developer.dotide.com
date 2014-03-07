@@ -12,7 +12,7 @@ outlines:
 
 ## 权限验证
 
-数据流操作支持[Basic Auth][auth]和[OAuth][auth]两种形式
+数据流操作支持[Basic Auth][auth]和[Access Token][auth]两种方式
 
 ## 查询数据点
 
@@ -136,7 +136,7 @@ POST /datastreams/:id/datapoints
 `创建多个数据点:`
 
     Status: 201 Created
-    
+
 ```json
 [
   {

@@ -14,7 +14,7 @@ outlines:
 
 ## 权限验证
 
-数据流操作支持[Basic Auth][auth]和[OAuth][auth]两种形式
+数据流操作支持[Basic Auth][auth]和[Access Token][auth]两种方式
 
 ## 罗列数据流
 
