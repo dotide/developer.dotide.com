@@ -14,7 +14,7 @@ outlines:
 
 ## 权限验证
 
-数据流操作支持[Basic Auth][auth]和[OAuth][auth]两种形式
+数据流操作支持[Basic Auth][basic_auth]和[OAuth][oauth]两种形式
 
 ## 罗列数据流
 
@@ -107,7 +107,7 @@ Status: 201 OK
   "current_t": "",
   "current_v": 0,
   "created_at": "2014-01-03T00:00:00Z",
-  "updated_at": "2014-01-03T00:00:00ZZ"
+  "updated_at": "2014-01-03T00:00:00Z"
 }
 ```
 
@@ -115,12 +115,9 @@ Status: 201 OK
 
 ```
 GET /datastreams/:id
-```
 
-### 参数
-| 名称        | 类型    | 说明 |
-| ---------- | ------ | ------------------------------------------------------ |
-| id         | string | 数据流id。 |
+注：:id为数据流的id。
+```
 
 **示例**
 
@@ -145,7 +142,7 @@ Status: 200 OK
   "current_t": "",
   "current_v": 0,
   "created_at": "2014-01-03T00:00:00Z",
-  "updated_at": "2014-01-03T00:00:00ZZ"
+  "updated_at": "2014-01-03T00:00:00Z"
 }
 ```
 
@@ -153,6 +150,8 @@ Status: 200 OK
 
 ```
 PUT /datastreams/:id
+
+注：:id为数据流的id。
 ```
 
 ### 输入
@@ -193,7 +192,7 @@ Status: 200 OK
   "current_t": "",
   "current_v": 0,
   "created_at": "2014-01-03T00:00:00Z",
-  "updated_at": "2014-01-03T00:00:00ZZ"
+  "updated_at": "2014-01-03T00:00:00Z"
 }
 ```
 
@@ -201,6 +200,8 @@ Status: 200 OK
 
 ```
 DELETE /datastreams/:id
+
+注：:id为数据流的id。
 ```
 
 ### 响应
@@ -209,5 +210,6 @@ DELETE /datastreams/:id
 Status: 204 No Content
 ```
 
-[auth]: /cn/docs/refs/basics/auth.html
+[basic_auth]: /cn/docs/refs/auth/basic-auth.html
+[oauth]: /cn/docs/refs/auth/oauth.html
 [database]: /cn/docs/guides/data/database.html
