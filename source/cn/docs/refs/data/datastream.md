@@ -14,7 +14,7 @@ outlines:
 
 ## 权限验证
 
-数据流操作支持[Basic Auth][basic_auth]和[OAuth][oauth]两种形式
+数据流操作支持[Basic Auth][auth]和[OAuth][auth]两种形式
 
 ## 罗列数据流
 
@@ -209,6 +209,5 @@ DELETE /datastreams/:id
 Status: 204 No Content
 ```
 
-[basic_auth]: /cn/docs/refs/auth/basic-auth.html
-[oauth]: /cn/docs/refs/auth/oauth.html
+[auth]: /cn/docs/refs/basics/auth.html
 [database]: /cn/docs/guides/data/database.html
