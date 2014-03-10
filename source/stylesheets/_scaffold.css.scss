@@ -1,0 +1,20 @@
+pre{
+  overflow: auto;
+}
+
+.markdown{
+  margin-top: emCalc(25px);
+  margin-bottom: emCalc(25px);
+  .highlight{
+    border: 1px solid #cacaca;
+    color: #393939;
+    margin-bottom: 10px;
+    padding: 10px;
+    line-height: 1;
+    background-color: #fafafb;
+    background-clip: padding-box;
+    p{
+      margin: 0;
+    }
+  }
+}
