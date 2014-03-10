@@ -1,0 +1,24 @@
+.sub-nav-bar{
+  margin-top: 20px;
+  .large-7{
+    a{
+      font-size: 21px;
+      color: $gray-darker;
+      &:hover{
+        color: black;
+      }
+    }
+  }
+  .sub-nav{
+    margin: 0;
+    dd{
+      margin-bottom: 3px;
+      &.active a{
+        background-color: white;
+        color: black;
+        border-radius: 0;
+        border-bottom: solid 3px $gray-border;
+      }
+    }
+  }
+}
