@@ -1,3 +1,29 @@
+.top-bar{
+  .title-area{
+    i{
+      font-size: 33px;
+      line-height: 45px;
+      color: $gray-darker;
+      &:hover{
+        color: black;
+      }
+    }
+    span{
+      font-weight: bold;
+    }
+  }
+  section .left{
+    line-height: 45px;
+    margin-left: 0;
+    font-weight: bold;
+    a{
+      color: $gray-darker;
+      &:hover{
+        color: black;
+      }
+    }
+  }
+}
 .sub-nav-bar{
   margin-top: 20px;
   .large-7{

@@ -33,8 +33,12 @@
           %li.name
             %h1
               %a{href: '/cn/index.html'}
-                = image_tag('logo.png')
-                开发者中心
+                %i{:"data-icon" => 'a'}
+        %section
+          %ul.left
+            %li
+              %a{:href => "/cn/index.html"}
+                = "开发者中心"
         %section.top-bar-section
           %ul.right
             %li.nav-docs

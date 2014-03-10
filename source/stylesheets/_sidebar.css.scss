@@ -1,0 +1,32 @@
+.sidebar{
+  .accordion dd{
+    border: solid 1px white;
+    a{
+      background-color: $gray-bg;
+      padding: 8px;
+      padding-left: 20px;
+      &:hover{
+        background-color: $gray-dark-bg;
+      }
+    }
+    .side-nav{
+      padding: 0;
+      a{
+        background-color: white;
+        padding: 4px;
+        border-bottom: solid 1px $gray-border;
+        color: $gray-darker;
+        padding-left: 10px;
+        &:hover{
+          color: black;
+        }
+      }
+      li.active{
+        a{
+          color: $blue-dark;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}
