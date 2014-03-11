@@ -1,9 +1,8 @@
 - wrap_layout :cn do
-  .row
-    %h3
-      %small
-        %a{href: '/cn/docs/index.html'}= '文档首页:'
-    %dl.sub-nav
+  .row.sub-nav-bar
+    .large-7.columns
+      %a{href: '/cn/docs/index.html'}= '文档'
+    %dl.sub-nav.large-5.columns
       %dd.nav-guides
         %a{href: '/cn/docs/guides/index.html'}= 'API使用指南'
       %dd.nav-refs
