@@ -1,14 +1,16 @@
 .main-content .large-9{
-  h1{
+  background-color: white;
+  & > h1{
     font-size: 20px;
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
   }
   .block-guides{
-    background-color: $gray-bg;
+    background-color: white;
     margin-bottom: 15px;
-    padding-top: 10px;
+    margin-top: 10px;
     h1{
       font-size: 1.2em;
+      margin: 0 0 10px 0;
     }
     h3{
       color: $gray-darker;

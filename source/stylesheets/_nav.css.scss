@@ -40,7 +40,7 @@
     dd{
       margin-bottom: 3px;
       &.active a{
-        background-color: white;
+        background-color: $gray-bg;
         color: black;
         border-radius: 0;
         border-bottom: solid 4px $gray-border;

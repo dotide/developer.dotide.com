@@ -1,13 +1,16 @@
-pre{
-  overflow: auto;
+body{
+  background-color: $gray-bg;
 }
 .toc{
   font-size: 14px;
   li{
     list-style-type: lower-roman;
-  }
-  a:hover{
-    text-decoration: underline;
+    a{
+      color: $blue;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
   }
 }
 .gray-bg{

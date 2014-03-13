@@ -1,13 +1,11 @@
 - wrap_layout 'docs.cn' do
   - if current_page.data.page != 'index'
-    .gray-bg
-      %h1= current_page.data.title
+    %h1= current_page.data.title
   - if current_page.data.outlines
-    .gray-bg
-      %ul.toc
-        - current_page.data.outlines.each_with_index do |o, i|
-          %li
-            %a{href: "#para-#{i}"}= o
+    %ul.toc
+      - current_page.data.outlines.each_with_index do |o, i|
+        %li
+          %a{href: "#para-#{i}"}= o
   - if content_for? :raw_content
     = yield_content :raw_content
   - else
