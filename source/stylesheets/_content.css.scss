@@ -1,0 +1,28 @@
+.main-content .large-9{
+  h1{
+    font-size: 20px;
+    margin: 0 0 10px 0;
+  }
+  .block-guides{
+    background-color: $gray-bg;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    h1{
+      font-size: 1.2em;
+    }
+    h3{
+      color: $gray-darker;
+      border-top: solid 1px $gray-border;
+      width: 100%;
+      padding-top: 5px;
+    }
+    ul{
+      li a{
+        font-size: 14px;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
