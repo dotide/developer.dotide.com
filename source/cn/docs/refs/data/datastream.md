@@ -101,8 +101,8 @@ POST /datastreams
 ### 响应
 
 ```
-Status: 201 OK
-Location: http://api.dotide.com/v1/demo/datastreams/51e51544fa36a48592000074
+Status: 201 Created
+Location: https://api.dotide.com/v1/demo/datastreams/51e51544fa36a48592000074
 ```
 
 ```json
