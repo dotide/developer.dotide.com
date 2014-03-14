@@ -6,7 +6,7 @@ body{
   li{
     list-style-type: lower-roman;
     a{
-      color: $blue;
+      color: $blue-dark1;
       &:hover{
         text-decoration: underline;
       }
@@ -18,9 +18,10 @@ body{
   background-color: $gray-bg;
 }
 a{
-  color: $blue;
+  color: $blue-dark1;
   &:hover{
-    color: $blue-dark;
+    color: $blue-dark3;
+    text-decoration: underline;
   }
 }
 .remove-border{

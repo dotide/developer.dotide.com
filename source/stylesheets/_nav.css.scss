@@ -1,35 +1,41 @@
 .top-bar{
+  a:hover{
+    text-decoration: none;
+  }
   .title-area{
-    i{
-      font-size: 33px;
-      line-height: 45px;
-      color: $gray-darker;
-      &:hover{
-        color: black;
-      }
+    a{
+      padding-right: 5px !important;
     }
-    span{
-      font-weight: bold;
+    i{
+      font-size: 30px;
+      line-height: 45px;
+      color: white;
+      &:hover{
+        color: $white-dark;
+      }
     }
   }
   section .left{
     line-height: 45px;
     margin-left: 0;
-    font-weight: bold;
     a{
-      color: $gray-darker;
+      color: white;
       &:hover{
-        color: black;
+        color: $white-dark;
       }
     }
   }
 }
 .sub-nav-bar{
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  a:hover{
+    text-decoration: none;
+  }
   .large-7{
     a{
       font-size: 21px;
-      color: $gray-darker;
+      color: $gray-dark2;
       &:hover{
         color: black;
       }

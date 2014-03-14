@@ -1,31 +1,38 @@
-.sidebar{
-  .accordion dd{
-    border: solid 5px $gray-bg;
+.sidebar dd{
+  & > a{
+    border-bottom: solid 1px $gray-light-border;
+  }
+  &:last-child a{
+    border: none;
+  }
+  &.active > a{
+    border-bottom: solid 1px $gray-border;
+  }
+  a{
+    background-color: $gray-dark1-bg;
+    padding: 8px;
+    padding-left: 20px;
+    &:hover{
+      text-decoration: none;
+      background-color: $gray-dark2-bg;
+    }
+  }
+  .side-nav{
+    padding: 0;
     a{
       background-color: white;
-      padding: 8px;
-      padding-left: 20px;
+      width: 70%;
+      padding: 4px;
+      padding-left: 10px;
       &:hover{
-        background-color: $gray-dark-bg;
+        color: $blue-dark3;
+        font-weight: bold;
+        text-decoration: none;
       }
     }
-    .side-nav{
-      padding: 0;
+    li.active{
       a{
-        background-color: white;
-        padding: 4px;
-        border-bottom: solid 1px $gray-border;
-        color: $gray-darker;
-        padding-left: 10px;
-        &:hover{
-          color: black;
-        }
-      }
-      li.active{
-        a{
-          color: $blue;
-          font-weight: bolder;
-        }
+        border-bottom: solid 1px $blue-dark1;
       }
     }
   }
