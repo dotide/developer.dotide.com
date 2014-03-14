@@ -1,6 +1,7 @@
 .sidebar dd{
   & > a{
     border-bottom: solid 1px $gray-light-border;
+    font-size: 13px;
   }
   &:last-child a{
     border: none;
@@ -21,7 +22,7 @@
     padding: 0;
     a{
       background-color: white;
-      width: 70%;
+      width: 60%;
       padding: 4px;
       padding-left: 10px;
       &:hover{
@@ -29,9 +30,13 @@
         font-weight: bold;
         text-decoration: none;
       }
+      span{
+        padding-left: 8px;
+        padding-right: 8px;
+      }
     }
     li.active{
-      a{
+      a span{
         border-bottom: solid 1px $blue-dark1;
       }
     }

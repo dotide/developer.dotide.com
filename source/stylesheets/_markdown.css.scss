@@ -26,18 +26,35 @@
     font-size: 12px;
   }
   h1{
-    font-size: 20px;
+    font-size: 22px;
   }
   h2{
-    font-size: 18px;
+    font-size: 20px;
     color: $gray-dark2;
-    i{
+    a{
       margin-right: 5px;
+      font-size: 15px;
+      position: relative;
+      display: none;
+      &:hover{
+        text-decoration: none;
+        color: $blue;
+      }
+    }
+    &:hover a{
+      display: inline;
+    }
+    &:hover{
+      transform: translateX(-20px);
+      -webkit-transform: translateX(-20px);
+      -o-transform: translateX(-20px);
     }
   }
   h3{
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 16px;
+  }
+  h4{
+    font-size: 14px;
   }
   p{
     font-size: 14px;

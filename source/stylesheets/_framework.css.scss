@@ -793,7 +793,7 @@
 // We use these to control link styles.
 // $side-nav-link-color: $blue-dark1;
 $side-nav-link-color-active: $blue-dark3;
-// $side-nav-font-size: rem-calc(14);
+$side-nav-font-size: rem-calc(13);
 // $side-nav-font-family: $body-font-family;
 // $side-nav-active-font-family: $side-nav-font-family;
 
@@ -1036,7 +1036,7 @@ $topbar-link-color: white;
 $topbar-link-color-hover: $white-dark;
 $topbar-link-color-active: $white-dark;
 // $topbar-link-weight: bold;
-$topbar-link-font-size: rem-calc(15px);
+$topbar-link-font-size: rem-calc(15);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg-hover: scale-color($blue-dark3, $lightness: 5%);
 $topbar-link-bg-active: scale-color($blue-dark3, $lightness: 4%);
