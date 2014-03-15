@@ -1,20 +1,29 @@
-pre{
-  overflow: auto;
+body{
+  background-color: $gray-bg;
 }
-
-.markdown{
-  margin-top: emCalc(25px);
-  margin-bottom: emCalc(25px);
-  .highlight{
-    border: 1px solid #cacaca;
-    color: #393939;
-    margin-bottom: 10px;
-    padding: 10px;
-    line-height: 1;
-    background-color: #fafafb;
-    background-clip: padding-box;
-    p{
-      margin: 0;
+.toc{
+  font-size: 14px;
+  li{
+    list-style-type: lower-roman;
+    a{
+      color: $blue-dark1;
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
+}
+.gray-bg{
+  padding: 10px 15px 5px 15px;
+  background-color: $gray-bg;
+}
+a{
+  color: $blue-dark1;
+  &:hover{
+    color: $blue-dark3;
+    text-decoration: underline;
+  }
+}
+.remove-border{
+  border: none !important;
 }

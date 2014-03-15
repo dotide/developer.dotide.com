@@ -791,10 +791,9 @@
 // $side-nav-list-margin: rem-calc(0 0 7 0);
 
 // We use these to control link styles.
-// $side-nav-link-color: $primary-color;
-// $side-nav-link-color-active: scale-color(#000, $lightness: 30%);
-// $side-nav-font-size: rem-calc(14);
-// $side-nav-font-weight: normal;
+// $side-nav-link-color: $blue-dark1;
+$side-nav-link-color-active: $blue-dark3;
+$side-nav-font-size: rem-calc(13);
 // $side-nav-font-family: $body-font-family;
 // $side-nav-active-font-family: $side-nav-font-family;
 
@@ -1012,8 +1011,8 @@
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: $gray-bg;
-$topbar-bg: $gray-bg;
+$topbar-bg-color: $blue-dark1;
+// $topbar-bg: $blue-light;
 
 // Height and margin
 $topbar-height: 40px;
@@ -1033,15 +1032,15 @@ $topbar-height: 40px;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: $gray-darker;
-$topbar-link-color-hover: black;
-$topbar-link-color-active: black;
-$topbar-link-weight: bold;
+$topbar-link-color: white;
+$topbar-link-color-hover: $white-dark;
+$topbar-link-color-active: $white-dark;
+// $topbar-link-weight: bold;
 $topbar-link-font-size: rem-calc(15);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-$topbar-link-bg-hover: $gray-dark-bg;
-$topbar-link-bg-active: $gray-dark-bg;
-$topbar-link-bg-active-hover: $gray-dark-bg;
+$topbar-link-bg-hover: scale-color($blue-dark3, $lightness: 5%);
+$topbar-link-bg-active: scale-color($blue-dark3, $lightness: 4%);
+$topbar-link-bg-active-hover: $blue-dark3;
 // $topbar-link-font-family: $body-font-family;
 
 // $topbar-button-font-size: 0.75rem;

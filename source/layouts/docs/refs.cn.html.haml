@@ -1,11 +1,15 @@
 - wrap_layout 'docs.cn' do
-  %h1= current_page.data.title
+  - if current_page.data.page != 'index'
+    %h1= current_page.data.title
   - if current_page.data.outlines
-    %ul
+    %ul.toc
       - current_page.data.outlines.each_with_index do |o, i|
         %li
           %a{href: "#para-#{i}"}= o
-  .markdown= yield
+  - if content_for? :raw_content
+    = yield_content :raw_content
+  - else
+    .markdown= yield
 
   - content_for :sidebar do
     %dl.accordion{:'data-accordion' => true}
@@ -14,17 +18,25 @@
         #basics.content
           %ul.side-nav
             %li.nav-overview
-              %a{href: '/cn/docs/refs/basics/overview.html'}= "调用约定"
+              %a{href: '/cn/docs/refs/basics/overview.html'}
+                %span
+                  = "调用约定"
             %li.nav-auth
-              %a{href: '/cn/docs/refs/basics/auth.html'}= "认证与权限控制"
+              %a{href: '/cn/docs/refs/basics/auth.html'}
+                %span
+                  = "认证与权限控制"
       %dd
         %a{href: '#data'}= '数据存取'
         #data.content
           %ul.side-nav
             %li.nav-datastream
-              %a{href: '/cn/docs/refs/data/datastream.html'}= "数据流"
+              %a{href: '/cn/docs/refs/data/datastream.html'}
+                %span
+                  = "数据流"
             %li.nav-datapoint
-              %a{href: '/cn/docs/refs/data/datapoint.html'}= "数据点"
+              %a{href: '/cn/docs/refs/data/datapoint.html'}
+                %span
+                  = "数据点"
 
   - content_for :second_nav do
     %ul.off-canvas-list
@@ -48,7 +60,8 @@
       $("##{current_page.data.section}").parent().addClass('active');
       $("li.nav-#{current_page.data.page}").addClass('active');
       $('.markdown h2').each(function(idx) {
-        $(this).prepend('<i class="fa fa-bookmark-o"></i>');
+        html = "<a href=#para-" + idx + "><i class='fa fa-chain'></i></a>"
+        $(this).prepend(html);
         $(this).addClass('subheader');
         return $(this).attr('id', "para-" + idx);
       });

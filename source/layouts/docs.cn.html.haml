@@ -13,8 +13,9 @@
   .row.main-content
     .large-3.columns.hide-for-small.sidebar
       = yield_content :sidebar
-    .large-8.small-12.columns
-      = yield
+    .large-9.small-12.columns
+      .right-content
+        = yield
 
   - content_for :javascripts do
     :javascript
