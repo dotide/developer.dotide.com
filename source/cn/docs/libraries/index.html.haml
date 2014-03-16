@@ -5,18 +5,19 @@ page: index
 title: SDK
 ---
 
-.row.block-guides
-  .large-12.columns
-    %h3= 'SDK'
-    %h3#libraries-official
-      %small
-        %i.fa.fa-book
-        = '官方'
-    %ul.inline-list
-      %li
-        %a{href: '/cn/docs/libraries/ruby.html'}= "Ruby"
-    %h3#libraries-community
-      %small
-        %i.fa.fa-book
-        = '社区'
-    %ul.inline-list
+- content_for :raw_content do
+  .row.block-guides
+    .large-12.columns
+      %h1= 'SDK'
+      %h3#libraries-official.remove-border
+        %small
+          %i.fa.fa-book
+          = '官方'
+      %ul.inline-list
+        %li
+          %a{href: '/cn/docs/libraries/ruby.html'}= "Ruby"
+      %h3#libraries-community
+        %small
+          %i.fa.fa-book
+          = '社区'
+      %ul.inline-list

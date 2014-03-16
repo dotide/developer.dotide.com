@@ -1,11 +1,15 @@
 - wrap_layout 'docs.cn' do
-  %h1= current_page.data.title
+  - if current_page.data.page != 'index'
+    %h1= current_page.data.title
   - if current_page.data.outlines
-    %ul
+    %ul.toc
       - current_page.data.outlines.each_with_index do |o, i|
         %li
           %a{href: "#para-#{i}"}= o
-  .markdown= yield
+  - if content_for? :raw_content
+    = yield_content :raw_content
+  - else
+    .markdown= yield
 
   - content_for :sidebar do
     %dl.accordion{:'data-accordion' => true}
@@ -14,7 +18,9 @@
         #official.content
           %ul.side-nav
             %li.nav-ruby
-              %a{href: '/cn/docs/libraries/ruby.html'}= "Ruby"
+              %a{href: '/cn/docs/libraries/ruby.html'}
+                %span
+                  = "Ruby"
       %dd
         %a{href: '#community'}= '社区'
         #community.content
@@ -36,7 +42,8 @@
       $("##{current_page.data.section}").parent().addClass('active');
       $("li.nav-#{current_page.data.page}").addClass('active');
       $('.markdown h2').each(function(idx) {
-        $(this).prepend('<i class="fa fa-bookmark-o"></i>');
+        html = "<a href=#para-" + idx + "><i class='fa fa-chain'></i></a>"
+        $(this).prepend(html);
         $(this).addClass('subheader');
         return $(this).attr('id', "para-" + idx);
       });

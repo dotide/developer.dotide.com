@@ -1,11 +1,15 @@
 - wrap_layout 'docs.cn' do
-  %h1= current_page.data.title
+  - if current_page.data.page != 'index'
+    %h1= current_page.data.title
   - if current_page.data.outlines
-    %ul
+    %ul.toc
       - current_page.data.outlines.each_with_index do |o, i|
         %li
           %a{href: "#para-#{i}"}= o
-  .markdown= yield
+  - if content_for? :raw_content
+    = yield_content :raw_content
+  - else
+    .markdown= yield
 
   - content_for :sidebar do
     %dl.accordion{:'data-accordion' => true}
@@ -14,21 +18,33 @@
         #basics.content
           %ul.side-nav
             %li.nav-concepts
-              %a{href: '/cn/docs/guides/basics/concepts.html'}= "关键概念"
+              %a{href: '/cn/docs/guides/basics/concepts.html'}
+                %span
+                  = "关键概念"
             %li.nav-programming-model
-              %a{href: '/cn/docs/guides/basics/programming-model.html'}= "编程模型"
+              %a{href: '/cn/docs/guides/basics/programming-model.html'}
+                %span
+                  = "编程模型"
             %li.nav-security
-              %a{href: '/cn/docs/guides/basics/security.html'}= "安全机制"
+              %a{href: '/cn/docs/guides/basics/security.html'}
+                %span
+                  = "安全机制"
       %dd
         %a{href: '#data'}= '数据存取'
         #data.content
           %ul.side-nav
             %li.nav-database
-              %a{href: '/cn/docs/guides/data/database.html'}= "数据库"
+              %a{href: '/cn/docs/guides/data/database.html'}
+                %span
+                  = "数据库"
             %li.nav-datastream
-              %a{href: '/cn/docs/guides/data/datastream.html'}= "数据流"
+              %a{href: '/cn/docs/guides/data/datastream.html'}
+                %span
+                  = "数据流"
             %li.nav-datapoint
-              %a{href: '/cn/docs/guides/data/datapoint.html'}= "数据点"
+              %a{href: '/cn/docs/guides/data/datapoint.html'}
+                %span
+                  = "数据点"
 
   - content_for :second_nav do
     %ul.off-canvas-list
@@ -56,7 +72,8 @@
       $("##{current_page.data.section}").parent().addClass('active');
       $("li.nav-#{current_page.data.page}").addClass('active');
       $('.markdown h2').each(function(idx) {
-        $(this).prepend('<i class="fa fa-bookmark-o"></i>');
+        html = "<a href=#para-" + idx + "><i class='fa fa-chain'></i></a>"
+        $(this).prepend(html);
         $(this).addClass('subheader');
         return $(this).attr('id', "para-" + idx);
       });
