@@ -1,7 +1,7 @@
 require 'extensions/sitemap.rb'
 
 activate :sprockets
-ready do
+after_configuration do
   sprockets.append_path(File.join(root, 'vendor/assets/javascripts'))
   sprockets.append_path(File.join(root, 'vendor/assets/stylesheets'))
   sprockets.append_path(File.join(root, 'vendor/assets/components'))
@@ -85,6 +85,10 @@ set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => true
 
 set :haml, { ugly: true }
+
+# Livereload
+activate :livereload
+
 ###
 # Deploy
 ###
@@ -97,11 +101,13 @@ activate :deploy do |deploy|
   deploy.build_before = true
 end
 
+# Compressing Images
+activate :imageoptim do |options|
+  options.pngout_options = false
+end
+
 # Build-specific configuration
 configure :build do
-
-  # Use digest for assets
-  activate :asset_hash
 
   # For example, change the Compass output style for deployment
   activate :minify_css
@@ -110,16 +116,11 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  # activate :cache_buster
+  activate :asset_hash
 
   # Use relative URLs
   # activate :relative_assets
 
-  # Compress PNGs after build
-  # First: gem install middleman-smusher
-  require "middleman-smusher"
-  activate :smusher
-
   # Or use a different image path
-  # set :http_path, "/Content/images/"
+  # set :http_prefix, "/Content/images/"
 end
