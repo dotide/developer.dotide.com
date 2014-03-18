@@ -1,0 +1,47 @@
+.home{
+  .grayBox{
+    background-color: $gray-bg;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .main-content{
+    margin-top: 20px;
+  }
+  .right-content{
+    padding: 0;
+  }
+  .block-guides{
+    margin-top: 0;
+  }
+  .news{
+    span{
+    float: right;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: $gray-text;
+    }
+    ul{
+      list-style: none;
+      padding: 10px 0 0 0;
+      margin-left: 0;
+      li{
+        border-bottom: solid 1px $gray-border;
+        &:last-child{
+          border: none;
+        }
+        a{
+          font-size: 0.85rem;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+      p{
+        font-size: 0.8rem;
+      }
+    }
+    .headerFooter{
+  }
+    margin-bottom: 10px;
+  }
+}

@@ -6,6 +6,7 @@ title: 文档
 .row.block-guides
   .large-12.columns
     %h1= 'API使用指南'
+    %hr
     %h3#guides-basics.remove-border
       %small
         %i.fa.fa-book
@@ -31,6 +32,7 @@ title: 文档
 .row.block-guides
   .large-12.columns
     %h1= 'API参考手册'
+    %hr
     %h3#refs-auth.remove-border
       %small
         %i.fa.fa-book
@@ -52,6 +54,7 @@ title: 文档
 .row.block-guides
   .large-12.columns
     %h1= 'SDK'
+    %hr
     %h3#libraries-official.remove-border
       %small
         %i.fa.fa-book
@@ -68,24 +71,40 @@ title: 文档
 - content_for :sidebar do
   %dl.accordion{:'data-accordion' => true}
     %dd
-      %a{href: '#guides'}= 'API使用指南'
+      %a{href: '#guides'}
+        %i.fa.fa-plus-square
+        = 'API使用指南'
       #guides.content
         %ul.side-nav
           %li
-            %a{href: '/cn/docs/guides/basics/concepts.html'}= "开发基础"
+            %a{href: '/cn/docs/guides/basics/concepts.html'}
+            %span
+              = "开发基础"
           %li
-            %a{href: '/cn/docs/guides/data/database.html'}= "数据存取"
+            %a{href: '/cn/docs/guides/data/database.html'}
+              %span
+                = "数据存取"
     %dd
-      %a{href: '#refs'}= 'API参考手册'
+      %a{href: '#refs'}
+        %i.fa.fa-plus-square
+        = 'API参考手册'
       #refs.content
         %ul.side-nav
           %li
-            %a{href: '/cn/docs/refs/basics/overview.html'}= "调用基础"
+            %a{href: '/cn/docs/refs/basics/overview.html'}
+              %span
+                = "调用基础"
           %li
-            %a{href: '/cn/docs/refs/data/datastream.html'}= "数据存取"
+            %a{href: '/cn/docs/refs/data/datastream.html'}
+              %span
+                = "数据存取"
     %dd
-      %a{href: '#libraries'}= 'SDK'
+      %a{href: '#libraries'}
+        %i.fa.fa-plus-square
+        = 'SDK'
       #libraries.content
         %ul.side-nav
           %li
-            %a{href: '/cn/docs/libraries/index.html'}= "SDK"
+            %a{href: '/cn/docs/libraries/index.html'}
+              %span
+                = "SDK"

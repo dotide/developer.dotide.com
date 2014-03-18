@@ -1,12 +1,11 @@
-body{
-  background-color: $gray-bg;
+hr{
+  margin: 0;
 }
 .toc{
   font-size: 14px;
   li{
     list-style-type: lower-roman;
     a{
-      color: $blue-dark1;
       &:hover{
         text-decoration: underline;
       }
@@ -18,10 +17,16 @@ body{
   background-color: $gray-bg;
 }
 a{
-  color: $blue-dark1;
+  color: $primary;
   &:hover{
-    color: $blue-dark3;
-    text-decoration: underline;
+    color: $primary-hover;
+    text-decoration: none;
+  }
+}
+a.reverse{
+  color: $primary-hover;
+  &:hover{
+    color: $primary;
   }
 }
 .remove-border{
