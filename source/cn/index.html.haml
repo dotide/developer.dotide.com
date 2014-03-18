@@ -4,6 +4,12 @@ title: 首页
 ---
 
 .home
+  .grayBox
+    .row
+      .large-8.columns
+        %h4= "文档"
+      .large-4.columns
+        %h4= "更新日志"
   .row.main-content
     .large-8.columns
       .right-content
@@ -75,7 +81,6 @@ title: 首页
             %ul.inline-list
     .large-4.columns.news
       .right-content
-        %h1.headerFooter= "更新"
         %ul
           %li
             %a{:href => "#"}

@@ -1,17 +1,19 @@
 .home{
-  .image{
-    img{
-      width: 50%;
-      height: auto;
-    }
+  .grayBox{
+    background-color: $gray-bg;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .main-content{
-    margin-top: 50px;
+    margin-top: 20px;
+  }
+  .right-content{
+    padding: 0;
+  }
+  .block-guides{
+    margin-top: 0;
   }
   .news{
-    .right-content{
-      padding-top: 10px;
-    }
     span{
     float: right;
     font-size: 0.8rem;
