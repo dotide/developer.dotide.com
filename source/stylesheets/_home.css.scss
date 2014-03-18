@@ -2,4 +2,38 @@
   .main-content{
     margin-top: 50px;
   }
+  .news{
+    .right-content{
+      padding-top: 10px;
+    }
+    span{
+    float: right;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: $gray-text;
+    }
+  }
+  ul{
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin-left: 0;
+    li{
+      border-bottom: solid 1px $gray-border;
+      &:last-child{
+        border: none;
+      }
+      a{
+        font-size: 0.85rem;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    p{
+      font-size: 0.8rem;
+    }
+  }
+  .headerFooter{
+    margin-bottom: 10px;
+  }
 }
