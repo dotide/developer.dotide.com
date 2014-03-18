@@ -1,1 +1,5 @@
-//= require vendor
+//= require "fastclick"
+//= require "jquery"
+//= require "jquery-placeholder/jquery.placeholder"
+//= require "jquery.cookie/jquery.cookie"
+//= require "foundation"
