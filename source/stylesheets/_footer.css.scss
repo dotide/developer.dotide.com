@@ -1,11 +1,15 @@
 .footer{
-  // background-color: $gray-bg;
+  background-color: $gray-bg;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: $gray;
+  color: black;
   ul{
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
     list-style: none;
+    li{
+      margin: 0;
+      padding-right: 10px;
+    }
   }
 }

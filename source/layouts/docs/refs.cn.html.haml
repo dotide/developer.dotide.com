@@ -14,7 +14,9 @@
   - content_for :sidebar do
     %dl.accordion{:'data-accordion' => true}
       %dd
-        %a{href: '#basics'}= '调用基础'
+        %a{href: '#basics'}
+          %i.fa.fa-plus-square
+          = '调用基础'
         #basics.content
           %ul.side-nav
             %li.nav-overview
@@ -26,7 +28,9 @@
                 %span
                   = "认证与权限控制"
       %dd
-        %a{href: '#data'}= '数据存取'
+        %a{href: '#data'}
+          %i.fa.fa-plus-square
+          = '数据存取'
         #data.content
           %ul.side-nav
             %li.nav-datastream

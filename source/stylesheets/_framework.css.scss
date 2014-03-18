@@ -791,8 +791,8 @@
 // $side-nav-list-margin: rem-calc(0 0 7 0);
 
 // We use these to control link styles.
-// $side-nav-link-color: $blue-dark1;
-$side-nav-link-color-active: $blue-dark3;
+$side-nav-link-color: $primary;
+$side-nav-link-color-active: $primary;
 $side-nav-font-size: rem-calc(13);
 // $side-nav-font-family: $body-font-family;
 // $side-nav-active-font-family: $side-nav-font-family;
@@ -852,9 +852,9 @@ $side-nav-font-size: rem-calc(13);
 
 // We use this to control the definition
 // $sub-nav-font-family: $body-font-family;
-// $sub-nav-font-size: rem-calc(14);
-// $sub-nav-font-color: #999;
-// $sub-nav-font-weight: normal;
+$sub-nav-font-size: rem-calc(15);
+$sub-nav-font-color: black;
+$sub-nav-font-weight: normal;
 // $sub-nav-text-decoration: none;
 // $sub-nav-border-radius: 3px;
 // $sub-nav-font-color-hover: scale-color($sub-nav-font-color, $lightness: -25%);
@@ -863,9 +863,9 @@ $side-nav-font-size: rem-calc(13);
 // We use these to control the active item styles
 
 // $sub-nav-active-font-weight: normal;
-// $sub-nav-active-bg: $primary-color;
-// $sub-nav-active-bg-hover: scale-color($sub-nav-active-bg, $lightness: -14%);
-// $sub-nav-active-color: #fff;
+$sub-nav-active-bg: $gray-bg;
+$sub-nav-active-bg-hover: $gray-bg;
+$sub-nav-active-color: black;
 // $sub-nav-active-padding: rem-calc(3 16);
 // $sub-nav-active-cursor: default;
 
@@ -1011,11 +1011,11 @@ $side-nav-font-size: rem-calc(13);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: $blue-dark1;
+$topbar-bg-color: white;
 // $topbar-bg: $blue-light;
 
 // Height and margin
-$topbar-height: 40px;
+$topbar-height: 60px;
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1032,15 +1032,15 @@ $topbar-height: 40px;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: white;
-$topbar-link-color-hover: $white-dark;
-$topbar-link-color-active: $white-dark;
+$topbar-link-color: $gray-text;
+$topbar-link-color-hover: black;
+$topbar-link-color-active: black;
 // $topbar-link-weight: bold;
 $topbar-link-font-size: rem-calc(15);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
-$topbar-link-bg-hover: scale-color($blue-dark3, $lightness: 5%);
-$topbar-link-bg-active: scale-color($blue-dark3, $lightness: 4%);
-$topbar-link-bg-active-hover: $blue-dark3;
+$topbar-link-bg-hover: white;
+$topbar-link-bg-active: white;
+$topbar-link-bg-active-hover: white;
 // $topbar-link-font-family: $body-font-family;
 
 // $topbar-button-font-size: 0.75rem;

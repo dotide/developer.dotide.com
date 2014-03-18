@@ -1,55 +1,46 @@
 .top-bar{
-  a:hover{
-    text-decoration: none;
+  a{
+    font-weight: bold !important;
   }
   .title-area{
     a{
-      padding-right: 5px !important;
+      padding-right: 8px !important;
     }
     i{
       font-size: 30px;
-      line-height: 45px;
-      color: white;
-      &:hover{
-        color: $white-dark;
-      }
+      line-height: 60px;
+      color: black;
     }
   }
   section .left{
-    line-height: 40px;
+    line-height: 60px;
     margin-left: 0;
     a{
-      color: white;
-      &:hover{
-        color: $white-dark;
-      }
+      color: black;
     }
   }
 }
 .sub-nav-bar{
-  margin-top: 40px;
-  margin-bottom: 15px;
-  a:hover{
-    text-decoration: none;
-  }
+  padding-top: 10px;
+  margin-bottom: 30px;
+  background-color: $gray-bg;
   .large-7{
     a{
-      font-size: 21px;
-      color: $gray-dark2;
-      &:hover{
-        color: black;
-      }
+      font-size: 1.4rem;
+      color: black;
     }
   }
   .sub-nav{
     margin: 0;
     dd{
       margin-bottom: 3px;
-      &.active a{
-        background-color: $gray-bg;
-        color: black;
-        border-radius: 0;
-        border-bottom: solid 4px $gray-border;
+      border-bottom: solid 3px $gray-bg;
+      padding-bottom: 10px;
+      &:hover{
+        border-bottom: solid 3px $primary;
+      }
+      &.active{
+        border-bottom: solid 3px $primary;
       }
     }
   }

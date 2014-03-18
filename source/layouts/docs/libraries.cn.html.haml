@@ -14,7 +14,9 @@
   - content_for :sidebar do
     %dl.accordion{:'data-accordion' => true}
       %dd
-        %a{href: '#official'}= '官方'
+        %a{href: '#official'}
+          %i.fa.fa-plus-square
+          = '官方'
         #official.content
           %ul.side-nav
             %li.nav-ruby
@@ -22,7 +24,9 @@
                 %span
                   = "Ruby"
       %dd
-        %a{href: '#community'}= '社区'
+        %a{href: '#community'}
+          %i.fa.fa-plus-square
+          = '社区'
         #community.content
           %ul.side-nav
 

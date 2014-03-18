@@ -9,7 +9,8 @@ title: 首页
       .right-content
         .row.block-guides
           .large-12.columns
-            %h1= 'API使用指南'
+            %h1
+              = 'API使用指南'
             %h3#guides-basics.remove-border
               %small
                 %i.fa.fa-book
@@ -32,9 +33,11 @@ title: 首页
                 %a{href: '/cn/docs/guides/data/datastream.html'}= "数据流"
               %li
                 %a{href: '/cn/docs/guides/data/datapoint.html'}= "数据点"
+          %hr
         .row.block-guides
           .large-12.columns
-            %h1= 'API参考手册'
+            %h1
+              = 'API参考手册'
             %h3#refs-auth.remove-border
               %small
                 %i.fa.fa-book
@@ -53,9 +56,11 @@ title: 首页
                 %a{href: '/cn/docs/refs/data/datastream.html'}= "数据流"
               %li
                 %a{href: '/cn/docs/refs/data/datapoint.html'}= "数据点"
+          %hr
         .row.block-guides
           .large-12.columns
-            %h1= 'SDK'
+            %h1
+              = 'SDK'
             %h3#libraries-official.remove-border
               %small
                 %i.fa.fa-book
@@ -70,7 +75,7 @@ title: 首页
             %ul.inline-list
     .large-4.columns.news
       .right-content
-        %h1.headerFooter= "最新动态"
+        %h1.headerFooter= "更新"
         %ul
           %li
             %a{:href => "#"}
