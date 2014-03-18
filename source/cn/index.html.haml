@@ -1,0 +1,71 @@
+---
+layout: cn
+title: 首页
+---
+
+.home
+  .row.main-content
+    .large-9.columns
+      .right-content
+        .row.block-guides
+          .large-12.columns
+            %h1= 'API使用指南'
+            %h3#guides-basics.remove-border
+              %small
+                %i.fa.fa-book
+                = '开发基础'
+            %ul.inline-list
+              %li
+                %a{href: '/cn/docs/guides/basics/concepts.html'}= "关键概念"
+              %li
+                %a{href: '/cn/docs/guides/basics/programming-model.html'}= "编程模型"
+              %li
+                %a{href: '/cn/docs/guides/basics/security.html'}= "安全机制"
+            %h3#guides-data
+              %small
+                %i.fa.fa-book
+                = '数据存取'
+            %ul.inline-list
+              %li
+                %a{href: '/cn/docs/guides/data/database.html'}= "数据库"
+              %li
+                %a{href: '/cn/docs/guides/data/datastream.html'}= "数据流"
+              %li
+                %a{href: '/cn/docs/guides/data/datapoint.html'}= "数据点"
+        .row.block-guides
+          .large-12.columns
+            %h1= 'API参考手册'
+            %h3#refs-auth.remove-border
+              %small
+                %i.fa.fa-book
+                = '认证与授权'
+            %ul.inline-list
+              %li
+                %a{href: '/cn/docs/refs/basics/overview.html'}= "调用约定"
+              %li
+                %a{href: '/cn/docs/refs/basics/auth.html'}= "认证与权限控制"
+            %h3#refs-data
+              %small
+                %i.fa.fa-book
+                = '数据存取'
+            %ul.inline-list
+              %li
+                %a{href: '/cn/docs/refs/data/datastream.html'}= "数据流"
+              %li
+                %a{href: '/cn/docs/refs/data/datapoint.html'}= "数据点"
+        .row.block-guides
+          .large-12.columns
+            %h1= 'SDK'
+            %h3#libraries-official.remove-border
+              %small
+                %i.fa.fa-book
+                = '官方'
+            %ul.inline-list
+              %li
+                %a{href: '/cn/docs/libraries/ruby.html'}= "Ruby"
+            %h3#libraries-community
+              %small
+                %i.fa.fa-book
+                = '社区'
+            %ul.inline-list
+    .large-3.columns
