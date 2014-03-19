@@ -51,7 +51,7 @@ Cache-Control: max-age=0, private, must-revalidate
 
 ### 参数
 
-很多API有可选参数。对 GET 请求来说，参数应拼接成 `query string` 包含在URL中：
+很多API有可选参数。对 GET 和 DELETE 请求来说，参数应拼接成 `query string` 包含在URL中：
 
 ```
 $ curl -i https://api.dotide.com/v1/demo/datastreams?limit=10
@@ -59,7 +59,7 @@ $ curl -i https://api.dotide.com/v1/demo/datastreams?limit=10
 
 在本例子中，`demo` 是数据库名，`limit` 是可选参数。
 
-对 POST， PUT， DELETE 请求来说，参数不包含在 URL 中，而应该编码成 JSON 格式放在 body 中，注意：
+对 POST 和 PUT 请求来说，参数不包含在 URL 中，而应该编码成 JSON 格式放在 body 中，如：
 
 ```
 $ curl -i -u client_id -d '{"v":4}' -H "Content-Type: application/json"  https://api.dotide.com/v1/demo/datastreams/demostream/datapoints
