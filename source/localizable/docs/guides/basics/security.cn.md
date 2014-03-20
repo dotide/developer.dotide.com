@@ -3,6 +3,9 @@ layout: docs/guides.cn
 section: basics
 page: security
 title: 安全机制
+outlines:
+  - Basic 认证
+  - Access Token 认证
 ---
 
 目前支持两种方式进行安全验证：

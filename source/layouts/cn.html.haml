@@ -7,8 +7,8 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
 %head
   %meta{:charset => "utf-8"}/
-  %meta{:content => "Dotide API文档", :name => "description"}/
-  %meta{:content => "Free Storm", :name => "copyright"}/
+  %meta{:content => "Dotide API 文档", :name => "description"}/
+  %meta{:content => "Freestorm", :name => "copyright"}/
   %link{:href => "/humans.txt", :rel => "author", :type => "text/plain"}/
   %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
   %meta{:content => "True", :name => "HandheldFriendly"}/
@@ -17,7 +17,7 @@
   %meta{:content => "black-translucent", :name => "apple-mobile-web-app-status-bar-style"}/
   %meta{:content => "on", "http-equiv" => "cleartype"}/
   %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
-  %title= data.page.title || "Dotide开发者中心"
+  %title= data.page.title || "Dotide 开发者中心"
   = stylesheet_link_tag "application"
   = yield_content :stylesheets
   - if content_for? :styles
@@ -33,12 +33,12 @@
           %ul.title-area
             %li.name
               %h1
-                %a{href: '/index.html'}
+                %a{href: '/'}
                   %i{:"data-icon" => 'a'}
           %section
             %ul.left
               %li
-                %a{:href => "/index.html"}
+                %a{:href => "/"}
                   = "开发者中心"
           %section.top-bar-section
             %ul.right
@@ -51,7 +51,7 @@
           %a.left-off-canvas-toggle.menu-icon
             %span
         %section.middle.tab-bar-section
-          %h1.title= "Dotide开发者中心"
+          %h1.title= "Dotide 开发者中心"
         - if content_for? :second_nav
           %section.right-small
             %a.right-off-canvas-toggle.menu-icon
@@ -61,7 +61,7 @@
           %li
             %label= '目录'
           %li.nav-home
-            %a{href: '/index.html'}= "首页"
+            %a{href: '/'}= "首页"
           %li.nav-docs
             %a{href: '/docs/index.html'}= "文档"
           %li.nav-changelog
@@ -71,7 +71,7 @@
           %li
             %a{href: 'https://github.com/dotide/developer.dotide.com'}= '本站源代码'
           %li
-            %a{href: 'http://dotide.com'}= 'Dotide主站'
+            %a{href: 'https://dotide.com'}= 'Dotide 主站'
       %aside.right-off-canvas-menu.show-for-small
         = yield_content :second_nav
       %hr
@@ -86,12 +86,12 @@
                 = '站点托管在'
                 %a.reverse{href: 'https://www.upyun.com/?md=geakit'}= '又拍云'
               %li
-                = '站点源代码托管在'
+                = '站点源代码托管在 '
                 %a.reverse{href: 'https://github.com/dotide/developer.dotide.com'}= 'GitHub'
           .small-12.large-pull-4.large-8.columns
             %ul.inline-list
               %li
-                %a.reverse{href: 'http://dotide.com'}= "© #{Date.today.year} Dotide"
+                %a.reverse{href: 'https://dotide.com'}= "© #{Date.today.year} Dotide"
               %li
                 %a.reverse{href: 'http://www.miibeian.gov.cn'}= '苏ICP备12071270号'
       %a.exit-off-canvas

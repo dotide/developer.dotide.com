@@ -3,9 +3,15 @@ layout: docs/refs.cn
 section: basics
 page: auth
 title: 认证与权限控制
+outlines:
+  - 罗列 Access Token
+  - 创建 Access Token
+  - 读取 Access Token
+  - 更新 Access Token
+  - 删除 Access Token
 ---
 
-Basic Auth 适用与服务端间的安全通信， Access Token 适用于分发给客户端进行与 Dotide 交互。
+Basic Auth 适用与服务端间的安全通信， Access Token 适用于分发给客户端进行与 Dotide 交互。对 Access Token 的操作要通过 Basic 认证。
 
 ## 罗列 Access Token
 

@@ -3,6 +3,8 @@ layout: docs/guides.cn
 section: basics
 page: data
 title: 数据存取
+outlines:
+  - 数据建模
 ---
 
 ## 数据建模

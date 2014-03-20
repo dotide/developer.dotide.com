@@ -3,6 +3,9 @@ layout: docs/guides.cn
 section: basics
 page: programming-model
 title: 编程模型
+outlines:
+  - 基本架构
+  - 数据流程
 ---
 
 为了帮助开发者更合理地利用 Dotide 进行开发，这里给出一些编程模型上的建议。

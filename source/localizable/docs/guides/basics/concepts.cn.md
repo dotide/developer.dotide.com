@@ -3,6 +3,11 @@ layout: docs/guides.cn
 section: basics
 page: concepts
 title: 关键概念
+outlines:
+  - 时序数据（Time Series Data）
+  - 数据库（Database）
+  - 数据流（Datastream）
+  - 数据点（Datapoint）
 ---
 
 ## 时序数据（Time Series Data）
