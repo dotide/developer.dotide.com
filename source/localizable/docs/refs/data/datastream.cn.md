@@ -228,5 +228,5 @@ Status: 204 No Content
 ```
 
 
-[auth]: /cn/docs/refs/basics/auth.html
-[database]: /cn/docs/guides/data/database.html
+[auth]: /docs/refs/basics/auth.html
+[database]: /docs/guides/data/database.html

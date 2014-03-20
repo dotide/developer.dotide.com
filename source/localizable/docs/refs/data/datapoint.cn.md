@@ -210,5 +210,5 @@ Status: 204 No Content
 ```
 
 
-[auth]: /cn/docs/refs/basics/auth.html
+[auth]: /docs/refs/basics/auth.html
 [geojson]: http://geojson.org/

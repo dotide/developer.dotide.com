@@ -20,54 +20,34 @@
         #basics.content
           %ul.side-nav
             %li.nav-concepts
-              %a{href: '/cn/docs/guides/basics/concepts.html'}
+              %a{href: '/docs/guides/basics/concepts.html'}
                 %span
                   = "关键概念"
+            %li.nav-data
+              %a{href: '/docs/guides/basics/data.html'}
+                %span
+                  = '数据存取'
             %li.nav-programming-model
-              %a{href: '/cn/docs/guides/basics/programming-model.html'}
+              %a{href: '/docs/guides/basics/programming-model.html'}
                 %span
                   = "编程模型"
             %li.nav-security
-              %a{href: '/cn/docs/guides/basics/security.html'}
+              %a{href: '/docs/guides/basics/security.html'}
                 %span
                   = "安全机制"
-      %dd
-        %a{href: '#data'}
-          %i.fa.fa-plus-square
-          = '数据存取'
-        #data.content
-          %ul.side-nav
-            %li.nav-database
-              %a{href: '/cn/docs/guides/data/database.html'}
-                %span
-                  = "数据库"
-            %li.nav-datastream
-              %a{href: '/cn/docs/guides/data/datastream.html'}
-                %span
-                  = "数据流"
-            %li.nav-datapoint
-              %a{href: '/cn/docs/guides/data/datapoint.html'}
-                %span
-                  = "数据点"
 
   - content_for :second_nav do
     %ul.off-canvas-list
       %li
         %label= '开发基础'
       %li.nav-concepts
-        %a{href: '/cn/docs/guides/basics/concepts.html'}= "关键概念"
+        %a{href: '/docs/guides/basics/concepts.html'}= "关键概念"
+      %li.nav-data
+        %a{href: '/docs/guides/basics/data.html'}= '数据存取'
       %li.nav-programming-model
-        %a{href: '/cn/docs/guides/basics/programming-model.html'}= "编程模型"
+        %a{href: '/docs/guides/basics/programming-model.html'}= "编程模型"
       %li.nav-security
-        %a{href: '/cn/docs/guides/basics/security.html'}= "安全机制"
-      %li
-        %label= '数据存取'
-      %li.nav-database
-        %a{href: '/cn/docs/guides/data/database.html'}= "数据库"
-      %li.nav-datastream
-        %a{href: '/cn/docs/guides/data/datastream.html'}= "数据流"
-      %li.nav-datapoint
-        %a{href: '/cn/docs/guides/data/datapoint.html'}= "数据点"
+        %a{href: '/docs/guides/basics/security.html'}= "安全机制"
 
   - content_for :javascripts do
     :javascript

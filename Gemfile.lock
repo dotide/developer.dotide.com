@@ -64,10 +64,6 @@ GEM
       rack-test (~> 0.6.1)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1)
-    middleman-deploy (0.2.3)
-      middleman-core (>= 3.0.0)
-      net-sftp
-      ptools
     middleman-imageoptim (0.1.4)
       image_optim (~> 0.9.1)
       middleman-core (>= 3.0)
@@ -85,11 +81,7 @@ GEM
       middleman-core (~> 3.2)
       rouge (~> 1.0)
     multi_json (1.9.0)
-    net-sftp (2.1.2)
-      net-ssh (>= 2.6.5)
-    net-ssh (2.8.0)
     progress (3.0.0)
-    ptools (1.2.4)
     rack (1.5.2)
     rack-livereload (0.3.15)
       rack
@@ -127,7 +119,6 @@ PLATFORMS
 DEPENDENCIES
   font-awesome-sass
   middleman (~> 3.2.2)
-  middleman-deploy
   middleman-imageoptim (~> 0.1.4)
   middleman-livereload (~> 3.1.0)
   middleman-syntax
