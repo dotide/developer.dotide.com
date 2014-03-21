@@ -26,10 +26,9 @@ end
 ###
 
 # With no layout
-page "robots.txt", :layout => false
-page "humans.txt", :layout => false
-page "index.html", :layout => false
-page "404.html", :layout => false
+page 'robots.txt', layout: false
+page 'humans.txt', layout: false
+page '404.html', layout: false
 
 # Per-page layout changes:
 #
@@ -43,10 +42,6 @@ page "404.html", :layout => false
 # with_layout :en do
 #   page "/en/*"
 # end
-
-with_layout :cn do
-  page "/cn/*"
-end
 
 # Proxy (fake) files
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
@@ -81,29 +76,14 @@ set :images_dir, 'images'
 activate :syntax
 
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => true
+set :markdown, fenced_code_blocks: true, smartypants: true, tables: true
 
-set :haml, { ugly: true }
+set :haml, ugly: true
 
 # Livereload
 activate :livereload
 
-###
-# Deploy
-###
-activate :deploy do |deploy|
-  deploy.method   = :ftp
-  deploy.host     = "v0.ftp.upyun.com"
-  deploy.user     = 'cms-admin/dotide-developer'
-  deploy.password = ENV['password']
-  deploy.path     = "/"
-  deploy.build_before = true
-end
-
-# Compressing Images
-activate :imageoptim do |options|
-  options.pngout_options = false
-end
+activate :i18n, langs: [:cn, :en]
 
 # Build-specific configuration
 configure :build do
@@ -116,6 +96,11 @@ configure :build do
 
   # Enable cache buster
   activate :asset_hash
+
+  # Compressing Images
+  activate :imageoptim do |options|
+    options.pngout_options = false
+  end
 
   # Use relative URLs
   # activate :relative_assets

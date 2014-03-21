@@ -1,0 +1,25 @@
+---
+layout: docs/guides.cn
+section: guides
+page: index
+title: API 使用指南
+---
+
+- content_for :raw_content do
+  .row.block-guides
+    .large-12.columns
+      %h1= 'API 使用指南'
+      %hr
+      %h3#guides-basics.remove-border
+        %small
+          %i.fa.fa-book
+          = '开发基础'
+      %ul.inline-list
+        %li
+          %a{href: '/docs/guides/basics/concepts.html'}= "关键概念"
+        %li
+          %a{href: '/docs/guides/basics/data.html'}= '数据存取'
+        %li
+          %a{href: '/docs/guides/basics/programming-model.html'}= "编程模型"
+        %li
+          %a{href: '/docs/guides/basics/security.html'}= "安全机制"

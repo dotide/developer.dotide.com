@@ -3,13 +3,17 @@ layout: docs/refs.cn
 section: basics
 page: overview
 title: 调用约定
+outlines:
+  - 概要
+  - 参数
+  - HTTP 动词
+  - 身份验证
+  - 时区
 ---
-
-## 调用约定
 
 本节将描述 Dotide API 的组成与使用。
 
-### 概要
+## 概要
 
 Host 为 api.dotide.com，当前 API 版本为 v1。
 
@@ -49,7 +53,8 @@ Cache-Control: max-age=0, private, must-revalidate
 {"version":"1"}
 ```
 
-### 参数
+
+## 参数
 
 很多API有可选参数。对 GET 和 DELETE 请求来说，参数应拼接成 `query string` 包含在URL中：
 
@@ -65,7 +70,8 @@ $ curl -i https://api.dotide.com/v1/demo/datastreams?limit=10
 $ curl -i -u client_id -d '{"v":4}' -H "Content-Type: application/json"  https://api.dotide.com/v1/demo/datastreams/demostream/datapoints
 ```
 
-### HTTP 动词
+
+## HTTP 动词
 
 Dotide API 使用不同的动词来区分不同的动作。
 
@@ -76,11 +82,13 @@ Dotide API 使用不同的动词来区分不同的动作。
 | PUT        |  更新资源 |
 | DELETE     |  删除资源 |
 
-### 身份验证
+
+## 身份验证
 
 Dotide API 支持 Basic 和 Access Token 两种方式进行身份验证。认证失败的请求会返回 `404 Not Found`，而不是 `403 Forbidden`，这是为了防止数据库的信息泄漏给未授权的用户。具体方式见[认证与权限控制][auth]
 
-### 时区
+
+## 时区
 
 一些请求和响应涉及时间的解析与格式化，用户可以通过两种方式指定时区。一种是在请求的 Header 中设置 `Timezone`：
 
@@ -100,5 +108,5 @@ $ curl https://api.dotide.com/v1/demo/datastreams?tz=Asia/Shanghai
 
 具体的时区值详见 [Olson 数据库][olson]。如果未提供时区信息，则默认为 `Asia/Shanghai`。
 
-[auth]: /cn/docs/refs/basics/auth.html
+[auth]: /docs/refs/basics/auth.html
 [olson]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones

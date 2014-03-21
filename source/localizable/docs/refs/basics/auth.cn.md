@@ -3,13 +3,17 @@ layout: docs/refs.cn
 section: basics
 page: auth
 title: 认证与权限控制
+outlines:
+  - 罗列 Access Token
+  - 创建 Access Token
+  - 读取 Access Token
+  - 更新 Access Token
+  - 删除 Access Token
 ---
 
-## 认证与权限控制
+Basic Auth 适用与服务端间的安全通信， Access Token 适用于分发给客户端进行与 Dotide 交互。对 Access Token 的操作要通过 Basic 认证。
 
-Basic Auth 适用与服务端间的安全通信， Access Token 适用于分发给客户端进行与 Dotide 交互。
-
-### 罗列 Access Token
+## 罗列 Access Token
 
 罗列数据库的 Access Token。
 
@@ -17,7 +21,7 @@ Basic Auth 适用与服务端间的安全通信， Access Token 适用于分发�
 GET /access_tokens
 ```
 
-#### 响应
+### 响应
 
 ```
 Status: 200 OK
@@ -43,7 +47,8 @@ Status: 200 OK
 ]
 ```
 
-### 创建 Access Token
+
+## 创建 Access Token
 
 创建一个 Access Token。
 
@@ -51,7 +56,7 @@ Status: 200 OK
 POST /access_tokens
 ```
 
-#### 输入
+### 输入
 
 | 名称        | 类型             | 说明 |
 | ---------- | ---------------- | ------------ |
@@ -79,7 +84,7 @@ scope
 }
 ```
 
-#### 响应
+### 响应
 
 ```
 Status: 201 Created
@@ -105,7 +110,7 @@ Location: https://api.dotide.com/v1/demo/access_tokens/61e13e47ed0b1b6f6a0ebe598
 ```
 
 
-### 读取 Access Token
+## 读取 Access Token
 
 读取一个 Access Token。
 
@@ -119,7 +124,7 @@ GET /access_tokens/:access_token
 /access_tokens/61e13e47ed0b1b6f6a0ebe598d5ddba0c386a0d856487ec84e973d06b1848223
 ```
 
-#### 响应
+### 响应
 
 ```
 Status: 200 OK
@@ -143,7 +148,8 @@ Status: 200 OK
 }
 ```
 
-### 更新 Access Token
+
+## 更新 Access Token
 
 更新一个 Access Token。
 
@@ -151,7 +157,7 @@ Status: 200 OK
 PUT /access_tokens/:access_token
 ```
 
-#### 输入
+### 输入
 
 | 名称        | 类型             | 说明 |
 | ---------- | ---------------- | ------------ |
@@ -179,7 +185,7 @@ scope
 }
 ```
 
-#### 响应
+### 响应
 
 ```
 Status: 200 OK
@@ -203,7 +209,8 @@ Status: 200 OK
 }
 ```
 
-### 删除 Access Token
+
+## 删除 Access Token
 
 删除一个 Access Token。
 
@@ -211,7 +218,7 @@ Status: 200 OK
 DELETE /access_tokens/:access_token
 ```
 
-#### 响应
+### 响应
 
 ```
 Status: 204 No Content

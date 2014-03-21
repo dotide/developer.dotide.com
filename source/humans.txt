@@ -1,6 +1,6 @@
 /* TEAM */
 Developer: Michael Ding
-Site: http://dotide.com
+Site: https://dotide.com
 Twitter: @dotidehq
 Location: Nanjing, China
 
