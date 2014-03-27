@@ -2,14 +2,15 @@
   .sub-nav-bar
     .row
       .large-7.columns
-        %a{href: '/docs/index.html'}= '文档'
+        %h4
+          %a{href: '/docs/index.html'}= '文档'
       %dl.sub-nav.large-5.columns
         %dd.nav-guides
           %a{href: '/docs/guides/index.html'}= 'API 使用指南'
         %dd.nav-refs
           %a{href: '/docs/refs/index.html'}= 'API 参考手册'
         %dd.nav-libraries
-          %a{href: '/docs/libraries/index.html'}= 'SDK'
+          %a{href: '/docs/libraries/index.html'}= 'SDK 文档'
   .row.main-content
     .large-3.columns.hide-for-small.sidebar
       = yield_content :sidebar
