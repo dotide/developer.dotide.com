@@ -91,4 +91,12 @@ GET /datastreams/device0_message
 GET /datastreams?tags=temperature
 ```
 
-更详细的操作请移步 [API 参考手册][api_ref]及[SDK][sdk]。
+更详细的操作请移步 [API 参考手册][api_ref]及[ SDK 文档][sdk]。
+
+
+[postman]: https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm
+[create_datastream]: /docs/refs/data/datastream.html#para-2
+[create_datapoints]: /docs/refs/data/datapoint.html#para-2
+[list_datapoints]: /docs/refs/data/datapoint.html#para-1
+[api_ref]: /docs/refs/index.html
+[sdk]: /docs/libraries/index.html
