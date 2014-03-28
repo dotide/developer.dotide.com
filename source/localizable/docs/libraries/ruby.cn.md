@@ -94,7 +94,7 @@ conn.configure do |c|
 end
 ```
 
-**当设置了client_id和client_secret以后，会优先使用Basic 认证**
+**当设置了`client_id`和`client_secret`以后，会优先使用Basic 认证**
 
 ## Access Token操作
 
@@ -227,12 +227,18 @@ dp = ds.datapoints.build(t: '2014-01-03T00:00:01Z', v: 10)
 dp.save
 
 # 一次创建多个数据点
-dps = ds.datapoints.create([{t: '2014-01-03T00:00:01Z', v: 10}, {t: '2014-01-03T00:20:01Z', v: 12}])
+dps = ds.datapoints.create([
+  {t: '2014-01-03T00:00:01Z', v: 10},
+  {t: '2014-01-03T00:20:01Z', v: 12}
+  ])
 dps.length
 #=> 2
 
 # 删除一个时间段的数据点
-ds.datapoints.destroy_all(start: '2014-01-03T00:00:01Z', end: '2014-01-03T00:20:01Z')
+ds.datapoints.destroy_all(
+  start: '2014-01-03T00:00:01Z',
+  end: '2014-01-03T00:20:01Z'
+  )
 ```
 
 [api_token]: /docs/refs/basics/auth.html
