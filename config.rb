@@ -95,12 +95,7 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  activate :asset_hash
-
-  # Compressing Images
-  activate :imageoptim do |options|
-    options.pngout_options = false
-  end
+  activate :asset_hash, ignore: [/^fonts/]
 
   # Use relative URLs
   # activate :relative_assets
