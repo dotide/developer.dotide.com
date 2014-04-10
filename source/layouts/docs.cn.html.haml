@@ -21,3 +21,10 @@
   - content_for :javascripts do
     :javascript
       $('li.nav-docs').addClass('active');
+      $('.markdown h2').each(function(idx, elem) {
+        var id = (idx + 1).toString() + '-' + $(elem).text().replace(/\s+/g, '-')
+        var html = "<a href=#" + id + "><i class='fa fa-chain'></i></a>"
+        $(this).prepend(html);
+        $(this).addClass('subheader');
+        return $(this).attr('id', id);
+      });
