@@ -41,4 +41,4 @@ $ curl -u client_id https://api.dotide.com/v1/demo/datastreams?access_token=ACCE
 
 推荐将 `access_token` 放置在 Header 中，并使用 HTTPS 进行传输。目前 `access_token` 还没有过期和刷新的机制， 只可以通过 Access Token 的 API 进行操作。对 Access Token的操作都需要使用 Basic 认证。关于操作 Access Token 的详细内容，参见[认证与权限控制][token]。
 
-[token]: /docs/refs/basics/auth.html
+[token]: /docs/v1/basics/auth.html

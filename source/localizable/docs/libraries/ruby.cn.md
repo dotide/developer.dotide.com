@@ -241,6 +241,6 @@ ds.datapoints.destroy_all(
   )
 ```
 
-[api_token]: /docs/refs/basics/auth.html
-[api_datastream]: /docs/refs/data/datastream.html
-[api_datapoint]: /docs/refs/data/datapoint.html
+[api_token]: /docs/v1/basics/auth.html
+[api_datastream]: /docs/v1/data/datastream.html
+[api_datapoint]: /docs/v1/data/datapoint.html

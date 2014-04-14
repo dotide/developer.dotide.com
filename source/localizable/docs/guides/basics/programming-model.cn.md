@@ -49,10 +49,10 @@ Dotide 提供时序数据存储服务，向用户服务器提供数据的管理�
 如果数据库设置为 `public`， 则不需要认证，直接发请求即可。否则下载流程与上传流程相同。
 
 
-[create_datastream]: /docs/refs/data/datastream.html#3-创建数据流
-[create_datapoints]: /docs/refs/data/datapoint.html#3-创建数据点
-[list_datapoints]: /docs/refs/data/datapoint.html#2-查询数据点
-[api_ref]: /docs/refs/index.html
+[create_datastream]: /docs/v1/data/datastream.html#3-创建数据流
+[create_datapoints]: /docs/v1/data/datapoint.html#3-创建数据点
+[list_datapoints]: /docs/v1/data/datapoint.html#2-查询数据点
+[api_ref]: /docs/v1/index.html
 [sdk]: /docs/libraries/index.html
 [postman]: https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm
 [security]: /docs/guides/basics/security.html

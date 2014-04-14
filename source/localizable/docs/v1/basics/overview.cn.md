@@ -108,5 +108,5 @@ $ curl https://api.dotide.com/v1/demo/datastreams?tz=Asia/Shanghai
 
 具体的时区值详见 [Olson 数据库][olson]。如果未提供时区信息，则默认为 `Asia/Shanghai`。
 
-[auth]: /docs/refs/basics/auth.html
+[auth]: /docs/v1/basics/auth.html
 [olson]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
