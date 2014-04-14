@@ -31,7 +31,7 @@ GET /datastreams/:id/datapoints
 | limit      | number | 数据点的个数的最大值。 |
 | offset     | number | 数据点的个数的偏移量，与 `limit` 配合以达到分页的效果。注意：在数据量很大的时候用 `offset` 进行分页会十分耗时，推荐限定 `start` 和 `end` 来进行分段查询。 |
 | summary    | int    | 是否返回数据的统计值，仅针对 `number` 型的数据流有效。可选值为`0`或`1`。**默认值**为`0`。 |
-| interval   | int    | 采样的时间间隔，单位为秒。`0`表示不进行采样，返回所有数据点。**默认值**为`0`。 |
+| interval   | int    | 采样的时间间隔，单位为毫秒。`0`表示不进行采样，返回所有数据点。**默认值**为`0`。 |
 | function   | string | 采样函数。可选 `avg`, `sum`, `max`, `min`, `count`。**默认值**为 `avg`。 |
 | tz         | string | 指定时区。**默认值**为 `Asia/Shanghai`。 |
 
