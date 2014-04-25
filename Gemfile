@@ -1,7 +1,7 @@
 # If you have OpenSSL installed, we recommend updating
 # the following line to use "https"
-# source 'http://rubygems.org'
-source 'http://ruby.taobao.org/'
+# source 'https://rubygems.org'
+source 'https://ruby.taobao.org/'
 
 # middleman
 gem "middleman", "~> 3.2.2"
