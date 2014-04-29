@@ -28,7 +28,6 @@ end
 # With no layout
 page 'robots.txt', layout: false
 page 'humans.txt', layout: false
-page '404.html', layout: false
 
 # Per-page layout changes:
 #
