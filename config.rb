@@ -1,4 +1,4 @@
-require 'extensions/sitemap.rb'
+require 'extensions/sitemap'
 
 activate :sprockets
 after_configuration do
@@ -61,9 +61,6 @@ page 'humans.txt', layout: false
 #   end
 # end
 
-# Generate sitemap after build
-activate :sitemap_generator
-
 ### Assets PATH
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
@@ -95,6 +92,9 @@ configure :build do
 
   # Enable cache buster
   activate :asset_hash, ignore: [/^fonts/]
+
+  # Generate sitemap after build
+  activate :sitemap_generator
 
   # Use relative URLs
   # activate :relative_assets
