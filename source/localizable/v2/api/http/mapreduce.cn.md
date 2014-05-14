@@ -2,7 +2,7 @@
 layout: docs
 category: api
 section: http
-title: HTTP API
+title: MapReduce
 ---
 
-HTTP API
+MapReduce
