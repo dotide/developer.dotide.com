@@ -1,19 +1,45 @@
 = wrap_layout 'cn' do
   .row.main-content
-    .large-3.columns
+    .large-3.small-12.columns
       .hide-for-small
-        .sidebar.gray-bg
+        .sidebar
           %nav
             %ul.side-nav
-              %li.heading= 'API'
-              %li.nav-api-concepts
-                = link_to '关键概念', '/v2/api/concepts.html'
+              %li.heading
+                %i.fa.fa-globe
+                = 'API'
               %li.nav-api-http
                 = link_to 'HTTP API', '/v2/api/http/overview.html'
               %li.nav-api-protobuf
                 = link_to 'Protobuf API', '/v2/api/protobuf/overview.html'
               %li.divider
-              %li.heading= 'MapReduce'
+              %li.heading
+                %i.fa.fa-cogs
+                = '数据操作'
+              %li.nav-data-concepts
+                = link_to '相关概念', '/v2/data/concepts.html'
+              %li.nav-data-database
+                = link_to '数据库操作', '/v2/data/database.html'
+              %li.nav-data-datastream
+                = link_to '数据流操作', '/v2/data/datastream.html'
+              %li.nav-data-datapoint
+                = link_to '数据点操作', '/v2/data/datapoint.html'
+              %li.nav-data-dataprocessing
+                = link_to '数据分析处理', '/v2/data/dataprocessing.html'
+              %li.divider
+              %li.heading
+                %i.fa.fa-key
+                = '认证与授权'
+              %li.nav-auth-overview
+                = link_to '概述', '/v2/auth/overview.html'
+              %li.nav-auth-authentication
+                = link_to '认证', '/v2/auth/authentication.html'
+              %li.nav-auth-authorization
+                = link_to '授权', '/v2/auth/authorization.html'
+              %li.divider
+              %li.heading
+                %i.fa.fa-coffee
+                = 'MapReduce'
               %li.nav-mr-overview
                 = link_to '概述', '/v2/mr/overview.html'
               %li.nav-mr-map
@@ -21,11 +47,23 @@
               %li.nav-mr-reduce
                 = link_to 'Reduce', '/v2/mr/reduce.html'
               %li.divider
-              %li.heading= '管理界面'
+              %li.heading
+                %i.fa.fa-wrench
+                = '管理界面'
               %li.nav-admin-account
                 = link_to '帐号管理', '/admin/account.html'
               %li.nav-admin-db
                 = link_to '数据库管理', '/admin/db.html'
+              %li.divider
+              %li.heading
+                %i.fa.fa-rocket
+                = 'API 客户端'
+              %li.nav-libs-python
+                = link_to 'Python', '/libs/python.html'
+              %li.nav-libs-ruby
+                = link_to 'Ruby', '/libs/ruby.html'
+              %li.heading
+                %a.button.primary{href: 'https://dashboard.dotide.com/login'}= '使用 Dotide'
     .large-9.small-12.columns
       .right-content
         - if content_for? :raw_content
@@ -43,12 +81,30 @@
     %ul.off-canvas-list
       %li
         %label= 'API'
-      %li.nav-api-concepts
-        = link_to '关键概念', '/v2/api/concepts.html'
       %li.nav-api-http
         = link_to 'HTTP API', '/v2/api/http/overview.html'
       %li.nav-api-protobuf
         = link_to 'Protobuf API', '/v2/api/protobuf/overview.html'
+      %li
+        %label= '数据操作'
+      %li.nav-data-concepts
+        = link_to '相关概念', '/v2/data/concepts.html'
+      %li.nav-data-database
+        = link_to '数据库操作', '/v2/data/database.html'
+      %li.nav-data-datastream
+        = link_to '数据流操作', '/v2/data/datastream.html'
+      %li.nav-data-datapoint
+        = link_to '数据点操作', '/v2/data/datapoint.html'
+      %li.nav-data-dataprocessing
+        = link_to '数据分析处理', '/v2/data/dataprocessing.html'
+      %li
+        %label= '认证与授权'
+      %li.nav-auth-overview
+        = link_to '概述', '/v2/auth/overview.html'
+      %li.nav-auth-basic
+        = link_to '认证', '/v2/auth/authentication.html'
+      %li.nav-auth-token
+        = link_to '授权', '/v2/auth/authorization.html'
       %li
         %label= 'MapReduce'
       %li.nav-mr-overview
@@ -63,6 +119,12 @@
         = link_to '帐号管理', '/admin/account.html'
       %li.nav-admin-db
         = link_to '数据库管理', '/admin/db.html'
+      %li
+        %label='API 客户端'
+      %li.nav-libs-python
+        = link_to 'Python', '/libs/python.html'
+      %li.nav-libs-ruby
+        = link_to 'Ruby', '/libs/ruby.html'
 
   - content_for :javascripts do
     :javascript

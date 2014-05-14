@@ -45,9 +45,9 @@
           %section.top-bar-section
             %ul.right
               %li.nav-guides
-                = link_to '指南', '/guides/index.html'
+                = link_to '指南', '/guides/overview.html'
               %li.nav-docs
-                = link_to '文档', '/v2/api/concepts.html'
+                = link_to '文档', '/v2/data/concepts.html'
               %li.nav-changelog
                 %a{href: 'http://blog.dotide.com/cn/tags/开发者中心.html'}= '更新日志'
               %li.nav-backdotide
@@ -62,16 +62,16 @@
           %section.right-small
             %a.right-off-canvas-toggle.menu-icon
               %span
-      %aside.left-off-canvas-menu.show-for-small
+      %aside.right-off-canvas-menu.show-for-small
         %ul.off-canvas-list
           %li
             %label= '目录'
           %li.nav-home
             = link_to '首页', '/'
           %li.nav-guides
-            = link_to '指南', '/guides/index.html'
+            = link_to '指南', '/guides/overview.html'
           %li.nav-docs
-            = link_to '文档', '/v2/api/concepts.html'
+            = link_to '文档', '/v2/data/concepts.html'
           %li.nav-changelog
             %a{href: 'http://blog.dotide.com/cn/tags/开发者中心.html'}= "更新日志"
           %li
@@ -80,7 +80,7 @@
             %a{href: 'https://github.com/dotide/developer.dotide.com'}= '本站源代码'
           %li
             %a{href: 'https://dotide.com'}= '回到 Dotide'
-      %aside.right-off-canvas-menu.show-for-small
+      %aside.left-off-canvas-menu.show-for-small
         = yield_content :second_nav
       %hr
       / Main page container

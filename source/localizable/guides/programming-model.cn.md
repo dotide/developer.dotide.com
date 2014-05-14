@@ -1,7 +1,7 @@
 ---
-layout: docs/guides.cn
-section: basics
-page: programming-model
+layout: guides
+category: guides
+section: programming-model
 title: 编程模型
 outlines:
   - 基本架构

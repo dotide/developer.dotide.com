@@ -1,0 +1,51 @@
+= wrap_layout 'cn' do
+  .row.main-content
+    .large-3.small-12.columns
+      .hide-for-small
+        .sidebar
+          %nav
+            %ul.side-nav
+              %li.heading
+                %i.fa.fa-book
+                = '指南'
+              %li.nav-guides-overview
+                = link_to '概述', '/guides/overview.html'
+              %li.nav-guides-data-model
+                = link_to '如何进行数据建模', '/guides/data-model.html'
+              %li.nav-guides-programming-model
+                = link_to '编程模型', '/guides/programming-model.html'
+    .large-9.small-12.columns
+      .right-content
+        - if content_for? :raw_content
+          = yield_content :raw_content
+        - else
+          %h1= current_page.data.title
+          - if current_page.data.outlines
+            %ul.toc
+              - current_page.data.outlines.each_with_index do |o, i|
+                %li
+                  %a{href: "##{i+1}-#{o.gsub(/\s+/, '-')}"}= o
+          .markdown= yield
+
+  - content_for :second_nav do
+    %ul.off-canvas-list
+      %li
+        %label= '指南'
+      %li.nav-guides-overview
+        = link_to '概述', '/guides/overview.html'
+      %li.nav-guides-data-model
+        = link_to '如何进行数据建模', '/guides/data-model.html'
+      %li.nav-guides-programming-model
+        = link_to '编程模型', '/guides/programming-model.html'
+
+  - content_for :javascripts do
+    :javascript
+      $('li.nav-guides').addClass('active');
+      $("li.nav-#{current_page.data.category}-#{current_page.data.section}").addClass('active');
+      $('.markdown h2').each(function(idx, elem) {
+        var id = (idx + 1).toString() + '-' + $(elem).text().replace(/\s+/g, '-');
+        var html = '<a href=#' + id + '><i class="fa fa-chain"></i></a>';
+        $(this).prepend(html);
+        $(this).addClass('subheader');
+        return $(this).attr('id', id);
+      });

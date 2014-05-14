@@ -1,8 +1,8 @@
 ---
 layout: docs
-category: api
+category: data
 section: concepts
-title: 关键概念
+title: 相关概念
 outlines:
   - 时序数据（Time Series Data）
   - 数据库（Database）

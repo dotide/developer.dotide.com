@@ -1,13 +1,19 @@
 .sidebar {
   background-color: $gray-bg;
 }
-
 .side-nav {
   li {
-    padding: 3px 0 2px 10px;
+    padding: rem-calc(5 20 5 20);
+    a {
+      padding-left: rem-calc(22);
+    }
     &.heading {
+      margin-top: rem-calc(10);
       font-weight: bold;
-      font-size: $h5-font-size;
+      font-size: rem-calc(18);
+    }
+    &:not(.heading):hover, &.active {
+      background-color: scale-color($gray-bg, $lightness: -5%);
     }
   }
 }

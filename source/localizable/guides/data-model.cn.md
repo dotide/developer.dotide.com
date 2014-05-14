@@ -1,13 +1,9 @@
 ---
-layout: docs/guides.cn
-section: basics
-page: data
-title: 数据存取
-outlines:
-  - 数据建模
+layout: guides
+category: guides
+section: data-model
+title: 数据建模
 ---
-
-## 数据建模
 
 使用 Dotide 的第一步应该对要处理的数据进行建模，下面举个例子来说明。
 

@@ -1,8 +1,8 @@
 ---
-layout: docs/libraries.cn
-section: official
-page: ruby
-title: Ruby SDK for Dotide API
+layout: docs
+category: libs
+section: ruby
+title: Ruby 客户端
 outlines:
   - 概述
   - 安装

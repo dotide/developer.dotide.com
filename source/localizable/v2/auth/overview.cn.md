@@ -1,8 +1,8 @@
 ---
-layout: docs/guides.cn
-section: basics
-page: security
-title: 安全机制
+layout: docs
+category: auth
+section: overview
+title: 概述
 outlines:
   - Basic 认证
   - Access Token 认证

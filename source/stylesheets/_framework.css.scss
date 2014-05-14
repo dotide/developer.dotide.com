@@ -788,7 +788,7 @@
 // We use these to control list styles.
 // $side-nav-list-type: none;
 // $side-nav-list-position: inside;
-// $side-nav-list-margin: 0;
+$side-nav-list-margin: 0;
 
 // We use these to control link styles.
 $side-nav-link-color: $primary;
@@ -805,7 +805,7 @@ $side-nav-font-weight-active: bold;
 // We use these to control border styles
 // $side-nav-divider-size: 1px;
 // $side-nav-divider-style: solid;
-// $side-nav-divider-color: scale-color(#fff, $lightness: -10%);
+$side-nav-divider-color: scale-color($gray-bg, $lightness: -10%);
 
 // Split Buttons
 
