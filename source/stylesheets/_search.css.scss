@@ -1,0 +1,31 @@
+
+body form input.search-input {
+  line-height: $topbar-height / 2;
+}
+/* Change color of search result text */
+.swiftype-widget .autocomplete ul li p.title {
+  color: $primary;
+}
+
+/* Change background color of selected search result */
+.swiftype-widget .autocomplete ul li.active {
+  background: none;
+  background-color: $primary;
+  border-top: 1px solid $gray-light-border;
+  border-bottom: 1px solid $gray-light-border;
+}
+
+/* change the color of the section text (displayed below the title) */
+.swiftype-widget .autocomplete ul li.active .sections em {
+  color: white;
+}
+
+.st-result-listing h3 a {
+  font-size: $h5-font-size;
+}
+
+.st-snippet em {
+  color: #990000;
+  font-style: normal;
+  font-size: $h5-font-size;
+}

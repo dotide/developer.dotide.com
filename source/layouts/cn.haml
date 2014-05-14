@@ -35,13 +35,14 @@
               %h1
                 = link_to '/' do
                   %i{:"data-icon" => 'a'}
-          %section
+          %section.top-bar-section
             %ul.left
               %li
                 = link_to '/' do
                   = "开发者中心"
-            %form
-              %input.st-search-input{type: 'text', id: 'st-search-input'}
+              %li.has-form
+                %form
+                  %input.search-input{type: 'search', id: 'st-search-input', placeholder: '搜索'}
           %section.top-bar-section
             %ul.right
               %li.nav-guides

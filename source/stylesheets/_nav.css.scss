@@ -8,12 +8,11 @@
     }
     i{
       font-size: 30px;
-      line-height: 60px;
+      line-height: inherit;
       color: black;
     }
   }
   section .left{
-    line-height: 60px;
     margin-left: 0;
     a{
       color: black;
