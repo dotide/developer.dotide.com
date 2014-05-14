@@ -1,7 +1,7 @@
 ---
 layout: docs
 category: api
-section: http
+section: protobuf
 title: Protobuf API
 ---
 
