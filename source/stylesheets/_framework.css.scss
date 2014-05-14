@@ -783,19 +783,22 @@
 // $include-html-nav-classes: $include-html-classes;
 
 // We use this to control padding.
-// $side-nav-padding: rem-calc(14 0);
+// $side-nav-padding: rem-calc(32 20);
 
 // We use these to control list styles.
 // $side-nav-list-type: none;
 // $side-nav-list-position: inside;
-// $side-nav-list-margin: rem-calc(0 0 7 0);
+// $side-nav-list-margin: 0;
 
 // We use these to control link styles.
 $side-nav-link-color: $primary;
-$side-nav-link-color-active: $primary;
-$side-nav-font-size: rem-calc(13);
+$side-nav-link-color-active: #008CBA;
+$side-nav-link-color-hover: #008CBA;
+// $side-nav-font-size: rem-calc(16);
+$side-nav-font-weight: normal;
+$side-nav-font-weight-active: bold;
 // $side-nav-font-family: $body-font-family;
-// $side-nav-active-font-family: $side-nav-font-family;
+// $side-nav-font-family-active: $side-nav-font-family;
 
 
 

@@ -1,7 +1,7 @@
 ---
-layout: docs/guides.cn
-section: basics
-page: concepts
+layout: docs
+category: api
+section: concepts
 title: 关键概念
 outlines:
   - 时序数据（Time Series Data）

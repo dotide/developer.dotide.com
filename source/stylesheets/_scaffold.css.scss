@@ -5,14 +5,9 @@ hr{
   font-size: 14px;
   li{
     list-style-type: lower-roman;
-    a{
-      &:hover{
-        text-decoration: underline;
-      }
-    }
   }
 }
-.gray-bg{
+.gray-bg {
   padding: 10px 15px 5px 15px;
   background-color: $gray-bg;
 }

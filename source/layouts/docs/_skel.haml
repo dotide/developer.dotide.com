@@ -1,7 +1,0 @@
-- if current_page.data.page != 'index'
-  %h1= current_page.data.title
-- if current_page.data.outlines
-  %ul.toc
-    - current_page.data.outlines.each_with_index do |o, i|
-      %li
-        %a{href: "##{i+1}-#{o.gsub(/\s+/, '-')}"}= o

@@ -33,21 +33,25 @@
           %ul.title-area
             %li.name
               %h1
-                %a{href: '/'}
+                = link_to '/' do
                   %i{:"data-icon" => 'a'}
           %section
             %ul.left
               %li
-                %a{:href => "/"}
+                = link_to '/' do
                   = "开发者中心"
+            %form
+              %input.st-search-input{type: 'text', id: 'st-search-input'}
           %section.top-bar-section
             %ul.right
+              %li.nav-guides
+                = link_to '指南', '/guides/index.html'
               %li.nav-docs
-                %a{href: '/docs/index.html'}= "文档"
+                = link_to '文档', '/v2/api/concepts.html'
               %li.nav-changelog
-                %a{href: 'http://blog.dotide.com/cn/tags/开发者中心.html'}= "更新日志"
+                %a{href: 'http://blog.dotide.com/cn/tags/开发者中心.html'}= '更新日志'
               %li.nav-backdotide
-                %a{href: 'https://dotide.com'}= "回到Dotide"
+                %a{href: 'https://dotide.com'}= '回到 Dotide'
       %nav.tab-bar.show-for-small
         %section.left-small
           %a.left-off-canvas-toggle.menu-icon
@@ -63,9 +67,11 @@
           %li
             %label= '目录'
           %li.nav-home
-            %a{href: '/'}= "首页"
+            = link_to '首页', '/'
+          %li.nav-guides
+            = link_to '指南', '/guides/index.html'
           %li.nav-docs
-            %a{href: '/docs/index.html'}= "文档"
+            = link_to '文档', '/v2/api/concepts.html'
           %li.nav-changelog
             %a{href: 'http://blog.dotide.com/cn/tags/开发者中心.html'}= "更新日志"
           %li
@@ -73,7 +79,7 @@
           %li
             %a{href: 'https://github.com/dotide/developer.dotide.com'}= '本站源代码'
           %li
-            %a{href: 'https://dotide.com'}= 'Dotide 主站'
+            %a{href: 'https://dotide.com'}= '回到 Dotide'
       %aside.right-off-canvas-menu.show-for-small
         = yield_content :second_nav
       %hr
@@ -130,12 +136,22 @@
 
   / Javascript
   = javascript_include_tag "application"
-  = yield_content :javascripts
+
   :javascript
-    $(document).ready(function () {
-      #{yield_content :onready}
-      $(document).foundation();
-    });
+    var Swiftype = window.Swiftype || {};
+    (function() {
+      Swiftype.key = 'c4Vqv939Mj1JitxK3jZm';
+      /** DO NOT EDIT BELOW THIS LINE **/
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = "//s.swiftypecdn.com/embed.js";
+      var entry = document.getElementsByTagName('script')[0];
+      entry.parentNode.insertBefore(script, entry);
+    }());
+
+  = yield_content :javascripts
+
+  :javascript
+    $(document).foundation();
 
   - if build?
     -# Google Analytics

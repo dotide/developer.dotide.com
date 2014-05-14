@@ -1,44 +1,13 @@
-.sidebar dd{
-  & > a{
-    border-bottom: solid 1px $gray-light-border;
-    font-size: 13px;
-  }
-  &:last-child a{
-    border: none;
-  }
-  &.active > a{
-    border-bottom: solid 1px $gray-border;
-  }
-  a{
-    background-color: $gray-light-bg;
-    padding: 8px;
-    padding-left: 20px;
-    i{
-      padding-right: 10px;
-    }
-  }
-  .side-nav{
-    padding: 0;
-    a{
-      background-color: white;
-      width: 60%;
-      padding: 4px;
-      padding-left: 10px;
-      &:hover{
-        font-weight: bold;
-        span{
-          border-bottom: solid 1px $primary;
-        }
-      }
-      span{
-        padding-left: 8px;
-        padding-right: 8px;
-      }
-    }
-    li.active{
-      a span{
-        border-bottom: solid 1px $primary;;
-      }
+.sidebar {
+  background-color: $gray-bg;
+}
+
+.side-nav {
+  li {
+    padding: 3px 0 2px 10px;
+    &.heading {
+      font-weight: bold;
+      font-size: $h5-font-size;
     }
   }
 }

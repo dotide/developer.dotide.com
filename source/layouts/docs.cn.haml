@@ -1,29 +1,76 @@
 = wrap_layout 'cn' do
-  .sub-nav-bar
-    .row
-      .large-7.columns
-        %h4
-          %a{href: '/docs/index.html'}= '文档'
-      %dl.sub-nav.large-5.columns
-        %dd.nav-guides
-          %a{href: '/docs/guides/index.html'}= 'API 使用指南'
-        %dd.nav-refs
-          %a{href: '/docs/v1/index.html'}= 'API 参考手册'
-        %dd.nav-libraries
-          %a{href: '/docs/libraries/index.html'}= 'SDK 文档'
   .row.main-content
-    .large-3.columns.hide-for-small.sidebar
-      = yield_content :sidebar
+    .large-3.columns
+      .hide-for-small
+        .sidebar.gray-bg
+          %nav
+            %ul.side-nav
+              %li.heading= 'API'
+              %li.nav-api-concepts
+                = link_to '关键概念', '/v2/api/concepts.html'
+              %li.nav-api-http
+                = link_to 'HTTP API', '/v2/api/http/overview.html'
+              %li.nav-api-protobuf
+                = link_to 'Protobuf API', '/v2/api/protobuf/overview.html'
+              %li.divider
+              %li.heading= 'MapReduce'
+              %li.nav-mr-overview
+                = link_to '概述', '/v2/mr/overview.html'
+              %li.nav-mr-map
+                = link_to 'Map', '/v2/mr/map.html'
+              %li.nav-mr-reduce
+                = link_to 'Reduce', '/v2/mr/reduce.html'
+              %li.divider
+              %li.heading= '管理界面'
+              %li.nav-admin-account
+                = link_to '帐号管理', '/admin/account.html'
+              %li.nav-admin-db
+                = link_to '数据库管理', '/admin/db.html'
     .large-9.small-12.columns
       .right-content
-        = yield
+        - if content_for? :raw_content
+          = yield_content :raw_content
+        - else
+          %h1= current_page.data.title
+          - if current_page.data.outlines
+            %ul.toc
+              - current_page.data.outlines.each_with_index do |o, i|
+                %li
+                  %a{href: "##{i+1}-#{o.gsub(/\s+/, '-')}"}= o
+          .markdown= yield
+
+  - content_for :second_nav do
+    %ul.off-canvas-list
+      %li
+        %label= 'API'
+      %li.nav-api-concepts
+        = link_to '关键概念', '/v2/api/concepts.html'
+      %li.nav-api-http
+        = link_to 'HTTP API', '/v2/api/http/overview.html'
+      %li.nav-api-protobuf
+        = link_to 'Protobuf API', '/v2/api/protobuf/overview.html'
+      %li
+        %label= 'MapReduce'
+      %li.nav-mr-overview
+        = link_to '概述', '/v2/mr/overview.html'
+      %li.nav-mr-map
+        = link_to 'Map', '/v2/mr/map.html'
+      %li.nav-mr-reduce
+        = link_to 'Reduce', '/v2/mr/reduce.html'
+      %li
+        %label= '管理界面'
+      %li.nav-admin-account
+        = link_to '帐号管理', '/admin/account.html'
+      %li.nav-admin-db
+        = link_to '数据库管理', '/admin/db.html'
 
   - content_for :javascripts do
     :javascript
       $('li.nav-docs').addClass('active');
+      $("li.nav-#{current_page.data.category}-#{current_page.data.section}").addClass('active');
       $('.markdown h2').each(function(idx, elem) {
-        var id = (idx + 1).toString() + '-' + $(elem).text().replace(/\s+/g, '-')
-        var html = "<a href=#" + id + "><i class='fa fa-chain'></i></a>"
+        var id = (idx + 1).toString() + '-' + $(elem).text().replace(/\s+/g, '-');
+        var html = '<a href=#' + id + '><i class="fa fa-chain"></i></a>';
         $(this).prepend(html);
         $(this).addClass('subheader');
         return $(this).attr('id', id);
