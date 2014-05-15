@@ -2,12 +2,8 @@
 layout: docs
 category: api
 section: http
+toc: article
 title: 数据点
-outlines:
-  - 权限验证
-  - 读取数据点
-  - 创建数据点
-  - 删除数据点
 ---
 
 ## 权限验证

@@ -2,13 +2,8 @@
 layout: docs
 category: api
 section: http
+toc: article
 title: HTTP API 基础
-outlines:
-  - 调用约定
-  - 请求参数
-  - HTTP 动词
-  - 权限验证
-  - 时区
 ---
 
 本节将描述 Dotide API 的组成与使用。

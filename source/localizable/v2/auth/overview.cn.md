@@ -2,10 +2,8 @@
 layout: docs
 category: auth
 section: overview
+toc: article
 title: 概述
-outlines:
-  - Basic 认证
-  - Access Token 认证
 ---
 
 目前支持两种方式进行安全验证：

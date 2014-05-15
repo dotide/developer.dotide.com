@@ -1,10 +1,15 @@
 hr{
   margin: 0;
 }
-.toc{
-  font-size: 14px;
-  li{
+ol.toc{
+  li {
+    font-size: 14px;
+  }
+  & > li {
     list-style-type: lower-roman;
+    ol > li {
+      list-style-type: lower-alpha;
+    }
   }
 }
 .gray-bg {

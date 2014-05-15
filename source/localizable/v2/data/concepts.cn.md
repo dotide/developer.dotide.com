@@ -2,12 +2,8 @@
 layout: docs
 category: data
 section: concepts
+toc: article
 title: 相关概念
-outlines:
-  - 时序数据（Time Series Data）
-  - 数据库（Database）
-  - 数据流（Datastream）
-  - 数据点（Datapoint）
 ---
 
 ## 时序数据（Time Series Data）

@@ -2,14 +2,8 @@
 layout: docs
 category: api
 section: http
+toc: article
 title: 数据流
-outlines:
-  - 权限验证
-  - 罗列数据流
-  - 创建数据流
-  - 读取数据流
-  - 更新数据流
-  - 删除数据流
 ---
 
 ## 权限验证

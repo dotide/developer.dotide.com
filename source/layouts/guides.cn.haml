@@ -41,13 +41,30 @@
         = link_to '编程模型', '/guides/programming-model.html'
 
   - content_for :javascripts do
-    :javascript
-      $('li.nav-guides').addClass('active');
-      $("li.nav-#{current_page.data.category}-#{current_page.data.section}").addClass('active');
-      $('.markdown h2').each(function(idx, elem) {
-        var id = (idx + 1).toString() + '-' + $(elem).text().replace(/\s+/g, '-');
-        var html = '<a href=#' + id + '><i class="fa fa-chain"></i></a>';
-        $(this).prepend(html);
-        $(this).addClass('subheader');
-        return $(this).attr('id', id);
-      });
+    :coffee
+      $('li.nav-guides').addClass('active')
+      $("li.nav-#{current_page.data.category}-#{current_page.data.section}").addClass('active')
+      h2_idx = 0
+      h3_idx = 0
+      toc = $('ol.toc')
+      lnode = toc
+      $('.markdown h2, .markdown h3').each ()->
+        elem = $(this);
+        hc = elem.text().replace(/\s+/g, '-')
+        if elem.prop('tagName') is 'H2'
+          id = (h2_idx + 1).toString() + '-' + hc
+          anchor = '<a href=#' + id + '><i class="fa fa-chain"></i></a>'
+          elem.prepend(anchor);
+          elem.attr('id', id)
+          toc_item = '<li><a href="' + id + '">' + hc + '</a><ol></ol></li>'
+          toc.append(toc_item)
+          lnode = toc.children().last().children('ol')
+          h2_idx += 1
+        else
+          id = (h2_idx + 1).toString() + '-' + (h3_idx + 1).toString() + '-' + hc
+          anchor = '<a href=#' + id + '><i class="fa fa-chain"></i></a>'
+          elem.prepend(anchor);
+          elem.attr('id', id)
+          toc_item = '<li><a href="' + id + '">' + hc + '</a></li>'
+          lnode.append(toc_item)
+          h3_idx += 1

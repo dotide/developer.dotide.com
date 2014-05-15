@@ -70,11 +70,7 @@
           = yield_content :raw_content
         - else
           %h1= current_page.data.title
-          - if current_page.data.outlines
-            %ul.toc
-              - current_page.data.outlines.each_with_index do |o, i|
-                %li
-                  %a{href: "##{i+1}-#{o.gsub(/\s+/, '-')}"}= o
+          %ol.toc
           .markdown= yield
 
   - content_for :second_nav do
@@ -127,24 +123,41 @@
         = link_to 'Ruby', '/libs/ruby.html'
 
   - content_for :javascripts do
-    :javascript
-      $('li.nav-docs').addClass('active');
-      $("li.nav-#{current_page.data.category}-#{current_page.data.section}").addClass('active');
-    :javascript
-      $('.markdown h2').each(function(idx, elem) {
-        var id = (idx + 1).toString() + '-' + $(elem).text().replace(/\s+/g, '-');
-        var html = '<a href=#' + id + '><i class="fa fa-chain"></i></a>';
-        $(this).prepend(html);
-        $(this).addClass('subheader');
-        return $(this).attr('id', id);
-      });
+    :coffee
+      $('li.nav-docs').addClass('active')
+      $("li.nav-#{current_page.data.category}-#{current_page.data.section}").addClass('active')
+    - if current_page.data.toc == 'article'
+      :coffee
+        h2_idx = 0
+        h3_idx = 0
+        toc = $('ol.toc')
+        lnode = toc
+        $('.markdown h2, .markdown h3').each ()->
+          elem = $(this);
+          hc = elem.text().replace(/\s+/g, '-')
+          if elem.prop('tagName') is 'H2'
+            id = (h2_idx + 1).toString() + '-' + hc
+            anchor = '<a href=#' + id + '><i class="fa fa-chain"></i></a>'
+            elem.prepend(anchor);
+            elem.attr('id', id)
+            toc_item = '<li><a href="' + id + '">' + hc + '</a><ol></ol></li>'
+            toc.append(toc_item)
+            lnode = toc.children().last().children('ol')
+            h2_idx += 1
+          else
+            id = (h2_idx + 1).toString() + '-' + (h3_idx + 1).toString() + '-' + hc
+            anchor = '<a href=#' + id + '><i class="fa fa-chain"></i></a>'
+            elem.prepend(anchor);
+            elem.attr('id', id)
+            toc_item = '<li><a href="' + id + '">' + hc + '</a></li>'
+            lnode.append(toc_item)
+            h3_idx += 1
     - if current_page.data.toc == 'section'
-      :javascript
-        $('.markdown ul ul').each(function() {
-          $(this).find('li a').each(function(idx, elem) {
-            var anchor = (idx + 1).toString() + '-' + $(elem).text().replace(/\s+/g, '-');
-            var base_link = $(elem).attr('href');
-            var link = base_link + '#' + anchor;
-            $(elem).attr('href', link);
-          });
-        });
+      :coffee
+        $('.markdown ul ul').each ()->
+          $(this).find('li a').each (idx, el)->
+            elem = $(this)
+            anchor = (idx + 1).toString() + '-' + elem.text().replace(/\s+/g, '-')
+            base_link = elem.attr('href')
+            link = base_link + '#' + anchor
+            elem.attr('href', link)

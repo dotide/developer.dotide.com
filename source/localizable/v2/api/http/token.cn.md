@@ -2,14 +2,8 @@
 layout: docs
 category: api
 section: http
+toc: article
 title: Access Token
-outlines:
-  - 权限验证
-  - 罗列 Access Token
-  - 创建 Access Token
-  - 读取 Access Token
-  - 更新 Access Token
-  - 删除 Access Token
 ---
 
 ## 权限验证
