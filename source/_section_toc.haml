@@ -1,9 +1,0 @@
-:javascript
-  $('.markdown ul ul').each(function() {
-    $(this).find('li a').each(function(idx, elem) {
-      var anchor = (idx + 1).toString() + '-' + $(elem).text().replace(/\s+/g, '-');
-      var base_link = $(elem).attr('href');
-      var link = base_link + '#' + anchor;
-      $(elem).attr('href', link);
-    });
-  });

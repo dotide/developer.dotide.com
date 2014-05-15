@@ -5,7 +5,7 @@ section: http
 title: 数据点
 outlines:
   - 权限验证
-  - 查询数据点
+  - 读取数据点
   - 创建数据点
   - 删除数据点
 ---
