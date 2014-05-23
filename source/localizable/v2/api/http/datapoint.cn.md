@@ -10,7 +10,7 @@ title: 单条数据流的数据点操作
 
 数据点“创建”，“删除”操作均需要通过 [Access Token][auth] 或 [Basic][auth] 认证授权。
 
-数据点“查询”，“获取”操作，当前数据库 `public` 为 `true` 时无需认证，当前数据库 `public` 为 `false` 时，需要通过 [Access Token][auth] 或 [Basic][auth] 认证授权。
+数据点“获取”操作，当前数据库 `public` 为 `true` 时无需认证，当前数据库 `public` 为 `false` 时，需要通过 [Access Token][auth] 或 [Basic][auth] 认证授权。
 
 
 ## 获取数据点
@@ -173,3 +173,5 @@ Status: 204 No Content
 
 [auth]: /docs/v1/basics/auth.html
 [dp-1on1]: /v2/api/http/datapoint.html#4-1-一次创建一个数据点
+[unix_time]: http://en.wikipedia.org/wiki/Unix_time
+[iso8601]: http://en.wikipedia.org/wiki/ISO_8601
