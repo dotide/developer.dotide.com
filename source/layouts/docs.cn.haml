@@ -134,22 +134,22 @@
         lnode = toc
         $('.markdown h2, .markdown h3').each ()->
           elem = $(this);
-          hc = elem.text().replace(/\s+/g, '-')
+          hc = elem.text()
           if elem.prop('tagName') is 'H2'
-            id = (h2_idx + 1).toString() + '-' + hc
-            anchor = '<a href=#' + id + '><i class="fa fa-chain"></i></a>'
+            id = (h2_idx + 1).toString() + '-' + hc.replace(/\s+/g, '-')
+            anchor = '<a href="#' + id + '"><i class="fa fa-chain"></i></a>'
             elem.prepend(anchor);
             elem.attr('id', id)
-            toc_item = '<li><a href="' + id + '">' + hc + '</a><ol></ol></li>'
+            toc_item = '<li><a href="#' + id + '">' + hc + '</a><ol></ol></li>'
             toc.append(toc_item)
             lnode = toc.children().last().children('ol')
             h2_idx += 1
           else
-            id = (h2_idx + 1).toString() + '-' + (h3_idx + 1).toString() + '-' + hc
-            anchor = '<a href=#' + id + '><i class="fa fa-chain"></i></a>'
+            id = (h2_idx + 1).toString() + '-' + (h3_idx + 1).toString() + '-' + hc.replace(/\s+/g, '-')
+            anchor = '<a href="#' + id + '"><i class="fa fa-chain"></i></a>'
             elem.prepend(anchor);
             elem.attr('id', id)
-            toc_item = '<li><a href="' + id + '">' + hc + '</a></li>'
+            toc_item = '<li><a href="#' + id + '">' + hc + '</a></li>'
             lnode.append(toc_item)
             h3_idx += 1
     - if current_page.data.toc == 'section'

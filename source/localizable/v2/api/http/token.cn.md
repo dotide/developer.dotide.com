@@ -3,22 +3,20 @@ layout: docs
 category: api
 section: http
 toc: article
-title: Access Token
+title: Access Token 操作
 ---
 
 ## 权限验证
 
-Access Token 操作需要通过 [Basic][auth]认证授权
+Access Token 的所有操作均需要通过 [Basic][auth]认证。
 
 ## 罗列 Access Token
 
-罗列数据库的 Access Token。
-
 ```
-GET /access_tokens
+GET /:db/access_tokens
 ```
 
-### 响应
+#### 响应
 
 ```
 Status: 200 OK
@@ -45,30 +43,36 @@ Status: 200 OK
 ```
 
 
-## 创建 Access Token
-
-创建一个 Access Token。
+## 创建一个 Access Token
 
 ```
-POST /access_tokens
+POST /:db/access_tokens
 ```
 
-### 输入
+#### 输入
 
 | 名称        | 类型             | 说明 |
 | ---------- | ---------------- | ------------ |
-| scopes     | array            | 指定作用范围， 每个元素描述如下。 |
+| scopes     | array            | 一组授权规则。|
 
-scope
+`scopes` 列表中，每个元素是一个表示授权规则的 hash，其构成如下表所示：
 
-| 名称        | 类型             | 说明 |
-| ----------  | ---------------- | ------------ |
-| permissions | array(of string) | 指定权限，可选 `read`，`write` 和 `delete`。 |
-| global      | boolean          | 是否全局，可选 `true` 或 `false`，若指定为 `true` 则忽略 `ids` 和 `tags`， **默认值**为 `false`。 |
-| ids         | array(of string) | 指定数据流的 id，表示作用的数据流 id 范围。 |
-| tags        | array(of string) | 制定数据流的 tag， 表示作用于包含所有 tag 的数据流。|
+| 名称        | 类型    | 说明 |
+| ----------  | ------- | ------------ |
+| permissions | array | 指定权限，**可选** `read`，`write` 和 `delete`。 |
+| global      | boolean | 是否全局。 **默认值**为 `false`。 |
+| ids         | array | 数据流 'id' 的列表。 |
+| tags        | array | 数据流标签的列表。|
 
-**示例**
+`permission` 规定了规则的权限，`global`, `ids`, `tags`共同规定了规则的适用范围。
+
+`global` 为 `true` 时，表示该规则适用于当前数据库中的所有数据流，并忽略 `ids` 和 `tags` 的值。`global`为 `false` 时，该规则的适用范围由 `ids` 和 `tags` 决定。
+
+`ids` 和 `tags` 共同指定适用该规则的数据流，指定方法与”[查询数据流][qdatastream]”中 `ids` 和 `tags` 相同：
+`ids` 表示： id 在该列表中的数据流将适用该规则。`tags` 表示：标签包含 `tags` 中所有标签的数据流将适用该规则。二者结果的“并集”为最终适用该规则的数据流。
+
+
+> 示例
 
 ```json
 {
@@ -81,7 +85,7 @@ scope
 }
 ```
 
-### 响应
+#### 响应
 
 ```
 Status: 201 Created
@@ -107,21 +111,13 @@ Location: https://api.dotide.com/v1/demo/access_tokens/61e13e47ed0b1b6f6a0ebe598
 ```
 
 
-## 读取 Access Token
-
-读取一个 Access Token。
+## 获取一个 Access Token
 
 ```
-GET /access_tokens/:access_token
+GET /:db/access_tokens/:access_token
 ```
 
-**示例**
-
-```
-/access_tokens/61e13e47ed0b1b6f6a0ebe598d5ddba0c386a0d856487ec84e973d06b1848223
-```
-
-### 响应
+#### 响应
 
 ```
 Status: 200 OK
@@ -146,30 +142,35 @@ Status: 200 OK
 ```
 
 
-## 更新 Access Token
-
-更新一个 Access Token。
+## 更新一个 Access Token
 
 ```
-PUT /access_tokens/:access_token
+PUT /:db/access_tokens/:access_token
 ```
 
-### 输入
+#### 输入
 
 | 名称        | 类型             | 说明 |
 | ---------- | ---------------- | ------------ |
-| scopes     | array            | 指定作用范围， 每个元素描述如下。 |
+| scopes     | array            | 一组授权规则。|
 
-scope
+`scopes` 列表中，每个元素是一个表示授权规则的 hash，其构成如下表所示：
 
-| 名称        | 类型             | 说明 |
-| ----------  | ---------------- | ------------ |
-| permissions | array(of string) | 指定权限，可选 `read`，`write` 和 `delete`。 |
-| global      | boolean          | 是否全局，可选 `true` 或 `false`，若指定为 `true` 则忽略 `ids` 和 `tags`， **默认值**为 `false`。 |
-| ids         | array(of string) | 指定数据流的 id，表示作用的数据流 id 范围。 |
-| tags        | array(of string) | 制定数据流的 tag， 表示作用于包含所有 tag 的数据流。|
+| 名称        | 类型    | 说明 |
+| ----------  | ------- | ------------ |
+| permissions | array | 指定权限，**可选** `read`，`write` 和 `delete`。 |
+| global      | boolean | 是否全局。 **默认值**为 `false`。 |
+| ids         | array | 数据流 'id' 的列表。 |
+| tags        | array | 数据流标签的列表。|
 
-**示例**
+`permission` 规定了规则的权限，`global`, `ids`, `tags`共同规定了规则的适用范围。
+
+`global` 为 `true` 时，表示该规则适用于当前数据库中的所有数据流，并忽略 `ids` 和 `tags` 的值。`global`为 `false` 时，该规则的适用范围由 `ids` 和 `tags` 决定。
+
+`ids` 和 `tags` 共同指定适用该规则的数据流，指定方法与”[查询数据流][qdatastream]”中 `ids` 和 `tags` 相同：
+`ids` 表示： id 在该列表中的数据流将适用该规则。`tags` 表示：标签包含 `tags` 中所有标签的数据流将适用该规则。二者结果的“并集”为最终适用该规则的数据流。
+
+> 示例
 
 ```json
 {
@@ -182,7 +183,7 @@ scope
 }
 ```
 
-### 响应
+#### 响应
 
 ```
 Status: 200 OK
@@ -207,18 +208,17 @@ Status: 200 OK
 ```
 
 
-## 删除 Access Token
-
-删除一个 Access Token。
+## 删除一个 Access Token
 
 ```
-DELETE /access_tokens/:access_token
+DELETE /:db/access_tokens/:access_token
 ```
 
-### 响应
+#### 响应
 
 ```
 Status: 204 No Content
 ```
 
-[auth]:/docs/guides/basics/security.html
+[auth]:/v2/auth/overview.html
+[qdatastream]:/v2/api/http/datastream.html#2-查询数据流

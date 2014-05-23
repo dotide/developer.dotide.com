@@ -37,6 +37,5 @@ title: 相关概念
 
 在概念上与关系型数据库中 `记录` 的概念相同。
 
-
 [iso8601]: http://en.wikipedia.org/wiki/ISO_8601
 [geojson]: http://geojson.org/
