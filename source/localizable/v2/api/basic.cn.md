@@ -1,9 +1,9 @@
 ---
 layout: docs
 category: api
-section: http
+section: basic
 toc: article
-title: HTTP API 基础
+title: API 基础
 ---
 
 ## 调用约定
@@ -56,7 +56,7 @@ $ curl -i -u client_id -d '{"v":4}' -H "Content-Type: application/json"  https:/
 
 ### 响应的格式
 
-所有响应均包含下述的 `Header`， 且`body`格式均为 `json`。
+所有响应均包含下述的 `Header`， 且`body`均以 `json` 编码。
 
 ```
 $ curl -i https://api.dotide.com/v2

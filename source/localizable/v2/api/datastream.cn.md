@@ -1,16 +1,10 @@
 ---
 layout: docs
 category: api
-section: http
+section: datastream
 toc: article
 title: 数据流操作
 ---
-
-## 权限验证
-
-数据流“创建”，“更新”，“删除”操作均需要通过 [Access Token][auth] 或 [Basic][auth] 认证授权。
-
-数据流“查询”，“获取”操作，当前数据库 `public` 为 `true` 时无需认证，当前数据库 `public` 为 `false` 时，需要通过 [Access Token][auth] 或 [Basic][auth] 认证授权。
 
 ## 查询数据流
 
@@ -25,8 +19,9 @@ GET /:db/datastreams
 | ---------- | ------ | ------------------------------------------------------ |
 | ids        | string | 数据流 id 的列表，不同的 id 以`,`分隔。 |
 | tags       | string | 数据流标签的列表，不同的标签以`,`分隔。 |
-| limit      | number | 返回数据流的个数的最大值。 |
-| offset     | number | 返回数据流的偏移量，即返回结果中跳过开头的 `offset`个数据流，与 `limit` 配合以达到分页的效果。 |
+| limit      | number | 返回数据流的个数的最大值。**默认值**为`100`，**最大值**为`1000`。 |
+| offset     | number | 返回数据流的偏移量，即返回结果中跳过开头的 `offset`个数据流，与 `limit` 配合以达到分页的效果。**默认值**为`0` |
+| chunked    | boolean| 以 [Chunked][chunked] 形式返回响应。当一次请求需要返回大量结果时，需要。**默认值**为`false`。 |
 
 `ids` 和 `tags` 共同确定需要返回的数据流。
 
@@ -196,3 +191,4 @@ Status: 204 No Content
 ```
 
 [auth]: /v2/auth/overview.html
+[chunked]: http://en.wikipedia.org/wiki/Chunked_transfer_encoding

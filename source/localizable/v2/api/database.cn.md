@@ -1,14 +1,10 @@
 ---
 layout: docs
 category: api
-section: http
+section: database
 toc: article
 title: 数据库操作
 ---
-
-## 权限验证
-
-数据库的所有操作均需要通过 [Basic][auth]认证。
 
 ## 读取数据库属性
 

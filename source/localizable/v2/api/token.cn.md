@@ -1,20 +1,22 @@
 ---
 layout: docs
 category: api
-section: http
+section: token
 toc: article
 title: Access Token 操作
 ---
-
-## 权限验证
-
-Access Token 的所有操作均需要通过 [Basic][auth]认证。
 
 ## 罗列 Access Token
 
 ```
 GET /:db/access_tokens
 ```
+
+#### 参数
+| 名称        | 类型    | 说明 |
+| ---------- | ------ | ------------------------------------------------------ |
+| limit      | number | 返回 access token 的个数的最大值。**默认值**为`100`，**最大值**为`1000`。 |
+| offset     | number | 返回 access token 的偏移量，即返回结果中跳过开头的 `offset`个 access token，与 `limit` 配合以达到分页的效果。**默认值**为`0` |
 
 #### 响应
 
@@ -59,7 +61,7 @@ POST /:db/access_tokens
 
 | 名称        | 类型    | 说明 |
 | ----------  | ------- | ------------ |
-| permissions | array | 指定权限，**可选** `read`，`write` 和 `delete`。 |
+| permissions | array | 指定权限，**可选** `read`，`write`，`delete` 和 `process`。 |
 | global      | boolean | 是否全局。 **默认值**为 `false`。 |
 | ids         | array | 数据流 'id' 的列表。 |
 | tags        | array | 数据流标签的列表。|
