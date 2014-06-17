@@ -22,6 +22,7 @@ GET /:db/datastreams/:id/datapoints
 | t          | string/number | 返回特定时间的数据点，若指定此参数则忽略 `start`, `end` 和 `order`。 |
 | limit      | number | 数据点的个数的最大值。 |
 | offset     | number | 数据点的个数的偏移量，与 `limit` 配合以达到分页的效果。注意：在数据量很大的时候用 `offset` 进行分页会十分耗时，推荐限定 `start` 和 `end` 来进行分段查询。 |
+| chunked    | boolean| 以 [Chunked][chunked] 形式返回响应。当一次请求需要返回大量结果时，需要。**默认值**为`false`。 |
 
 > 示例
 
@@ -112,3 +113,4 @@ Status: 204 No Content
 [dp-1on1]: /v2/api/http/datapoint.html#4-1-一次创建一个数据点
 [unix_time]: http://en.wikipedia.org/wiki/Unix_time
 [iso8601]: http://en.wikipedia.org/wiki/ISO_8601
+[chunked]: http://en.wikipedia.org/wiki/Chunked_transfer_encoding

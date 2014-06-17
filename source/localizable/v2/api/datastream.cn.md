@@ -6,9 +6,9 @@ toc: article
 title: 数据流操作
 ---
 
-## 查询数据流
+## 罗列数据流
 
-获取数据库中一组特定的数据流，返回结果按照数据流 id 的字母顺序升序排列。
+罗列数据库中一组特定的数据流，返回结果按照数据流 id 的字母顺序升序排列。
 
 ```
 GET /:db/datastreams
@@ -21,7 +21,6 @@ GET /:db/datastreams
 | tags       | string | 数据流标签的列表，不同的标签以`,`分隔。 |
 | limit      | number | 返回数据流的个数的最大值。**默认值**为`100`，**最大值**为`1000`。 |
 | offset     | number | 返回数据流的偏移量，即返回结果中跳过开头的 `offset`个数据流，与 `limit` 配合以达到分页的效果。**默认值**为`0` |
-| chunked    | boolean| 以 [Chunked][chunked] 形式返回响应。当一次请求需要返回大量结果时，需要。**默认值**为`false`。 |
 
 `ids` 和 `tags` 共同确定需要返回的数据流。
 
@@ -106,7 +105,7 @@ Location: https://api.dotide.com/v1/demo/datastreams/51e51544fa36a48592000074
 ```
 
 
-## 读取一条数据流
+## 获取一条数据流
 
 ```
 GET /:db/datastreams/:id
@@ -191,4 +190,3 @@ Status: 204 No Content
 ```
 
 [auth]: /v2/auth/overview.html
-[chunked]: http://en.wikipedia.org/wiki/Chunked_transfer_encoding
