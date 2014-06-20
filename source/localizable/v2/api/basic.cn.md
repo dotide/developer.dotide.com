@@ -74,6 +74,10 @@ Cache-Control: max-age=0, private, must-revalidate
 {"version":"2"}
 ```
 
+### `Chunked` 响应
+
+一些请求可以以[Chunked][chunked]形式返回响应。
+
 ## HTTP 动词
 
 Dotide 的 HTTP API 遵循 REST 设计模式。使用不同的动词来区分不同的动作。
@@ -167,3 +171,4 @@ $ curl https://api.dotide.com/v1/demo/datastreams?ts=iso&tz=Asia/Shanghai
 [unix_time]: http://en.wikipedia.org/wiki/Unix_time
 [iso8601]: http://en.wikipedia.org/wiki/ISO_8601
 [database-op]: /v2/api/http/database.html#3-更新数据库属性
+[chunked]: http://en.wikipedia.org/wiki/Chunked_transfer_encoding
