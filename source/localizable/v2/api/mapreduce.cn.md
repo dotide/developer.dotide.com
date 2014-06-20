@@ -21,11 +21,11 @@ POST /:db/datastreams/:id/mapred
 {
   "range": [1400723585636,1400723585650],
   "map": {
-    "function": "interval",
+    "function": "core.interval",
     "opts": [10]
   },
   "reduce": {
-    "function": "aggretion",
+    "function": "core.aggretion",
     "opts": ["max", "target.key"]
   },
   "async": false,
@@ -38,7 +38,7 @@ POST /:db/datastreams/:id/mapred
 {
   "range": [1400723585636,1400723585650],
   "map": {
-    "function": "interval",
+    "function": "core.interval",
     "opts": [10]
   },
   "reduce": {
