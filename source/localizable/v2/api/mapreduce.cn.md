@@ -26,7 +26,7 @@ POST /:db/datastreams/:id/mapred
   },
   "reduce": {
     "function": "core.aggretion",
-    "opts": ["max", "target.key"]
+    "opts": [["max", "foo.height"], ["count", ["gt", "foo.weight", 100]], ["count", "*"]]
   },
   "async": false,
   "chunked": true,
