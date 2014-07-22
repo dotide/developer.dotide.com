@@ -43,7 +43,7 @@ GET /:db
 对 GET 和 DELETE 请求来说，一般会有可选参数。参数应拼接成 `query string` 包含在 URL 中：
 
 ```
-$ curl -i https://api.dotide.com/v1/demo/datastreams?limit=10
+$ curl -i https://api.dotide.com/v2/demo/datastreams?limit=10
 ```
 
 在本例子中，`demo` 是数据库名，`limit` 是可选参数。
@@ -51,7 +51,7 @@ $ curl -i https://api.dotide.com/v1/demo/datastreams?limit=10
 对 POST 和 PUT 请求来说，一般会有输入。输入不包含在 URL 中，而应该编码成 `JSON` 格式放在请求的 `body` 中，如：
 
 ```
-$ curl -i -u client_id -d '{"v":4}' -H "Content-Type: application/json"  https://api.dotide.com/v1/demo/datastreams/demostream/datapoints
+$ curl -i -u client_id -d '{"v":4}' -H "Content-Type: application/json"  https://api.dotide.com/v2/demo/datastreams/demostream/datapoints
 ```
 
 ### 响应的格式
@@ -129,37 +129,37 @@ Dotide API 支持两种时间表示方式：以毫秒为单位的 [Unix time][un
 
 ### 请求中的时间表示的设定
 
-用户无需在请求中指定输入参数中时间以何种方式表示。Dotide API 服务器会进行自动判断。
+用户无需在请求中指定输入参数中时间以何种方式表示。Dotide 会进行自动判断。
 
 ### 响应中的时间表示的设定
 
-可以通过两种方法指定时间表示方式。一种是在 HTTP 请求头部附上 `Timestamp`：
+可以通过两种方法指定时间表示方式。一种是在 HTTP 请求头部附上 `Time-Format`：
 
 ```
-$ curl -H "Timestamp: unix" https://api.dotide.com/v1/demo/datastreams
+$ curl -H "Time-Format: unix" https://api.dotide.com/v2/demo/datastreams
 ```
 
-另一种是在 URL 参数部分指定 `ts`，例如：
+另一种是在 URL 参数部分指定 `tf`，例如：
 
 ```
-$ curl https://api.dotide.com/v1/demo/datastreams?ts=iso
+$ curl https://api.dotide.com/v2/demo/datastreams?tf=iso
 ```
 
-此外，对于 `iso`，还可以通过两种方法指定时区。一种是在 HTTP 请求头部附上 `Timezone`：
+此外，对于 `iso`，还可以通过两种方法指定时区。一种是在 HTTP 请求头部附上 `Time-Zone`：
 
 ```
-$ curl -H "Timestamp: iso" -H "Timezone: Asia/Shanghai" https://api.dotide.com/v1/demo/datastreams
+$ curl -H "Time-Zone: Asia/Shanghai" https://api.dotide.com/v2/demo/datastreams
 ```
 
 另一种是在 URL 参数部分指定 `tz`，例如：
 
 ```
-$ curl https://api.dotide.com/v1/demo/datastreams?ts=iso&tz=Asia/Shanghai
+$ curl https://api.dotide.com/v2/demo/datastreams?tz=Asia/Shanghai
 ```
 
 具体的时区值详见 [Olson 数据库][olson]。
 
-当没有提供时间表示方式和时区信息时，二者由数据库的 `ts`, `tz` 属性决定。见[更新数据库属性][database-op]
+当没有提供时间表示方式和时区信息时，二者由数据库的 `time_format`, `time_zone` 属性决定。见[更新数据库属性][database-op]
 
 [auth-doc]:/v2/auth/overview.html
 [http-basic-auth]:http://tools.ietf.org/html/rfc1945#section-11.1
@@ -167,4 +167,3 @@ $ curl https://api.dotide.com/v1/demo/datastreams?ts=iso&tz=Asia/Shanghai
 [unix_time]: http://en.wikipedia.org/wiki/Unix_time
 [iso8601]: http://en.wikipedia.org/wiki/ISO_8601
 [database-op]: /v2/api/http/database.html#3-更新数据库属性
-[chunked]: http://en.wikipedia.org/wiki/Chunked_transfer_encoding
