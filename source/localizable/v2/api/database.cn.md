@@ -26,8 +26,8 @@ Status: 200 OK
   "time_zone": "Asia/Shanghai",
   "datastreams_count": 10000,
   "datapoints_count": 1032320023,
-  "api_read_count": 211212,
-  "api_write_count": 1213
+  "read_count": 211212,
+  "write_count": 1213
 }
 ```
 
@@ -71,8 +71,8 @@ Status: 200 OK
   "time_zone": "Asia/Shanghai",
   "datastreams_count": 10000,
   "datapoints_count": 1032320023,
-  "api_read_count": 211212,
-  "api_write_count": 1213
+  "read_count": 211212,
+  "write_count": 1213
 }
 ```
 

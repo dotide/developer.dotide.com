@@ -41,13 +41,13 @@ Status: 200 OK
   {
     "id": "51e51544fa36a48592000074",
     "name": "Demo Datastream",
-    "type": "number",
     "tags": ["a", "b", "c"],
     "properties": {
         "prop": 1
     },
-    "current_t": "2014-01-03T00:01:02.123+08:00",
-    "current_v": 100,
+    "datapoints_count": 0,
+    "current_t": null,
+    "current_v": null,
     "created_at": "2014-01-03T00:00:00.001+08:00",
     "updated_at": "2014-01-03T00:01:02.456+08:00"
   }
@@ -66,6 +66,7 @@ POST /:db/datastreams
 | 名称        | 类型             | 说明 |
 | ---------- | ---------------- | ------------------------------------------------------ |
 | id         | string           | 指定需要创建的数据流的 id，如不输入，则由系统默认生成。**要求：当前数据库中唯一。** |
+| name       | string           | 数据流的显示名称。 |
 | tags       | array            | 标签列表。每个数据流可包含一组标签，每个标签为一个字符串。 |
 | properties | hash             | 自定义属性。每个数据流可包含一组自定义的属性，每个属性是由`属性名: 属性值`构成的键值对。 |
 
@@ -74,6 +75,7 @@ POST /:db/datastreams
 ```json
 {
   "id": "51e51544fa36a48592000074",
+  "name": "demo",
   "tags": ["a", "b", "c"],
   "properties": {
       "meterial": "steel",
@@ -92,11 +94,15 @@ Location: https://api.dotide.com/v1/demo/datastreams/51e51544fa36a48592000074
 ```json
 {
   "id": "51e51544fa36a48592000074",
+  "name": "demo",
   "tags": ["a", "b", "c"],
   "properties": {
       "meterial": "steel",
       "type": "number"
   },
+  "datapoints_count": 0,
+  "current_t": null,
+  "current_v": null,
   "created_at": "2014-01-03T00:00:00.001+08:00",
   "updated_at": "2014-01-03T00:01:02.456+08:00"
 }
@@ -118,10 +124,12 @@ Status: 200 OK
 ```json
 {
   "id": "51e51544fa36a48592000074",
+  "name": "demo",
   "tags": ["a", "b", "c"],
   "properties": {
       "prop1": 1
   },
+  "datapoints_count": 1,
   "current_t": "2014-01-03T00:01:02.123+08:00",
   "current_v": 100,
   "created_at": "2014-01-03T00:00:00.001+08:00",
@@ -140,6 +148,7 @@ PUT /:db/datastreams/:id
 
 | 名称        | 类型             | 说明 |
 | ---------- | ---------------- | ------------------------------------------------------ |
+| name       | string           | 数据流的显示名称。 ｜
 | tags       | array            | 标签列表。每个数据流可包含一组标签，每个标签为一个字符串。 |
 | properties | hash             | 自定义属性。每个数据流可包含一组自定义的属性，每个属性是由`属性名: 属性值`构成的键值对。 |
 
@@ -147,6 +156,7 @@ PUT /:db/datastreams/:id
 
 ```json
 {
+  "name": "demo2",
   "tags": ["a", "b", "c", "d"],
   "properties": {
       "prop1": 2
@@ -163,10 +173,12 @@ Status: 200 OK
 ```json
 {
   "id": "51e51544fa36a48592000074",
+  "name": "demo2",
   "tags": ["a", "b", "c", "d"],
   "properties": {
       "prop1": 2
   },
+  "datapoints_count": 1,
   "current_t": "2014-01-03T00:01:02.123+08:00",
   "current_v": 100,
   "created_at": "2014-01-03T00:00:00.001+08:00",
