@@ -22,12 +22,12 @@ Status: 200 OK
 {
   "name": "demo",
   "public": false,
-  "ts": "unix",
-  "tz": "Asia/Shanghai",
-  "datastream_count": 10000,
+  "time_format": "unix",
+  "time_zone": "Asia/Shanghai",
+  "datastreams_count": 10000,
   "datapoints_count": 1032320023,
-  "api_read_count": 211212,
-  "api_write_count": 1213
+  "read_count": 211212,
+  "write_count": 1213
 }
 ```
 
@@ -42,8 +42,8 @@ PUT /:db
 | 名称        | 类型             | 说明 |
 | ---------- | ---------------- | ------------ |
 | public     | boolean          | 是否为公开数据库。`true` 为公开，`false` 为私有。 |
-| ts         | string           | 该数据库中，默认的时间表示方式。**可选** `unix`, `iso`。`unix`：时间用 [Unix time][unix_time]的毫秒数表示。`iso`：时间用[ISO_8601][iso8601]格式的字符串表示。 |
-| tz         | string           | 该数据库中，[ISO_8601][iso8601]方式表示时间时，默认所使用的时区。具体的时区值详见 [Olson 数据库][olson]。 |
+| time_format | string           | 该数据库中，默认的时间表示方式。**可选** `unix`, `iso`。`unix`：时间用 [Unix time][unix_time] 的毫秒数表示。`iso`：时间用 [ISO_8601][iso8601] 格式的字符串表示。 |
+| time_zone   | string           | 该数据库中，[ISO_8601][iso8601] 方式表示时间时，默认所使用的时区。具体的时区值详见 [Olson 数据库][olson]。 |
 
 数据库为公开时，所存储数据的读取不需要认证信息。
 
@@ -52,8 +52,8 @@ PUT /:db
 ```json
 {
   "public": true,
-  "ts": "unix",
-  "tz": "Asia/Shanghai"
+  "time_format": "unix",
+  "time_zone": "Asia/Shanghai"
 }
 ```
 
@@ -67,10 +67,12 @@ Status: 200 OK
 {
   "name": "demo",
   "public": true,
-  "datastream_count": 10000,
+  "time_format": "unix",
+  "time_zone": "Asia/Shanghai",
+  "datastreams_count": 10000,
   "datapoints_count": 1032320023,
-  "api_read_count": 211212,
-  "api_write_count": 1213
+  "read_count": 211212,
+  "write_count": 1213
 }
 ```
 

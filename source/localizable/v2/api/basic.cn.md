@@ -8,9 +8,9 @@ title: API 基础
 
 ## 调用约定
 
-### URI 前缀
+### URL 前缀
 
-API 服务域名地址为：`api.dotide.com`，当前 API 版本为 v2。
+API 服务域名为：`api.dotide.com`，当前 API 版本为 v2。
 
 协议推荐使用 HTTPS，如果因为某些限制无法使用 HTTPS，也可以使用未加密的 HTTP：
 
@@ -20,7 +20,7 @@ API 服务域名地址为：`api.dotide.com`，当前 API 版本为 v2。
 https://api.dotide.com/v2
 ```
 
-在 HTTP API 相关文档中，**如果没有特殊说明，所述 URI 均要加上上述前缀**。
+在 HTTP API 相关文档中，**如果没有特殊说明，所述 URL 均要加上上述前缀**。
 
 例如 `/:db` 指代 `https://api.dotide.com/v2/:db`
 
@@ -36,27 +36,27 @@ GET /:db
 
 `GET` 表示 HTTP 动词, 本例中 HTTP 请求的动词需要使用 `GET`。
 
-`:db` 表示 URI 中需要替换成特定值的变量部分。本例中，如果我们操作的是名为 'demo' 的数据库，则最终实际的 URI 应该为 `https://api.dotide.com/v2/demo`。
+`:db` 表示 URL 中需要替换成特定值的变量部分。本例中，如果我们操作的是名为 'demo' 的数据库，则最终实际的 URL 应该为 `https://api.dotide.com/v2/demo`。
 
 ### 请求的格式
 
-对 GET 和 DELETE 请求来说，一般会有可选参数。参数应拼接成 `query string` 包含在 URI 中：
+对 GET 和 DELETE 请求来说，一般会有可选参数。参数应拼接成 `query string` 包含在 URL 中：
 
 ```
-$ curl -i https://api.dotide.com/v1/demo/datastreams?limit=10
+$ curl -i https://api.dotide.com/v2/demo/datastreams?limit=10
 ```
 
 在本例子中，`demo` 是数据库名，`limit` 是可选参数。
 
-对 POST 和 PUT 请求来说，一般会有输入。输入不包含在 URL 中，而应该编码成`json`格式放在请求的`body` 中，如：
+对 POST 和 PUT 请求来说，一般会有输入。输入不包含在 URL 中，而应该编码成 `JSON` 格式放在请求的 `body` 中，如：
 
 ```
-$ curl -i -u client_id -d '{"v":4}' -H "Content-Type: application/json"  https://api.dotide.com/v1/demo/datastreams/demostream/datapoints
+$ curl -i -u client_id -d '{"v":4}' -H "Content-Type: application/json"  https://api.dotide.com/v2/demo/datastreams/demostream/datapoints
 ```
 
 ### 响应的格式
 
-所有响应均包含下述的 `Header`， 且`body`均以 `json` 编码。
+所有响应均包含下述的 `Header`， 且 `body` 均以 `JSON` 编码。
 
 ```
 $ curl -i https://api.dotide.com/v2
@@ -74,13 +74,9 @@ Cache-Control: max-age=0, private, must-revalidate
 {"version":"2"}
 ```
 
-### `Chunked` 响应
-
-一些请求可以以[Chunked][chunked]形式返回响应。
-
 ## HTTP 动词
 
-Dotide 的 HTTP API 遵循 REST 设计模式。使用不同的动词来区分不同的动作。
+Dotide 的 HTTP API 遵循 REST 设计原则。使用不同的动词来区分不同的动作。
 
 | 动词        |  说明 |
 | ---------- |  ---------- |
@@ -98,7 +94,7 @@ Dotide 支持两种认证：'Basic' 和 'Access Token' 认证。在请求中附�
 
 **Basic 认证**
 
-需要在 HTTP 请求头部以 [HTTP Basic Authentication][http-basic-auth] 方式附上 `client_id` 和 `client_secret`(每个数据库都会有一个 `client_id` 和 `client_secret`，以`client_id`作为用户名，`client_secret`作为口令):
+需要在 HTTP 请求头部以 [HTTP Basic Authentication][http-basic-auth] 方式附上 `client_id` 和 `client_secret`(每个数据库都会有一个 `client_id` 和 `client_secret`，以 `client_id` 作为用户名，`client_secret` 作为口令):
 
 ```
 $ curl -u CLIENT_ID:CLIENT_SECRET https://api.dotide.com/v2/demo
@@ -114,7 +110,7 @@ CLIENT\_ID，CLIENT\_SECRET 分别为 `client_id`和`client_secret`的值。
 $ curl -H "Authorization: Bearer ACCESS_TOKEN" https://api.dotide.com/v2/demo/datastreams
 ```
 
-方法二，将 `access_token` 附在 URI 参数部分：
+方法二，将 `access_token` 附在 URL 参数部分：
 
 ```
 $ curl https://api.dotide.com/v2/demo/datastreams?access_token=ACCESS_TOKEN
@@ -122,7 +118,7 @@ $ curl https://api.dotide.com/v2/demo/datastreams?access_token=ACCESS_TOKEN
 
 ACCESS\_TOKEN 为 `access_token`的值。
 
-权限验证失败(可能是认证失败，也可能是授权不合)的请求会返回 `404 Not Found`，而不是 `403 Forbidden`，这是为了防止数据库的信息泄漏给未授权的用户。
+权限验证失败(可能是认证失败，也可能是授权不符合)的请求会返回 `404 Not Found`，而不是 `403 Forbidden`，这是为了防止数据库的信息泄漏给未授权的用户。
 
 关于权限验证的详细内容可参见[权限控制][auth-doc]部分。
 
@@ -133,37 +129,37 @@ Dotide API 支持两种时间表示方式：以毫秒为单位的 [Unix time][un
 
 ### 请求中的时间表示的设定
 
-用户无需在请求中指定输入参数中时间以何种方式表示。Dotide API 服务器会进行自动判断。
+用户无需在请求中指定输入参数中时间以何种方式表示。Dotide 会进行自动判断。
 
 ### 响应中的时间表示的设定
 
-可以通过两种方法指定时间表示方式。一种是在 HTTP 请求头部附上 `Timestamp`：
+可以通过两种方法指定时间表示方式。一种是在 HTTP 请求头部附上 `Time-Format`：
 
 ```
-$ curl -H "Timestamp: unix" https://api.dotide.com/v1/demo/datastreams
+$ curl -H "Time-Format: unix" https://api.dotide.com/v2/demo/datastreams
 ```
 
-另一种是在 URI 参数部分指定 `ts`，例如：
+另一种是在 URL 参数部分指定 `tf`，例如：
 
 ```
-$ curl https://api.dotide.com/v1/demo/datastreams?ts=iso
+$ curl https://api.dotide.com/v2/demo/datastreams?tf=iso
 ```
 
-此外，对于 `iso`，还可以通过两种方法指定时区。一种是在 HTTP 请求头部附上 `Timezone`：
+此外，对于 `iso`，还可以通过两种方法指定时区。一种是在 HTTP 请求头部附上 `Time-Zone`：
 
 ```
-$ curl -H "Timestamp: iso" -H "Timezone: Asia/Shanghai" https://api.dotide.com/v1/demo/datastreams
+$ curl -H "Time-Zone: Asia/Shanghai" https://api.dotide.com/v2/demo/datastreams
 ```
 
-另一种是在 URI 参数部分指定 `tz`，例如：
+另一种是在 URL 参数部分指定 `tz`，例如：
 
 ```
-$ curl https://api.dotide.com/v1/demo/datastreams?ts=iso&tz=Asia/Shanghai
+$ curl https://api.dotide.com/v2/demo/datastreams?tz=Asia/Shanghai
 ```
 
 具体的时区值详见 [Olson 数据库][olson]。
 
-当没有提供时间表示方式和时区信息时，二者由数据库的 `ts`, `tz` 属性决定。见[更新数据库属性][database-op]
+当没有提供时间表示方式和时区信息时，二者由数据库的 `time_format`, `time_zone` 属性决定。见[更新数据库属性][database-op]
 
 [auth-doc]:/v2/auth/overview.html
 [http-basic-auth]:http://tools.ietf.org/html/rfc1945#section-11.1
@@ -171,4 +167,3 @@ $ curl https://api.dotide.com/v1/demo/datastreams?ts=iso&tz=Asia/Shanghai
 [unix_time]: http://en.wikipedia.org/wiki/Unix_time
 [iso8601]: http://en.wikipedia.org/wiki/ISO_8601
 [database-op]: /v2/api/http/database.html#3-更新数据库属性
-[chunked]: http://en.wikipedia.org/wiki/Chunked_transfer_encoding
